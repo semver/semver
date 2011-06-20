@@ -186,6 +186,15 @@ modification depends on whether you updated your dependencies in order to fix
 a bug or introduce new functionality. I would usually expect additional code
 for the latter instance, in which case it's obviously a minor level increment.
 
+### What should I do if the bug that is being fixed returns the code to being compliant with the public API (i.e. the code was incorrectly out of sync with the public API documentation)?
+
+Use your best judgment. If you have a huge audience that will be drastically
+impacted by changing the behavior back to what the public API intended, then
+it may be best to perform a major version release, even though the fix could
+strictly be considered a patch release. Remember, Semantic Versioning is all
+about conveying meaning by how the version number changes. If these changes
+are important to your users, use the version number to inform them.
+
 
 About
 -----
