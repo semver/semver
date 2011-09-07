@@ -76,11 +76,13 @@ change that fixes incorrect behavior.
 1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
 compatible functionality is introduced to the public API. It MAY be
 incremented if substantial new functionality or improvements are introduced
-within the private code. It MAY include patch level changes.
+within the private code. It MAY include patch level changes. Patch version
+MUST be reset to 0 when minor version is incremented.
 
 1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
 incompatible changes are introduced to the public API. It MAY include minor
-and patch level changes.
+and patch level changes. Patch and minor version MUST be reset to 0 when major
+version is incremented.
 
 
 Tagging Specification (SemVerTag)
