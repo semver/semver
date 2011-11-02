@@ -85,22 +85,6 @@ and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
 
-Tagging Specification (SemVerTag)
----------------------------------
-
-This sub-specification SHOULD be used if you use a version control system
-(Git, Mercurial, SVN, etc) to store your code. Using this system allows
-automated tools to inspect your package and determine SemVer compliance and
-released versions.
-
-1. When tagging releases in a version control system, the tag for a version
-MUST be "vX.Y.Z" e.g. "v3.1.0".
-
-1. The first revision that introduces SemVer compliance SHOULD be tagged
-"semver". This allows pre-existing projects to assume compliance at any
-arbitrary point and for automated tools to discover this fact.
-
-
 Why Use Semantic Versioning?
 ----------------------------
 
