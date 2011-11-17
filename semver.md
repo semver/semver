@@ -43,9 +43,9 @@ could be declared in the code itself or exist strictly in documentation.
 However it is done, it should be precise and comprehensive.
 
 1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
-integers. X is the major version, Y is the minor version, and Z is the patch
-version. Each element MUST increase numerically by increments of one. For
-instance: 1.9.0 -> 1.10.0 -> 1.11.0.
+non-negative integers. X is the major version, Y is the minor version, and Z
+is the patch version. Each element MUST increase numerically by increments of
+one. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
 1. When a major version number is incremented, the minor version and patch
 version MUST be reset to zero. When a minor version number is incremented, the
