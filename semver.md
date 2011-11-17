@@ -52,12 +52,18 @@ version MUST be reset to zero. When a minor version number is incremented, the
 patch version MUST be reset to zero. For instance: 1.1.3 -> 2.0.0 and 2.1.7 ->
 2.2.0.
 
-1. A pre-release version number MAY be denoted by appending an arbitrary
-string immediately following the patch version and a dash. The string MUST be
-comprised of only alphanumerics plus dash [0-9A-Za-z-]. Pre-release versions
-satisfy but have a lower precedence than the associated normal version.
-Precedence SHOULD be determined by lexicographic ASCII sort order. For
-instance: 1.0.0-alpha1 < 1.0.0-beta1 < 1.0.0-beta2 < 1.0.0-rc1 < 1.0.0.
+1. A pre-release version number MAY be denoted by appending a dash and a
+qualifying string immediately following the patch version. The qualifying
+string is comprised of a mandatory identifier and an optional sequence number.
+If the sequence number is used, it MUST be separated from the identifier by a
+tilde. Identifiers MUST be comprised of only alphanumerics plus dash
+[0-9A-Za-z-]. Sequence numbers MUST be comprised of only digits [0-9].
+Pre-release versions satisfy but have a lower precedence than the associated
+normal version. Precedence SHOULD be determined by lexicographic ASCII sort
+order of the identifier followed by numeric sort order of the sequence number.
+If the sequence number is absent, it MUST be considered to be zero. For
+example: 1.0.0-alpha < 1.0.0-alpha~1 < 1.0.0-beta~2 < 1.0.0-beta~11 <
+1.0.0-rc~1 < 1.0.0.
 
 1. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications must be released as a new version.
