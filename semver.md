@@ -80,7 +80,8 @@ compatible bug fixes are introduced. A bug fix is defined as an internal
 change that fixes incorrect behavior.
 
 1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
-compatible functionality is introduced to the public API. It MAY be
+compatible functionality is introduced to the public API. It MUST be
+incremented if any public API functionality is marked as deprecated. It MAY be
 incremented if substantial new functionality or improvements are introduced
 within the private code. It MAY include patch level changes. Patch version
 MUST be reset to 0 when minor version is incremented.
@@ -191,6 +192,10 @@ it may be best to perform a major version release, even though the fix could
 strictly be considered a patch release. Remember, Semantic Versioning is all
 about conveying meaning by how the version number changes. If these changes
 are important to your users, use the version number to inform them.
+
+### How should I handle deprecating functionality?
+
+Deprecating existing functionality is a normal part of software development and is often required to make forward progress. When you deprecate part of your public API, you should do two things: (1) update your documentation to let users know about the change, (2) issue a new minor release with the deprecation in place. Before you completely remove the functionality in a new major release there should be at least one minor release that contains the deprecation so that users can smoothly transition to the new API.
 
 
 About
