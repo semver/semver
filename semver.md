@@ -1,5 +1,5 @@
-Semantic Versioning 1.0.0
-=========================
+Semantic Versioning 1.0.0-rc~1
+==============================
 
 In the world of software management there exists a dread place called
 "dependency hell." The bigger your system grows and the more packages you
