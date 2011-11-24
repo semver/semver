@@ -65,6 +65,17 @@ sequence number is absent, it MUST be considered to be zero. For example:
 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 <
 1.0.0.
 
+1. A build version MAY be denoted by appending a plus sign and a series of dot
+separated identifiers immediately following the patch version or pre-release
+version. Identifiers MUST be comprised of only ASCII alphanumerics and dash
+[0-9A-Za-z-]. Build versions satisfy and have a higher precedence than the
+associated normal version. Precedence SHOULD be determined by comparing each
+dot separated identifier as follows: identifiers consisting of only digits are
+compared numerically and identifiers with letters or dashes are compared
+lexically in ASCII sort order. Numeric identifiers always have lower
+precedence than non-numeric identifiers. For example: 1.3.7+1.0.0 <
+1.3.7+build < 1.3.7+build.2.b8f12d7 < 1.3.7+build.11.e0f985a.
+
 1. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications must be released as a new version.
 
