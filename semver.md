@@ -52,29 +52,29 @@ version MUST be reset to zero. When a minor version number is incremented, the
 patch version MUST be reset to zero. For instance: 1.1.3 -> 2.0.0 and 2.1.7 ->
 2.2.0.
 
-1. A pre-release version MAY be denoted by appending a dash and a qualifying
-string immediately following the patch version. The qualifying string is
-comprised of a mandatory identifier and an optional sequence number. If the
-sequence number is used, it MUST be separated from the identifier by a period.
-Identifiers MUST be comprised of only alphanumerics plus dash [0-9A-Za-z-].
-Sequence numbers MUST be comprised of only digits [0-9]. Pre-release versions
-satisfy but have a lower precedence than the associated normal version.
-Precedence SHOULD be determined by lexicographic ASCII sort order of the
-identifier followed by numeric sort order of the sequence number. If the
-sequence number is absent, it MUST be considered to be zero. For example:
-1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 <
-1.0.0.
+1. A pre-release version MAY be denoted by appending a dash and a series of
+dot separated identifiers immediately following the patch version. Identifiers
+MUST be comprised of only ASCII alphanumerics and dash [0-9A-Za-z-].
+Pre-release versions satisfy but have a lower precedence than the associated
+normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
+1.0.0-x.7.z.92.
 
 1. A build version MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch version or pre-release
 version. Identifiers MUST be comprised of only ASCII alphanumerics and dash
 [0-9A-Za-z-]. Build versions satisfy and have a higher precedence than the
-associated normal version. Precedence SHOULD be determined by comparing each
-dot separated identifier as follows: identifiers consisting of only digits are
-compared numerically and identifiers with letters or dashes are compared
-lexically in ASCII sort order. Numeric identifiers always have lower
-precedence than non-numeric identifiers. For example: 1.3.7+1.0.0 <
-1.3.7+build < 1.3.7+build.2.b8f12d7 < 1.3.7+build.11.e0f985a.
+associated normal version. Examples: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
+
+1. Precedence MUST be calculated by separating the version into major, minor,
+patch, pre-release, and build identifiers in that order. Major, minor, and
+patch versions are always compared numerically. Pre-release and build version
+precedence MUST be determined by comparing each dot separated identifier as
+follows: identifiers consisting of only digits are compared numerically and
+identifiers with letters or dashes are compared lexically in ASCII sort order.
+Numeric identifiers always have lower precedence than non-numeric identifiers.
+Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 <
+1.0.0-rc.1 < 1.0.0-rc.1+build.1 < 1.0.0 < 1.0.0+0.3.7 < 1.3.7+build <
+1.3.7+build.2.b8f12d7 < 1.3.7+build.11.e0f985a.
 
 1. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications must be released as a new version.
