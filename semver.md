@@ -47,11 +47,6 @@ non-negative integers. X is the major version, Y is the minor version, and Z
 is the patch version. Each element MUST increase numerically by increments of
 one. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
-1. When a major version number is incremented, the minor version and patch
-version MUST be reset to zero. When a minor version number is incremented, the
-patch version MUST be reset to zero. For instance: 1.1.3 -> 2.0.0 and 2.1.7 ->
-2.2.0.
-
 1. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications must be released as a new version.
 
