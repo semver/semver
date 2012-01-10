@@ -122,7 +122,7 @@ numéros de version sont essentiellement inutiles pour la gestion des
 dépendances. En donnant un nom et une définition claire aux idées ci-dessus, il
 devient facile de communiquer vos intentions pour les utilisateurs de votre
 logiciel. Une fois que ces intentions sont claires, souples (mais pas trop
-souple) les spécifications de dépendances peuvent enfin se faire.
+souples) les spécifications de dépendances peuvent enfin se faire.
 
 Un exemple simple montrera comment le Versionnement Sémantique peut faire de
 l'enfer des dépendances une chose du passé. Considérons une librairie appelée 
