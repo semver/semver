@@ -1,249 +1,249 @@
-Le Versionnement Sémantique 2.0.0-rc.1
+Le Versionnement SÃ©mantique 2.0.0-rc.1
 ======================================
 
-Dans le monde de la gestion de logiciels, il existe un endroit terrifiant appelé
-"l'enfer des dépendances". Plus votre système se développe et plus vous intégrez
-de composants dans votre logiciel, plus vous êtes susceptible de vous trouver,
-un jour, dans cette abîme de désespoir.
+Dans le monde de la gestion de logiciels, il existe un endroit terrifiant appelï¿½
+"l'enfer des dï¿½pendances". Plus votre systï¿½me se dï¿½veloppe et plus vous intï¿½grez
+de composants dans votre logiciel, plus vous ï¿½tes susceptible de vous trouver,
+un jour, dans cette abï¿½me de dï¿½sespoir.
 
-Dans les systèmes avec de nombreuses dépendances, publier une nouvelle version
-d’un composant peut vite devenir un cauchemar. Si les règles de dépendance sont
-trop strictes, vous risquez de verrouiller les versions (incapacité de mettre à
-jour un composant sans avoir à publier une nouvelle version de chaque composant
-qui en dépend). Si les règles de dépendances sont trop lâches, vous allez
-inévitablement être rattrapés par la promiscuité de version (supposer une
-compatibilité avec plus de futures versions que raisonnable). L'enfer des
-dépendances est l'endroit où vous vous trouvez lorsque les verrous de versions
-et/ou la promiscuité de versions vous empêchent d’avancer sans risque dans votre
+Dans les systï¿½mes avec de nombreuses dï¿½pendances, publier une nouvelle version
+dï¿½un composant peut vite devenir un cauchemar. Si les rï¿½gles de dï¿½pendance sont
+trop strictes, vous risquez de verrouiller les versions (incapacitï¿½ de mettre ï¿½
+jour un composant sans avoir ï¿½ publier une nouvelle version de chaque composant
+qui en dï¿½pend). Si les rï¿½gles de dï¿½pendances sont trop lï¿½ches, vous allez
+inï¿½vitablement ï¿½tre rattrapï¿½s par la promiscuitï¿½ de version (supposer une
+compatibilitï¿½ avec plus de futures versions que raisonnable). L'enfer des
+dï¿½pendances est l'endroit oï¿½ vous vous trouvez lorsque les verrous de versions
+et/ou la promiscuitï¿½ de versions vous empï¿½chent dï¿½avancer sans risque dans votre
 projet.
 
-Comme solution à ce problème, je propose un ensemble de règles et exigences
-simples qui dictent la façon dont les numéros de version sont attribués et
-incrémentés. Pour que ce système fonctionne, vous devez d'abord déclarer une API
-publique. Il peut s'agir d’un document ou de règles appliquées par le code
-lui-même. Quoiqu’il en soit, il est important que cette API soit claire et
-précise. Une fois qu’elle est prête, vous lui communiquez les modifications avec
-les incrémentations spécifiques à votre numéro de version. Considérons le format
-de version "X.Y.Z" (Majeur.Mineur.Patch). Les correctifs n'affectant pas l’API
-incrémentent la version de patch, des ajouts ou modifications rétro-compatibles
-incrémentent la version mineure et les modifications rétro-incompatibles
-incrémentent la version majeure.
+Comme solution ï¿½ ce problï¿½me, je propose un ensemble de rï¿½gles et exigences
+simples qui dictent la faï¿½on dont les numï¿½ros de version sont attribuï¿½s et
+incrï¿½mentï¿½s. Pour que ce systï¿½me fonctionne, vous devez d'abord dï¿½clarer une API
+publique. Il peut s'agir dï¿½un document ou de rï¿½gles appliquï¿½es par le code
+lui-mï¿½me. Quoiquï¿½il en soit, il est important que cette API soit claire et
+prï¿½cise. Une fois quï¿½elle est prï¿½te, vous lui communiquez les modifications avec
+les incrï¿½mentations spï¿½cifiques ï¿½ votre numï¿½ro de version. Considï¿½rons le format
+de version "X.Y.Z" (Majeur.Mineur.Patch). Les correctifs n'affectant pas lï¿½API
+incrï¿½mentent la version de patch, des ajouts ou modifications rï¿½tro-compatibles
+incrï¿½mentent la version mineure et les modifications rï¿½tro-incompatibles
+incrï¿½mentent la version majeure.
 
-J'appelle ce système "Versionnement Sémantique". Avec ce système, les numéros
-de version et la façon dont ils changent donnent du sens au code sous-jacent et
-à ce qui a été modifié d'une version à l'autre.
+J'appelle ce systï¿½me "Versionnement Sï¿½mantique". Avec ce systï¿½me, les numï¿½ros
+de version et la faï¿½on dont ils changent donnent du sens au code sous-jacent et
+ï¿½ ce qui a ï¿½tï¿½ modifiï¿½ d'une version ï¿½ l'autre.
 
 
-Spécifications du Versionnement Sémantique (SemVer)
+Spï¿½cifications du Versionnement Sï¿½mantique (SemVer)
 ---------------------------------------------------
 
-Les mots clés "DOIT", "NE DOIT PAS", "REQUIS", "DEVRAIT", "NE DEVRAIT PAS",
-"RECOMMANDÉ", "PEUT", et "FACULTATIF" dans ce document doivent être interprétés
-comme décrit dans la RFC 2119.
+Les mots clï¿½s "DOIT", "NE DOIT PAS", "REQUIS", "DEVRAIT", "NE DEVRAIT PAS",
+"RECOMMANDï¿½", "PEUT", et "FACULTATIF" dans ce document doivent ï¿½tre interprï¿½tï¿½s
+comme dï¿½crit dans la RFC 2119.
 
-1. Tout logiciel utilisant le Versionnement Sémantique DOIT déclarer une API
-publique. Cette API peut être déclarée dans le code lui-même ou dans un
-document. Dans tous les cas, elle doit être précise et claire.
+1. Tout logiciel utilisant le Versionnement Sï¿½mantique DOIT dï¿½clarer une API
+publique. Cette API peut ï¿½tre dï¿½clarï¿½e dans le code lui-mï¿½me ou dans un
+document. Dans tous les cas, elle doit ï¿½tre prï¿½cise et claire.
 
-1. Un numéro de version standard DOIT prendre la forme X.Y.Z où X, Y et Z sont
-des entiers non négatifs. X est la version majeure, Y est la version mineure, et
-Z est la version de patch. Chaque élément DOIT augmenter numériquement par
-incréments d'une unité. Par exemple : 1.9.0 -> 1.10.0 -> 1.11.0.
+1. Un numï¿½ro de version standard DOIT prendre la forme X.Y.Z oï¿½ X, Y et Z sont
+des entiers non nï¿½gatifs. X est la version majeure, Y est la version mineure, et
+Z est la version de patch. Chaque ï¿½lï¿½ment DOIT augmenter numï¿½riquement par
+incrï¿½ments d'une unitï¿½. Par exemple : 1.9.0 -> 1.10.0 -> 1.11.0.
 
-1. Quand un numéro de version majeur est incrémenté, la version mineure et la
-version patch DOIVENT être remises à zéro. Quand un numéro de version mineur est
-incrémenté, la version patch DOIT être remise à zéro. Par exemple:
+1. Quand un numï¿½ro de version majeur est incrï¿½mentï¿½, la version mineure et la
+version patch DOIVENT ï¿½tre remises ï¿½ zï¿½ro. Quand un numï¿½ro de version mineur est
+incrï¿½mentï¿½, la version patch DOIT ï¿½tre remise ï¿½ zï¿½ro. Par exemple:
 1.1.3 -> 2.0.0 et 2.1.7 -> 2.2.0.
 
-1. Une fois qu’une version d’un composant est publiée, le contenu de cette
-version NE DOIT PAS être modifié. Toute modification doit être publiée comme une
+1. Une fois quï¿½une version dï¿½un composant est publiï¿½e, le contenu de cette
+version NE DOIT PAS ï¿½tre modifiï¿½. Toute modification doit ï¿½tre publiï¿½e comme une
 nouvelle version.
 
-1. La version majeure zéro (0.y.z) sert au développement initial. Tout peut
-changer à tout moment. L'API publique ne doit pas être considérée comme stable.
+1. La version majeure zï¿½ro (0.y.z) sert au dï¿½veloppement initial. Tout peut
+changer ï¿½ tout moment. L'API publique ne doit pas ï¿½tre considï¿½rï¿½e comme stable.
 
-1. La version 1.0.0 définit l'API publique. La façon dont le numéro de version
-est incrémenté après la publication est dépendante de cette API publique.
+1. La version 1.0.0 dï¿½finit l'API publique. La faï¿½on dont le numï¿½ro de version
+est incrï¿½mentï¿½ aprï¿½s la publication est dï¿½pendante de cette API publique.
 
-1. La version de patch Z (x.y.Z | x > 0) DOIT être incrémentée si des
-corrections d’anomalies rétro-compatibles sont effectuées. Une correction
-d’anomalie est définie comme un changement interne qui corrige un comportement
+1. La version de patch Z (x.y.Z | x > 0) DOIT ï¿½tre incrï¿½mentï¿½e si des
+corrections dï¿½anomalies rï¿½tro-compatibles sont effectuï¿½es. Une correction
+dï¿½anomalie est dï¿½finie comme un changement interne qui corrige un comportement
 incorrect.
 
-1. La version mineure Y (x.Y.z | x > 0) DOIT être incrémentée si une nouvelle
-fonctionnalité, rétro-compatible est introduite à l'API publique. Elle DOIT être
-incrémentée si une fonctionnalité de l’API publique est marquée comme obsolète.
-Elle PEUT être incrémentée si une nouvelle fonctionnalité ou amélioration est
-introduite dans le code privé. Elle PEUT inclure des changements de niveau de
-patch. La version de patch DOIT être remise à 0 lorsque la version mineure est
-incrémentée.
+1. La version mineure Y (x.Y.z | x > 0) DOIT ï¿½tre incrï¿½mentï¿½e si une nouvelle
+fonctionnalitï¿½, rï¿½tro-compatible est introduite ï¿½ l'API publique. Elle DOIT ï¿½tre
+incrï¿½mentï¿½e si une fonctionnalitï¿½ de lï¿½API publique est marquï¿½e comme obsolï¿½te.
+Elle PEUT ï¿½tre incrï¿½mentï¿½e si une nouvelle fonctionnalitï¿½ ou amï¿½lioration est
+introduite dans le code privï¿½. Elle PEUT inclure des changements de niveau de
+patch. La version de patch DOIT ï¿½tre remise ï¿½ 0 lorsque la version mineure est
+incrï¿½mentï¿½e.
 
-1. La version majeure X (X.y.z | X > 0) DOIT être incrémentée si des changements
-rétro-incompatibles sont introduits à l'API publique. Elle PEUT inclure des
-changements mineurs et de patch. Les numéros de version de patch et mineurs
-DOIVENT être remis à 0 lorsque la version majeure est incrémentée.
+1. La version majeure X (X.y.z | X > 0) DOIT ï¿½tre incrï¿½mentï¿½e si des changements
+rï¿½tro-incompatibles sont introduits ï¿½ l'API publique. Elle PEUT inclure des
+changements mineurs et de patch. Les numï¿½ros de version de patch et mineurs
+DOIVENT ï¿½tre remis ï¿½ 0 lorsque la version majeure est incrï¿½mentï¿½e.
 
-1. Une version de prépublication PEUT être notée par l'ajout d'un tiret et une
-série d’identifiants séparés par des points suivant immédiatement la version de
-patch. Les identifiants DOIVENT être composés uniquement de caractères
-alphanumériques ASCII et de tirets [0-9A-Za-z-]. Des versions de prépublication
-sont utilisables, mais ont une priorité moindre par rapport à la version normale
-associée. Exemples : 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
+1. Une version de prï¿½publication PEUT ï¿½tre notï¿½e par l'ajout d'un tiret et une
+sï¿½rie dï¿½identifiants sï¿½parï¿½s par des points suivant immï¿½diatement la version de
+patch. Les identifiants DOIVENT ï¿½tre composï¿½s uniquement de caractï¿½res
+alphanumï¿½riques ASCII et de tirets [0-9A-Za-z-]. Des versions de prï¿½publication
+sont utilisables, mais ont une prioritï¿½ moindre par rapport ï¿½ la version normale
+associï¿½e. Exemples : 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
-1. Une version de construction PEUT être représentée par l'ajout d'un signe
-"plus" et d’une série d’identifiants séparés par des points suivant
-immédiatement la version de patch ou de prépublication. Les identifiants DOIVENT
-être composés uniquement de caractères alphanumériques ASCII et de tirets
-[0-9A-Za-z-]. Les versions de construction sont utilisables et ont une priorité
-plus élevée que la version normale associée. Exemples: 1.0.0+build.1,
+1. Une version de construction PEUT ï¿½tre reprï¿½sentï¿½e par l'ajout d'un signe
+"plus" et dï¿½une sï¿½rie dï¿½identifiants sï¿½parï¿½s par des points suivant
+immï¿½diatement la version de patch ou de prï¿½publication. Les identifiants DOIVENT
+ï¿½tre composï¿½s uniquement de caractï¿½res alphanumï¿½riques ASCII et de tirets
+[0-9A-Za-z-]. Les versions de construction sont utilisables et ont une prioritï¿½
+plus ï¿½levï¿½e que la version normale associï¿½e. Exemples: 1.0.0+build.1,
 1.3.7+build.11.e0f985a.
 
-1. La priorité DOIT être calculée en séparant les numéros de version en
-identifiants majeur, mineur, patch, prépublication et de construction dans cet
-ordre. Les numéros de version majeur, mineur, et de patch sont toujours comparés
-numériquement. Pour les versions de prépublication et de construction, la
-priorité DOIT être déterminée en comparant chaque identifiant séparé par un
-point comme suit : les identifiants composés de chiffres seulement sont comparés
-numériquement et les identifiants composés de lettres ou de tirets sont comparés
-dans l’ordre de tri ASCII. Les identifiants numériques ont toujours priorité
-inférieure par rapport aux identifiants non numériques. Exemple : 1.0.0-alpha <
+1. La prioritï¿½ DOIT ï¿½tre calculï¿½e en sï¿½parant les numï¿½ros de version en
+identifiants majeur, mineur, patch, prï¿½publication et de construction dans cet
+ordre. Les numï¿½ros de version majeur, mineur, et de patch sont toujours comparï¿½s
+numï¿½riquement. Pour les versions de prï¿½publication et de construction, la
+prioritï¿½ DOIT ï¿½tre dï¿½terminï¿½e en comparant chaque identifiant sï¿½parï¿½ par un
+point comme suit : les identifiants composï¿½s de chiffres seulement sont comparï¿½s
+numï¿½riquement et les identifiants composï¿½s de lettres ou de tirets sont comparï¿½s
+dans lï¿½ordre de tri ASCII. Les identifiants numï¿½riques ont toujours prioritï¿½
+infï¿½rieure par rapport aux identifiants non numï¿½riques. Exemple : 1.0.0-alpha <
 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-RC.1 < 1.0.0-RC.1+build.1 <
 1.0.0 < 1.0.0+0.3.7 < 1.3.7+build < 1.3.7+build.2.b8f12d7 <
 1.3.7+build.11.e0f985a.
 
 
-Pourquoi utiliser le Versionnement Sémantique ?
+Pourquoi utiliser le Versionnement Sï¿½mantique ?
 -----------------------------------------------
 
-Ce n'est pas une idée nouvelle ni révolutionnaire. En fait, vous utilisez
-probablement déjà un système proche de celui-ci. Le problème est que "proche"
-n'est pas suffisant. Sans le respect d'une certaine forme de spécification, les
-numéros de version sont essentiellement inutiles pour la gestion des
-dépendances. En donnant un nom et une définition claire aux idées ci-dessus, il
+Ce n'est pas une idï¿½e nouvelle ni rï¿½volutionnaire. En fait, vous utilisez
+probablement dï¿½jï¿½ un systï¿½me proche de celui-ci. Le problï¿½me est que "proche"
+n'est pas suffisant. Sans le respect d'une certaine forme de spï¿½cification, les
+numï¿½ros de version sont essentiellement inutiles pour la gestion des
+dï¿½pendances. En donnant un nom et une dï¿½finition claire aux idï¿½es ci-dessus, il
 devient facile de communiquer vos intentions pour les utilisateurs de votre
 logiciel. Une fois que ces intentions sont claires, souples (mais pas trop
-souple) les spécifications de dépendances peuvent enfin se faire.
+souple) les spï¿½cifications de dï¿½pendances peuvent enfin se faire.
 
-Un exemple simple montrera comment le Versionnement Sémantique peut faire de
-l'enfer des dépendances une chose du passé. Considérons une librairie appelée 
-"CamionDePompier". Elle nécessite un composant Sémantiquement Versionné nommé
-"Échelle". Au moment où CamionDePompier est créé, Échelle est à la version
-3.1.0. Puisque CamionDePompier utilise des fonctionnalités de la version 3.1.0,
-vous pouvez spécifier une dépendance avec Échelle comme supérieure ou égale à
-3.1.0, mais inférieure à 4.0.0. Maintenant, quand la version 3.1.1 et 3.2.0
-d’Échelle deviennent disponibles, vous pouvez les communiquer à votre système de
+Un exemple simple montrera comment le Versionnement Sï¿½mantique peut faire de
+l'enfer des dï¿½pendances une chose du passï¿½. Considï¿½rons une librairie appelï¿½e 
+"CamionDePompier". Elle nï¿½cessite un composant Sï¿½mantiquement Versionnï¿½ nommï¿½
+"ï¿½chelle". Au moment oï¿½ CamionDePompier est crï¿½ï¿½, ï¿½chelle est ï¿½ la version
+3.1.0. Puisque CamionDePompier utilise des fonctionnalitï¿½s de la version 3.1.0,
+vous pouvez spï¿½cifier une dï¿½pendance avec ï¿½chelle comme supï¿½rieure ou ï¿½gale ï¿½
+3.1.0, mais infï¿½rieure ï¿½ 4.0.0. Maintenant, quand la version 3.1.1 et 3.2.0
+dï¿½ï¿½chelle deviennent disponibles, vous pouvez les communiquer ï¿½ votre systï¿½me de
 gestion de composants et savoir qu'ils seront compatibles avec les logiciels
-existants dépendants.
+existants dï¿½pendants.
 
-En tant que développeur responsable, bien sûr, vous voudrez vérifier que toute
-mise à jour de composant fonctionne comme annoncé. Le monde réel étant ce qu’il
-est, il n'y a rien que nous puissions faire sinon être vigilant. Ce que vous
-pouvez faire est de laisser le Versionnement Sémantique vous offrir une façon
-saine de publier et mettre à niveau des composants, sans avoir à publier une
-nouvelle version pour tous les composants dépendants, vous permettant ainsi
-d'économiser du temps et des complications.
+En tant que dï¿½veloppeur responsable, bien sï¿½r, vous voudrez vï¿½rifier que toute
+mise ï¿½ jour de composant fonctionne comme annoncï¿½. Le monde rï¿½el ï¿½tant ce quï¿½il
+est, il n'y a rien que nous puissions faire sinon ï¿½tre vigilant. Ce que vous
+pouvez faire est de laisser le Versionnement Sï¿½mantique vous offrir une faï¿½on
+saine de publier et mettre ï¿½ niveau des composants, sans avoir ï¿½ publier une
+nouvelle version pour tous les composants dï¿½pendants, vous permettant ainsi
+d'ï¿½conomiser du temps et des complications.
 
-Si tout cela vous semble intéressant, tout ce que vous avez à faire pour
-commencer à utiliser le Versionnement Sémantique est de déclarer que vous le
-faites, puis suivre les règles. Ajoutez un lien vers ce site dans vos fichiers
-README pour que les autres connaissent les règles et puissent en bénéficier.
+Si tout cela vous semble intï¿½ressant, tout ce que vous avez ï¿½ faire pour
+commencer ï¿½ utiliser le Versionnement Sï¿½mantique est de dï¿½clarer que vous le
+faites, puis suivre les rï¿½gles. Ajoutez un lien vers ce site dans vos fichiers
+README pour que les autres connaissent les rï¿½gles et puissent en bï¿½nï¿½ficier.
 
 
 FAQ
 ---
 
-### Comment dois-je gérer les révisions dans la phase initiale de développement
+### Comment dois-je gï¿½rer les rï¿½visions dans la phase initiale de dï¿½veloppement
 0.y.z ?
 
-La chose la plus simple à faire est de commencer votre version de développement
-initial à 0.1.0 puis incrémenter la version mineure pour chaque version
-ultérieure.
+La chose la plus simple ï¿½ faire est de commencer votre version de dï¿½veloppement
+initial ï¿½ 0.1.0 puis incrï¿½menter la version mineure pour chaque version
+ultï¿½rieure.
 
 ### Comment puis-je savoir quand publier la version 1.0.0 ?
 
-Si votre logiciel est utilisé en production, il devrait probablement déjà être
-en 1.0.0. Si vous avez une API stable dont les utilisateurs dépendent, vous devriez
-être en 1.0.0. Si vous vous inquiétez beaucoup sur la rétro-compatibilité,
-vous devriez probablement déjà être en 1.0.0.
+Si votre logiciel est utilisï¿½ en production, il devrait probablement dï¿½jï¿½ ï¿½tre
+en 1.0.0. Si vous avez une API stable dont les utilisateurs dï¿½pendent, vous devriez
+ï¿½tre en 1.0.0. Si vous vous inquiï¿½tez beaucoup sur la rï¿½tro-compatibilitï¿½,
+vous devriez probablement dï¿½jï¿½ ï¿½tre en 1.0.0.
 
-### N'est-ce pas décourager le développement rapide et des itérations courtes ?
+### N'est-ce pas dï¿½courager le dï¿½veloppement rapide et des itï¿½rations courtes ?
 
-La version majeure zéro est faite pour le développement rapide. Si vous décidez
-de changer l'API tous les jours, vous devez soit être encore en version 0.x.x ou
-sur une branche de développement distincte de la prochaine version majeure.
+La version majeure zï¿½ro est faite pour le dï¿½veloppement rapide. Si vous dï¿½cidez
+de changer l'API tous les jours, vous devez soit ï¿½tre encore en version 0.x.x ou
+sur une branche de dï¿½veloppement distincte de la prochaine version majeure.
 
-### Si même le plus petit changement incompatible à l'API publique nécessite une
-montée de version majeure, ne vais-je pas me retrouver à la version 42.0.0 très
+### Si mï¿½me le plus petit changement incompatible ï¿½ l'API publique nï¿½cessite une
+montï¿½e de version majeure, ne vais-je pas me retrouver ï¿½ la version 42.0.0 trï¿½s
 rapidement ?
 
-C'est une question de développement responsable et de prévoyance. Les
-changements rétro-incompatibles ne doivent pas être introduits à la légère dans
-un logiciel qui a beaucoup de code dépendant. Le coût qui doit être engagé pour
-monter de version peut être important. Avoir besoin de monter de version majeure
-pour publier des changements incompatibles signifie que vous réfléchirez à
-l'impact de vos modifications et évaluerez le rapport coût/bénéfice.
+C'est une question de dï¿½veloppement responsable et de prï¿½voyance. Les
+changements rï¿½tro-incompatibles ne doivent pas ï¿½tre introduits ï¿½ la lï¿½gï¿½re dans
+un logiciel qui a beaucoup de code dï¿½pendant. Le coï¿½t qui doit ï¿½tre engagï¿½ pour
+monter de version peut ï¿½tre important. Avoir besoin de monter de version majeure
+pour publier des changements incompatibles signifie que vous rï¿½flï¿½chirez ï¿½
+l'impact de vos modifications et ï¿½valuerez le rapport coï¿½t/bï¿½nï¿½fice.
 
-### Documenter l'ensemble de l’API publique est trop de travail !
+### Documenter l'ensemble de lï¿½API publique est trop de travail !
 
-Il est de votre responsabilité en tant que développeur professionnel de bien
-documenter tout logiciel qui est destiné à être utilisé par d'autres. Gérer la
-complexité du logiciel est une partie très importante pour garder un projet
-efficace, et c'est difficile à faire si personne ne sait comment utiliser votre
-logiciel ou ne connait pas les bonnes méthodes à appeler. À long terme, le
-Versionnement Sémantique et l’effort sur une API publique bien définie peut
-faire fonctionner tout et tout le monde sans problème.
+Il est de votre responsabilitï¿½ en tant que dï¿½veloppeur professionnel de bien
+documenter tout logiciel qui est destinï¿½ ï¿½ ï¿½tre utilisï¿½ par d'autres. Gï¿½rer la
+complexitï¿½ du logiciel est une partie trï¿½s importante pour garder un projet
+efficace, et c'est difficile ï¿½ faire si personne ne sait comment utiliser votre
+logiciel ou ne connait pas les bonnes mï¿½thodes ï¿½ appeler. ï¿½ long terme, le
+Versionnement Sï¿½mantique et lï¿½effort sur une API publique bien dï¿½finie peut
+faire fonctionner tout et tout le monde sans problï¿½me.
 
-### Que dois-je faire si j'ai accidentellement publié un changement
-rétro-incompatible dans une version mineure ?
+### Que dois-je faire si j'ai accidentellement publiï¿½ un changement
+rï¿½tro-incompatible dans une version mineure ?
 
-Dès que vous réalisez que vous avez cassé la spécification du Versionnement
-Sémantique, réglez le problème et sortez une nouvelle version mineure qui
-corrige le problème et restaure la rétro-compatibilité. Rappelez-vous, il est
-inacceptable de modifier les versions publiées, même dans ce cas. Documentez
-éventuellement la version en erreur et informez vos utilisateurs de ce problème.
+Dï¿½s que vous rï¿½alisez que vous avez cassï¿½ la spï¿½cification du Versionnement
+Sï¿½mantique, rï¿½glez le problï¿½me et sortez une nouvelle version mineure qui
+corrige le problï¿½me et restaure la rï¿½tro-compatibilitï¿½. Rappelez-vous, il est
+inacceptable de modifier les versions publiï¿½es, mï¿½me dans ce cas. Documentez
+ï¿½ventuellement la version en erreur et informez vos utilisateurs de ce problï¿½me.
 
-### Que dois-je faire si je mets à jour mes propres dépendances sans changer
+### Que dois-je faire si je mets ï¿½ jour mes propres dï¿½pendances sans changer
 l'API publique?
 
-Cela peut être considéré comme compatible, dans la mesure où cela n'affecte pas
-l'API publique. Un logiciel qui a les mêmes dépendances que votre composant
-devrait avoir ses propres dépendances et l'auteur remarquera s’il y a un
+Cela peut ï¿½tre considï¿½rï¿½ comme compatible, dans la mesure oï¿½ cela n'affecte pas
+l'API publique. Un logiciel qui a les mï¿½mes dï¿½pendances que votre composant
+devrait avoir ses propres dï¿½pendances et l'auteur remarquera sï¿½il y a un
 conflit.
-Déterminer si le changement est de niveau patch ou mineur dépend de la raison
-pour laquelle vous avez actualisé vos dépendances : était-ce pour corriger un
-bug ou introduire une nouvelle fonctionnalité ? On peut plutôt s’attendre à du
-code supplémentaire pour ce dernier cas, auquel cas c'est évidemment une version
+Dï¿½terminer si le changement est de niveau patch ou mineur dï¿½pend de la raison
+pour laquelle vous avez actualisï¿½ vos dï¿½pendances : ï¿½tait-ce pour corriger un
+bug ou introduire une nouvelle fonctionnalitï¿½ ? On peut plutï¿½t sï¿½attendre ï¿½ du
+code supplï¿½mentaire pour ce dernier cas, auquel cas c'est ï¿½videmment une version
 mineure.
 
-### Que dois-je faire si je corrige un bug pour faire en sorte qu’il soit
-conforme avec la documentation associée (autrement dit, le code était
-désynchronisé de la documentation du composant) ?
+### Que dois-je faire si je corrige un bug pour faire en sorte quï¿½il soit
+conforme avec la documentation associï¿½e (autrement dit, le code ï¿½tait
+dï¿½synchronisï¿½ de la documentation du composant) ?
 
-A vous de décider. Si vous avez un large public qui va être considérablement
-affecté en revenant à ce que l'API publique prévoyait, alors il peut être
-préférable de publier une version majeure, même si le correctif est considéré
-comme une version de patch. Rappelez-vous : le Versionnement Sémantique consiste
-essentiellement à transmettre du sens dans la façon dont le numéro de version
+A vous de dï¿½cider. Si vous avez un large public qui va ï¿½tre considï¿½rablement
+affectï¿½ en revenant ï¿½ ce que l'API publique prï¿½voyait, alors il peut ï¿½tre
+prï¿½fï¿½rable de publier une version majeure, mï¿½me si le correctif est considï¿½rï¿½
+comme une version de patch. Rappelez-vous : le Versionnement Sï¿½mantique consiste
+essentiellement ï¿½ transmettre du sens dans la faï¿½on dont le numï¿½ro de version
 change. Si ces changements sont importants pour vos utilisateurs, utilisez le
-numéro de version pour les informer.
+numï¿½ro de version pour les informer.
 
-### Comment dois-je traiter les fonctionnalités obsolètes ?
+### Comment dois-je traiter les fonctionnalitï¿½s obsolï¿½tes ?
 
-Les fonctionnalités obsolètes sont une part normale du développement de
-logiciels et il est souvent nécessaire d’aller de l'avant. Lorsque vous
-dépréciez une partie de votre API publique, vous devez faire deux choses :
-(1) mettre à jour la documentation pour tenir les utilisateurs au courant du
+Les fonctionnalitï¿½s obsolï¿½tes sont une part normale du dï¿½veloppement de
+logiciels et il est souvent nï¿½cessaire dï¿½aller de l'avant. Lorsque vous
+dï¿½prï¿½ciez une partie de votre API publique, vous devez faire deux choses :
+(1) mettre ï¿½ jour la documentation pour tenir les utilisateurs au courant du
 changement,
-(2) publier une nouvelle version mineure avec la dépréciation en place. Avant de
-supprimer complètement la fonctionnalité dans une nouvelle version majeure, il
-devrait y avoir au moins une version mineure qui contient la dépréciation de
+(2) publier une nouvelle version mineure avec la dï¿½prï¿½ciation en place. Avant de
+supprimer complï¿½tement la fonctionnalitï¿½ dans une nouvelle version majeure, il
+devrait y avoir au moins une version mineure qui contient la dï¿½prï¿½ciation de
 sorte que les utilisateurs puissent faire la transition en douceur.
 
 
-À propos
+ï¿½ propos
 --------
 
-La spécification du Versionnement Sémantique a été écrite par Tom
+La spï¿½cification du Versionnement Sï¿½mantique a ï¿½tï¿½ ï¿½crite par Tom
 Preston-Werner, l'inventeur des Gravatars et cofondateur de GitHub.
 
 Si vous souhaitez laisser des commentaires, veuillez ouvrir un sujet sur GitHub.
