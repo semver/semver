@@ -1,20 +1,20 @@
 Le Versionnement Sémantique 2.0.0-rc.1
 ======================================
 
-Dans le monde de la gestion de logiciels, il existe un endroit terrifiant appel�
-"l'enfer des d�pendances". Plus votre syst�me se d�veloppe et plus vous int�grez
-de composants dans votre logiciel, plus vous �tes susceptible de vous trouver,
-un jour, dans cette ab�me de d�sespoir.
+Dans le monde de la gestion de logiciels, il existe un endroit terrifiant appelé
+"l'enfer des dépendances". Plus votre système se développe et plus vous intégrez
+de composants dans votre logiciel, plus vous êtes susceptible de vous trouver,
+un jour, dans cette ab�me de désespoir.
 
-Dans les syst�mes avec de nombreuses d�pendances, publier une nouvelle version
-d�un composant peut vite devenir un cauchemar. Si les r�gles de d�pendance sont
-trop strictes, vous risquez de verrouiller les versions (incapacit� de mettre �
-jour un composant sans avoir � publier une nouvelle version de chaque composant
-qui en d�pend). Si les r�gles de d�pendances sont trop l�ches, vous allez
-in�vitablement �tre rattrap�s par la promiscuit� de version (supposer une
-compatibilit� avec plus de futures versions que raisonnable). L'enfer des
-d�pendances est l'endroit o� vous vous trouvez lorsque les verrous de versions
-et/ou la promiscuit� de versions vous emp�chent d�avancer sans risque dans votre
+Dans les systèmes avec de nombreuses dépendances, publier une nouvelle version
+d'un composant peut vite devenir un cauchemar. Si les règles de dépendance sont
+trop strictes, vous risquez de verrouiller les versions (incapacité de mettre à
+jour un composant sans avoir à publier une nouvelle version de chaque composant
+qui en dépend). Si les règles de dépendances sont trop lâches, vous allez
+inévitablement être rattrapés par la promiscuité de version (supposer une
+compatibilité avec plus de futures versions que raisonnable). L'enfer des
+dépendances est l'endroit où vous vous trouvez lorsque les verrous de versions
+et/ou la promiscuité de versions vous empêchent d'avancer sans risque dans votre
 projet.
 
 Comme solution � ce probl�me, je propose un ensemble de r�gles et exigences
