@@ -152,8 +152,7 @@ README pour que les autres connaissent les règles et puissent en bénéficier.
 FAQ
 ---
 
-### Comment dois-je gérer les révisions dans la phase initiale de développement
-0.y.z ?
+### Comment dois-je gérer les révisions dans la phase initiale de développement 0.y.z ?
 
 La chose la plus simple à faire est de commencer votre version de développement
 initial à 0.1.0 puis incrémenter la version mineure pour chaque version
@@ -172,9 +171,7 @@ La version majeure zéro est faite pour le développement rapide. Si vous décid
 de changer l'API tous les jours, vous devez soit être encore en version 0.x.x ou
 sur une branche de développement distincte de la prochaine version majeure.
 
-### Si même le plus petit changement incompatible à l'API publique nécessite une
-montée de version majeure, ne vais-je pas me retrouver à la version 42.0.0 très
-rapidement ?
+### Si même le plus petit changement incompatible à l'API publique nécessite une montée de version majeure, ne vais-je pas me retrouver à la version 42.0.0 très rapidement ?
 
 C'est une question de développement responsable et de prévoyance. Les
 changements rétro-incompatibles ne doivent pas être introduits à la légère dans
@@ -193,8 +190,7 @@ logiciel ou ne connait pas les bonnes méthodes à appeler. À long terme, le
 Versionnement Sémantique et l'effort sur une API publique bien définie peut
 faire fonctionner tout et tout le monde sans problème.
 
-### Que dois-je faire si j'ai accidentellement publié un changement
-rétro-incompatible dans une version mineure ?
+### Que dois-je faire si j'ai accidentellement publié un changement rétro-incompatible dans une version mineure ?
 
 Dès que vous réalisez que vous avez cassé la spécification du Versionnement
 Sémantique, réglez le problème et sortez une nouvelle version mineure qui
@@ -202,8 +198,7 @@ corrige le problème et restaure la rétro-compatibilité. Rappelez-vous, il est
 inacceptable de modifier les versions publiées, même dans ce cas. Documentez
 éventuellement la version en erreur et informez vos utilisateurs de ce probléme.
 
-### Que dois-je faire si je mets à jour mes propres dépendances sans changer
-l'API publique ?
+### Que dois-je faire si je mets à jour mes propres dépendances sans changer l'API publique ?
 
 Cela peut être considéré comme compatible, dans la mesure où cela n'affecte pas
 l'API publique. Un logiciel qui a les mêmes dépendances que votre composant
@@ -215,9 +210,7 @@ bug ou introduire une nouvelle fonctionnalité ? On peut plutôt s'attendre à d
 code supplémentaire pour ce dernier cas, auquel cas c'est évidemment une version
 mineure.
 
-### Que dois-je faire si je corrige un bug pour faire en sorte qu'il soit
-conforme avec la documentation associée (autrement dit, le code était
-désynchronisé de la documentation du composant) ?
+### Que dois-je faire si je corrige un bug pour faire en sorte qu'il soit conforme avec la documentation associée (autrement dit, le code était désynchronisé de la documentation du composant) ?
 
 A vous de décider. Si vous avez un large public qui va être considérablement
 affecté en revenant à ce que l'API publique prévoyait, alors il peut être
