@@ -73,7 +73,7 @@ incompatible changes are introduced to the public API. It MAY include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
-1. A pre-release version MAY be denoted by appending a dash and a series of
+1. A pre-release version MAY be denoted by appending a hyphen and a series of
 dot separated identifiers immediately following the patch version. Identifiers
 MUST be comprised of only ASCII alphanumerics and dash [0-9A-Za-z-].
 Pre-release versions satisfy but have a lower precedence than the associated
