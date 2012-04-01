@@ -87,16 +87,16 @@ DOIVENT être remis à 0 lorsque la version majeure est incrémentée.
 série d'identifiants séparés par des points suivant immédiatement la version de
 patch. Les identifiants DOIVENT être composés uniquement de caractères
 alphanumériques ASCII et de tirets [0-9A-Za-z-]. Des versions de prépublication
-sont utilisables, mais ont une priorité moindre par rapport à la version normale
-associée. Exemples : 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
+sont utilisables et précèdent la version normale associée (version de prépublication < version normale). 
+Exemples : 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
 1. Une version de construction PEUT être représentée par l'ajout d'un signe
 "plus" et d'une série d'identifiants séparés par des points suivant
 immédiatement la version de patch ou de prépublication. Les identifiants DOIVENT
 être composés uniquement de caractères alphanumériques ASCII et de tirets
-[0-9A-Za-z-]. Les versions de construction sont utilisables et ont une priorité
-plus élevée que la version normale associée. Exemples: 1.0.0+build.1,
-1.3.7+build.11.e0f985a.
+[0-9A-Za-z-]. Les versions de construction sont utilisables et suivent 
+la version normale associée (version de construction > version normale). 
+Exemples: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
 
 1. La priorité DOIT être calculée en séparant les numéros de version en
 identifiants majeur, mineur, patch, prépublication et de construction dans cet
@@ -105,8 +105,8 @@ numériquement. Pour les versions de prépublication et de construction, la
 priorité DOIT être déterminée en comparant chaque identifiant séparé par un
 point comme suit : les identifiants composés de chiffres seulement sont comparés
 numériquement et les identifiants composés de lettres ou de tirets sont comparés
-dans l'ordre de tri ASCII. Les identifiants numériques ont toujours priorité
-inférieure par rapport aux identifiants non numériques. Exemple : 1.0.0-alpha <
+dans l'ordre de tri ASCII. Les identifiants numériques précèdent les identifiants non numériques 
+(identifiants numériques < identifiants non-numériques). Exemple : 1.0.0-alpha <
 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-RC.1 < 1.0.0-RC.1+build.1 <
 1.0.0 < 1.0.0+0.3.7 < 1.3.7+build < 1.3.7+build.2.b8f12d7 <
 1.3.7+build.11.e0f985a.
