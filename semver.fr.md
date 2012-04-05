@@ -1,20 +1,20 @@
-Le Versionnement Sémantique 2.0.0-rc.1
+Le versionnement sémantique 2.0.0-rc.1
 ======================================
 
 Dans le monde de la gestion de logiciels, il existe un endroit terrifiant appelé
-"l'enfer des dépendances". Plus votre système se développe et plus vous intégrez
-de composants dans votre logiciel, plus vous êtes susceptible de vous trouver,
-un jour, dans cette abîme de désespoir.
+"l'enfer des dépendances" (de l'anglais dependencies hell). Plus votre système
+se développe et plus vous intégrez de composants dans votre logiciel, plus vous
+êtes susceptible de vous trouver un jour dans cette abîme de désespoir.
 
 Dans les systèmes avec de nombreuses dépendances, publier une nouvelle version
 d'un composant peut vite devenir un cauchemar. Si les règles de dépendance sont
 trop strictes, vous risquez de verrouiller les versions (incapacité de mettre à
 jour un composant sans avoir à publier une nouvelle version de chaque composant
 qui en dépend). Si les règles de dépendances sont trop lâches, vous allez
-inévitablement être rattrapés par la promiscuité de version (supposer une
+inévitablement être rattrapé par la promiscuité de version (supposez une
 compatibilité avec plus de futures versions que raisonnable). L'enfer des
 dépendances est l'endroit où vous vous trouvez lorsque les verrous de versions
-et/ou la promiscuité de versions vous empêchent d'avancer sans risque dans votre
+ou la promiscuité de versions vous empêchent d'avancer sans risque dans votre
 projet.
 
 Comme solution à ce problème, je propose un ensemble de règles et exigences
@@ -22,23 +22,23 @@ simples qui dictent la façon dont les numéros de version sont attribués et
 incrémentés. Pour que ce système fonctionne, vous devez d'abord déclarer une API
 publique. Il peut s'agir d'un document ou de règles appliquées par le code
 lui-même. Quoiqu'il en soit, il est important que cette API soit claire et
-précise. Une fois qu'elle est prête, vous lui communiquez les modifications avec
+précise. Une fois que celle-ci est prête, vous communiquez ses modifications avec
 les incrémentations spécifiques à votre numéro de version. Considérons le format
 de version "X.Y.Z" (Majeur.Mineur.Patch). Les correctifs n'affectant pas l'API
 incrémentent la version de patch, des ajouts ou modifications rétro-compatibles
 incrémentent la version mineure et les modifications rétro-incompatibles
 incrémentent la version majeure.
 
-J'appelle ce système "Versionnement Sémantique". Avec ce système, les numéros
+J'appelle ce système "versionnement sémantique". Avec ce système, les numéros
 de version et la façon dont ils changent donnent du sens au code sous-jacent et
 à ce qui a été modifié d'une version à l'autre.
 
 
-Spécifications du Versionnement Sémantique (SemVer)
+Spécifications du versionnement sémantique (SemVer)
 ---------------------------------------------------
 
-Les mots clés "DOIT", "NE DOIT PAS", "REQUIS", "DEVRAIT", "NE DEVRAIT PAS",
-"RECOMMANDÉ", "PEUT", et "FACULTATIF" dans ce document doivent être interprétés
+Les mots clés "DOIT", "NE DOIT PAS", "OBLIGATOIRE", "DEVRAIT", "NE DEVRAIT PAS",
+"RECOMMANDÉ", "PEUT", et "OPTIONNEL" dans ce document doivent être interprétés
 comme décrit dans la RFC 2119.
 
 1. Tout logiciel utilisant le Versionnement Sémantique DOIT déclarer une API
@@ -60,7 +60,7 @@ version NE DOIT PAS être modifié. Toute modification doit être publiée comme
 nouvelle version.
 
 1. La version majeure zéro (0.y.z) sert au développement initial. Tout peut
-changer à tout moment. L'API publique ne doit pas être considérée comme stable.
+changer à tout moment. L'API publique ne devrait pas être considérée comme stable.
 
 1. La version 1.0.0 définit l'API publique. La façon dont le numéro de version
 est incrémenté après la publication est dépendante de cette API publique.
@@ -71,23 +71,24 @@ d'anomalie est définie comme un changement interne qui corrige un comportement
 incorrect.
 
 1. La version mineure Y (x.Y.z | x > 0) DOIT être incrémentée si une nouvelle
-fonctionnalité, rétro-compatible est introduite à l'API publique. Elle DOIT être
-incrémentée si une fonctionnalité de l'API publique est marquée comme obsolète.
-Elle PEUT être incrémentée si une nouvelle fonctionnalité ou amélioration est
-introduite dans le code privé. Elle PEUT inclure des changements de niveau de
-patch. La version de patch DOIT être remise à 0 lorsque la version mineure est
-incrémentée.
+fonctionnalité rétro-compatible est introduite dans l'API publique. Elle DOIT
+être incrémentée si une fonctionnalité de l'API publique est marquée comme
+obsolète. Elle PEUT être incrémentée si une nouvelle fonctionnalité ou
+amélioration est introduite dans le code privé. Elle PEUT inclure des
+changements de niveau de patch. La version de patch DOIT être remise à 0 lorsque
+la version mineure est incrémentée.
 
 1. La version majeure X (X.y.z | X > 0) DOIT être incrémentée si des changements
 rétro-incompatibles sont introduits à l'API publique. Elle PEUT inclure des
 changements mineurs et de patch. Les numéros de version de patch et mineurs
 DOIVENT être remis à 0 lorsque la version majeure est incrémentée.
 
-1. Une version de prépublication PEUT être notée par l'ajout d'un tiret et une
+1. Une version admissible PEUT être notée par l'ajout d'un tiret et une
 série d'identifiants séparés par des points suivant immédiatement la version de
 patch. Les identifiants DOIVENT être composés uniquement de caractères
 alphanumériques ASCII et de tirets [0-9A-Za-z-]. Des versions de prépublication
-sont utilisables et précèdent la version normale associée (version de prépublication < version normale). 
+sont utilisables et précèdent la version normale associée (version de
+prépublication < version normale). 
 Exemples : 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
 1. Une version de construction PEUT être représentée par l'ajout d'un signe
@@ -98,34 +99,34 @@ immédiatement la version de patch ou de prépublication. Les identifiants DOIVE
 la version normale associée (version de construction > version normale). 
 Exemples: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
 
-1. La priorité DOIT être calculée en séparant les numéros de version en
-identifiants majeur, mineur, patch, prépublication et de construction dans cet
-ordre. Les numéros de version majeur, mineur, et de patch sont toujours comparés
-numériquement. Pour les versions de prépublication et de construction, la
-priorité DOIT être déterminée en comparant chaque identifiant séparé par un
+1. La priorité DOIT être calculée en séparant les numéros de version, dans
+l'ordre, en identifiants majeur, mineur, patch, de prépublication et de
+construction. Les numéros de version majeur, mineur, et de patch sont toujours
+comparés numériquement. Pour les versions de prépublication et de construction,
+la priorité DOIT être déterminée en comparant chaque identifiant séparé par un
 point comme suit : les identifiants composés de chiffres seulement sont comparés
 numériquement et les identifiants composés de lettres ou de tirets sont comparés
-dans l'ordre de tri ASCII. Les identifiants numériques précèdent les identifiants non numériques 
-(identifiants numériques < identifiants non-numériques). Exemple : 1.0.0-alpha <
-1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-RC.1 < 1.0.0-RC.1+build.1 <
-1.0.0 < 1.0.0+0.3.7 < 1.3.7+build < 1.3.7+build.2.b8f12d7 <
-1.3.7+build.11.e0f985a.
+dans l'ordre de tri ASCII. Les identifiants numériques précèdent les
+identifiants non numériques (identifiants numériques < identifiants
+non-numériques). Exemple : 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 <
+1.0.0-beta.11 < 1.0.0-RC.1 < 1.0.0-RC.1+build.1 < 1.0.0 < 1.0.0+0.3.7 <
+1.3.7+build < 1.3.7+build.2.b8f12d7 < 1.3.7+build.11.e0f985a.
 
 
-Pourquoi utiliser le Versionnement Sémantique ?
+Pourquoi utiliser le versionnement sémantique ?
 -----------------------------------------------
 
-Ce n'est pas une idée nouvelle ni révolutionnaire. En fait, vous utilisez
-probablement déjà un système proche de celui-ci. Le problème est que "proche"
-n'est pas suffisant. Sans le respect d'une certaine forme de spécification, les
-numéros de version sont essentiellement inutiles pour la gestion des
-dépendances. En donnant un nom et une définition claire aux idées ci-dessus, il
-devient facile de communiquer vos intentions pour les utilisateurs de votre
-logiciel. Une fois que ces intentions sont claires, souples (mais pas trop
-souples) les spécifications de dépendances peuvent enfin se faire.
+Cette idée n'est ni nouvelle ni révolutionnaire. Vous utilisez déjà probablement
+un système similaire. Le problème est que "similaire" n'est pas suffisant. Seul
+le respect d'une certaine forme de spécification peut garantirt que les numéros
+de version soient une information utile pour la gestion des dépendances. En
+donnant un nom et une définition claire aux idées ci-dessus, il devient facile
+de communiquer vos intentions pour les utilisateurs de votre logiciel. Une fois
+que ces intentions sont claires, souples (mais pas trop souples) les
+spécifications de dépendances peuvent enfin se faire.
 
-Un exemple simple montrera comment le Versionnement Sémantique peut faire de
-l'enfer des dépendances une chose du passé. Considérons une librairie appelée 
+Un exemple simple montrera comment le versionnement sémantique peut faire de
+l'enfer des dépendances une chose du passé. Considérons une bibliothèque appelée 
 "CamionDePompier". Elle nécessite un composant Sémantiquement Versionné nommé
 "Échelle". Au moment où CamionDePompier est créé, Échelle est à la version
 3.1.0. Puisque CamionDePompier utilise des fonctionnalités de la version 3.1.0,
@@ -135,9 +136,9 @@ d'Échelle deviennent disponibles, vous pouvez les communiquer à votre système
 gestion de composants et savoir qu'ils seront compatibles avec les logiciels
 existants dépendants.
 
-En tant que développeur responsable, bien sûr, vous voudrez vérifier que toute
-mise à jour de composant fonctionne comme annoncé. Le monde réel étant ce qu'il
-est, il n'y a rien que nous puissions faire sinon être vigilant. Ce que vous
+En tant que développeur responsable, vous voudrez bien sûr vérifier que toute
+mise à jour de composant fonctionne comme annoncée. Le monde réel étant ce qu'il
+est, il n'y a rien que nous puissions faire, sinon d'être vigilant. Ce que vous
 pouvez faire est de laisser le Versionnement Sémantique vous offrir une façon
 saine de publier et mettre à niveau des composants, sans avoir à publier une
 nouvelle version pour tous les composants dépendants, vous permettant ainsi
@@ -155,7 +156,7 @@ FAQ
 ### Comment dois-je gérer les révisions dans la phase initiale de développement 0.y.z ?
 
 La chose la plus simple à faire est de commencer votre version de développement
-initial à 0.1.0 puis incrémenter la version mineure pour chaque version
+initial à 0.1.0 puis d'incrémenter la version mineure pour chaque version
 ultérieure.
 
 ### Comment puis-je savoir quand publier la version 1.0.0 ?
@@ -187,13 +188,13 @@ documenter tout logiciel qui est destiné à être utilisé par d'autres. Gérer
 complexité du logiciel est une partie très importante pour garder un projet
 efficace, et c'est difficile à faire si personne ne sait comment utiliser votre
 logiciel ou ne connait pas les bonnes méthodes à appeler. À long terme, le
-Versionnement Sémantique et l'effort sur une API publique bien définie peut
+versionnement sémantique et l'effort sur une API publique bien définie peut
 faire fonctionner tout et tout le monde sans problème.
 
 ### Que dois-je faire si j'ai accidentellement publié un changement rétro-incompatible dans une version mineure ?
 
-Dès que vous réalisez que vous avez cassé la spécification du Versionnement
-Sémantique, réglez le problème et sortez une nouvelle version mineure qui
+Dès que vous réalisez que vous avez cassé la spécification du versionnement
+sémantique, réglez le problème et sortez une nouvelle version mineure qui
 corrige le problème et restaure la rétro-compatibilité. Rappelez-vous, il est
 inacceptable de modifier les versions publiées, même dans ce cas. Documentez
 éventuellement la version en erreur et informez vos utilisateurs de ce probléme.
@@ -215,10 +216,10 @@ mineure.
 A vous de décider. Si vous avez un large public qui va être considérablement
 affecté en revenant à ce que l'API publique prévoyait, alors il peut être
 préférable de publier une version majeure, même si le correctif est considéré
-comme une version de patch. Rappelez-vous : le Versionnement Sémantique consiste
+comme une version de patch. Rappelez-vous : le versionnement sémantique consiste
 essentiellement à transmettre du sens dans la façon dont le numéro de version
 change. Si ces changements sont importants pour vos utilisateurs, utilisez le
-numéro de version pour les informer.
+numéro de version pour les en informer.
 
 ### Comment dois-je traiter les fonctionnalités obsolètes ?
 
@@ -230,13 +231,13 @@ changement,
 (2) publier une nouvelle version mineure avec la dépréciation en place. Avant de
 supprimer complètement la fonctionnalité dans une nouvelle version majeure, il
 devrait y avoir au moins une version mineure qui contient la dépréciation de
-sorte que les utilisateurs puissent faire la transition en douceur.
+sorte que les utilisateurs puissent effectuer la transition en douceur.
 
 
 À propos
 --------
 
-La spécification du Versionnement Sémantique a été écrite par Tom
+La spécification du versionnement sémantique a été écrite par Tom
 Preston-Werner, l'inventeur des Gravatars et cofondateur de GitHub.
 
 Si vous souhaitez laisser des commentaires, veuillez ouvrir un sujet sur GitHub.
