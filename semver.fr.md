@@ -2,7 +2,7 @@ Le versionnement sémantique 2.0.0-rc.1
 ======================================
 
 Dans le monde de la gestion de logiciels, il existe un endroit terrifiant appelé
-"l'enfer des dépendances" (de l'anglais dependencies hell). Plus votre système
+"l'enfer des dépendances" (de l'anglais dependency hell). Plus votre système
 se développe et plus vous intégrez de composants dans votre logiciel, plus vous
 êtes susceptible de vous trouver un jour dans cette abîme de désespoir.
 
@@ -11,7 +11,7 @@ d'un composant peut vite devenir un cauchemar. Si les règles de dépendance son
 trop strictes, vous risquez de verrouiller les versions (incapacité de mettre à
 jour un composant sans avoir à publier une nouvelle version de chaque composant
 qui en dépend). Si les règles de dépendances sont trop lâches, vous allez
-inévitablement être rattrapé par la promiscuité de version (supposez une
+inévitablement être rattrapé par la promiscuité de version (supposer une
 compatibilité avec plus de futures versions que raisonnable). L'enfer des
 dépendances est l'endroit où vous vous trouvez lorsque les verrous de versions
 ou la promiscuité de versions vous empêchent d'avancer sans risque dans votre
@@ -83,26 +83,25 @@ rétro-incompatibles sont introduits à l'API publique. Elle PEUT inclure des
 changements mineurs et de patch. Les numéros de version de patch et mineurs
 DOIVENT être remis à 0 lorsque la version majeure est incrémentée.
 
-1. Une version admissible PEUT être notée par l'ajout d'un tiret et une
-série d'identifiants séparés par des points suivant immédiatement la version de
-patch. Les identifiants DOIVENT être composés uniquement de caractères
-alphanumériques ASCII et de tirets [0-9A-Za-z-]. Des versions de prépublication
-sont utilisables et précèdent la version normale associée (version de
-prépublication < version normale). 
+1. Une version admissible (de l'anglais pre-release) PEUT être notée par l'ajout
+d'un tiret et une série d'identifiants séparés par des points suivant immédiatement
+la version de patch. Les identifiants DOIVENT être composés uniquement de caractères
+alphanumériques ASCII et de tirets [0-9A-Za-z-]. Des versions admissibles
+sont utilisables et précèdent la version normale associée (version admissible < version normale). 
 Exemples : 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
 1. Une version de construction PEUT être représentée par l'ajout d'un signe
 "plus" et d'une série d'identifiants séparés par des points suivant
-immédiatement la version de patch ou de prépublication. Les identifiants DOIVENT
+immédiatement la version de patch ou admissible. Les identifiants DOIVENT
 être composés uniquement de caractères alphanumériques ASCII et de tirets
 [0-9A-Za-z-]. Les versions de construction sont utilisables et suivent 
 la version normale associée (version de construction > version normale). 
 Exemples: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
 
 1. La priorité DOIT être calculée en séparant les numéros de version, dans
-l'ordre, en identifiants majeur, mineur, patch, de prépublication et de
+l'ordre, en identifiants majeur, mineur, patch, de admissible et de
 construction. Les numéros de version majeur, mineur, et de patch sont toujours
-comparés numériquement. Pour les versions de prépublication et de construction,
+comparés numériquement. Pour les versions admissible et de construction,
 la priorité DOIT être déterminée en comparant chaque identifiant séparé par un
 point comme suit : les identifiants composés de chiffres seulement sont comparés
 numériquement et les identifiants composés de lettres ou de tirets sont comparés
@@ -118,7 +117,7 @@ Pourquoi utiliser le versionnement sémantique ?
 
 Cette idée n'est ni nouvelle ni révolutionnaire. Vous utilisez déjà probablement
 un système similaire. Le problème est que "similaire" n'est pas suffisant. Seul
-le respect d'une certaine forme de spécification peut garantirt que les numéros
+le respect d'une certaine forme de spécification peut garantir que les numéros
 de version soient une information utile pour la gestion des dépendances. En
 donnant un nom et une définition claire aux idées ci-dessus, il devient facile
 de communiquer vos intentions pour les utilisateurs de votre logiciel. Une fois
