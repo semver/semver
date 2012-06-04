@@ -73,13 +73,6 @@ incompatible changes are introduced to the public API. It MAY include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
-1. A pre-release version MAY be denoted by appending a hyphen and a series of
-dot separated identifiers immediately following the patch version. Identifiers
-MUST be comprised of only ASCII alphanumerics and dash [0-9A-Za-z-].
-Pre-release versions satisfy but have a lower precedence than the associated
-normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
-
 1. A build version MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch version or pre-release
 version. Identifiers MUST be comprised of only ASCII alphanumerics and dash
@@ -87,6 +80,29 @@ version. Identifiers MUST be comprised of only ASCII alphanumerics and dash
 associated normal version. Examples: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
 
 1. Precedence MUST be calculated by separating the version into major, minor,
+patch, and build identifiers in that order. Major, minor, and
+patch versions are always compared numerically. Build version
+precedence MUST be determined by comparing each dot separated identifier as
+follows: identifiers consisting of only digits are compared numerically and
+identifiers with letters or dashes are compared lexically in ASCII sort order.
+Numeric identifiers always have lower precedence than non-numeric identifiers.
+Example: 1.0.0 < 1.0.0+0.3.7 < 1.3.7+build <1.3.7+build.2.b8f12d7 < 
+1.3.7+build.11.e0f985a.
+
+Development support
+------------------------------------------
+1. A pre-release version MAY be denoted by appending a hyphen and a series of
+dot separated identifiers immediately following the patch version. Identifiers
+MUST be comprised of only ASCII alphanumerics and dash [0-9A-Za-z-].
+Pre-release versions satisfy but have a lower precedence than the associated
+normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
+
+1. Any version number containing a pre-release element (x.y.z-BETA1) is for 
+intermediate development and MUST NOT be used to determine API 
+compatibility, it MAY be used to determine the development order. Anything 
+may change at any time. The public API should not be considered stable.
+
+1. Development order MUST be calculated by separating the version into major, minor,
 patch, pre-release, and build identifiers in that order. Major, minor, and
 patch versions are always compared numerically. Pre-release and build version
 precedence MUST be determined by comparing each dot separated identifier as
