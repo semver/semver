@@ -174,7 +174,7 @@ API can keep everyone and everything running smoothly.
 
 As soon as you realize that you've broken the Semantic Versioning spec, fix
 the problem and release a new minor version that corrects the problem and
-restores backwards compatibility. Remember, it is unacceptable to modify
+restores backwards compatibility. It remains unacceptable to modify
 versioned releases, even under this circumstance. If it's appropriate,
 document the offending version and inform your users of the problem so that
 they are aware of the offending version.
