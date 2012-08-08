@@ -209,6 +209,12 @@ there should be at least one minor release that contains the deprecation so
 that users can smoothly transition to the new API.
 
 
+Semantic Versioning In Other Languages
+-----
+
+[semver.ir](http://semver.ir) - Persian
+
+
 About
 -----
 
