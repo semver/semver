@@ -144,79 +144,88 @@ altri possano apprendere le regole e possano trarne a loro volta benefici.
 FAQ
 ---
 
-### How should I deal with revisions in the 0.y.z initial development phase?
+### Come mi dovrei trattare le revisioni 0.y.z nella fase iniziale dello sviluppo?
 
-The simplest thing to do is start your initial development release at 0.1.0
-and then increment the minor version for each subsequent release.
+La cosa più semplice da fare è quella di cominciare con un rilascio iniziale di sviluppo alla 0.1.0
+e incrementare sucessivamente la versione minor ad ogni nuovo rilascio.
 
-### How do I know when to release 1.0.0?
+### Quando decido di passare alla release 1.0.0?
 
-If your software is being used in production, it should probably already be
-1.0.0. If you have a stable API on which users have come to depend, you should
-be 1.0.0. If you're worrying a lot about backwards compatibility, you should
-probably already be 1.0.0.
+Se il tuo software è usato in produzione, dovrebbe probabilmente già essere in versione 1.0.0.
+Se si hanno delle API stabili su cui gli utenti possono cominciare a stabilire delle dipendenze,
+allora si dovrebbe già essere in 1.0.0.
+Se ci si stanno ponendo dubbi sulla retrocomaptibilità, allora si dovrebbe già essere in 1.0.0.
 
-### Doesn't this discourage rapid development and fast iteration?
+### Tutto ciò non disincentiva lo sviluppo rapido e le iterazioni veloci?
 
-Major version zero is all about rapid development. If you're changing the API
-every day you should either still be in version 0.x.x or on a separate
-development branch working on the next major version.
+La versione major zero è tutta oriantata allo sviluppo rapido. Se si stanno cambiando quotidianamente
+le API, o si è ancora in version 0.x.x, oppure in un ramo di sviluppo separato, al lavoro sulla prossima
+versione major.
 
-### If even the tiniest backwards incompatible changes to the public API require a major version bump, won't I end up at version 42.0.0 very rapidly?
+### Se anche la minima modifica non retrocompatibile alle API pubbliche richiede l'avanzamento di versione major, non si rischia di finire alla versione 42.0.0 troppo in fretta?
 
-This is a question of responsible development and foresight. Incompatible
-changes should not be introduced lightly to software that has a lot of
-dependent code. The cost that must be incurred to upgrade can be significant.
-Having to bump major versions to release incompatible changes means you'll
-think through the impact of your changes, and evaluate the cost/benefit ratio
-involved.
+Qui si tratta di una questione di sviluppo responsabile e lungimiranza.
+Le modifiche che introducono incompatibilità non dovrebbero essere introdotte
+alla leggera nel software che ha molte dipendenze con altro codice. Il costo 
+nel quale si potrebbe incappare per un eventuale aggiornamento dell'altro
+software potrebbe essere non trascurabile.
+Il fatto di dover portare avanti la versione major al ogni rilascio di modifiche incompatibili
+implica che si sia indotti a pensare molto bene all'impatto delle proprie scelte e a valutare
+altrettanto bene il rapporto costo/beneficio del cambiamento.
 
-### Documenting the entire public API is too much work!
+### La documentazione dei tutte le API pubbliche è un lavoro troppo oneroso!
 
-It is your responsibility as a professional developer to properly document
-software that is intended for use by others. Managing software complexity is a
-hugely important part of keeping a project efficient, and that's hard to do if
-nobody knows how to use your software, or what methods are safe to call. In
-the long run, Semantic Versioning, and the insistence on a well defined public
-API can keep everyone and everything running smoothly.
+Rientra nelle responsabilità di uno sviluppatore professionista la corretta documentazione
+del software che si intende fornire a disposizione di altri. La gestione della complessità
+del software è una grossa e importante parte del compito di mantenere efficiente un progetto
+ed è difficile farlo se nessuno sa come si usa il vostro software, o quali metodi possono 
+essere invocati in modo sicuro. Nel lungo termine, il Semantic Versioning, e la disciplina 
+nel mantenere un ben definito insieme di API pubbliche, può fare in modo che tutto
+proceda in modo liscio.
 
-### What do I do if I accidentally release a backwards incompatible change as a minor version?
+### Cosa facico se per sbaglio rilascio una modifica non retrocompatibile come una versione minor?
 
-As soon as you realize that you've broken the Semantic Versioning spec, fix
-the problem and release a new minor version that corrects the problem and
-restores backwards compatibility. Remember, it is unacceptable to modify
-versioned releases, even under this circumstance. If it's appropriate,
-document the offending version and inform your users of the problem so that
-they are aware of the offending version.
+Non appena ci si accorge di aver violato la specifica del Semantic Versioning, si deve
+correggere il problema e rilasciare una nuova versione minor che ripristini la 
+retrocompatibilità. Si tenga sempre presente che è inaccettabile cambiare le versioni
+già rilasciate, anhe in questa circostana. Se è il caso, tuttalpiù, si documenti opportunamente
+la versione errata e si informino gli utenti del problema, affinché siano al corrente del
+problema.
 
-### What should I do if I update my own dependencies without changing the public API?
+### Cosa devo fare se aggiorno le mie stesse dipendenze senza cambiare l'interfaccia pubblica delle mie API?
 
-That would be considered compatible since it does not affect the public API.
-Software that explicitly depends on the same dependencies as your package
-should have their own dependency specifications and the author will notice any
-conflicts. Determining whether the change is a patch level or minor level
-modification depends on whether you updated your dependencies in order to fix
-a bug or introduce new functionality. I would usually expect additional code
-for the latter instance, in which case it's obviously a minor level increment.
+Un'operazione del genere è da considerarsi compatibilie, in quanto non intacca le API pubbliche.
+Il software che ha dipendenze esplicite nei confronti delle medesime dipendenze del vostro package
+dovrebbe avere le proprie specifiche di dipendenza e l'autore noterà eventuali conflitti.
+Stabilire se la modifica debba considerarsi a livello di patch o di minor dipende sostanzialmente
+dalle ragioni per cui si è deciso di procedere all'aggiornamento di dipendenze sul proprio package:
+se lo si è fatto per correggere un'anomalia, piuttosto che per introdurre nuove funzionalità.
+Tipicamente mi aspetterei ulteriore codice nel secondo caso, per cui in tal caso si tratterebbe 
+ovviamente di una nuova versione minor.
 
-### What should I do if the bug that is being fixed returns the code to being compliant with the public API (i.e. the code was incorrectly out of sync with the public API documentation)?
+### Che cosa devo fare se è il codice correttivo dell'anomalia risolta a fare in modo che il codice sia aderente alle API pubbliche (es. il codice era erroneamente disallineato rispetto alla documentazione delle API pubbliche)?
 
-Use your best judgment. If you have a huge audience that will be drastically
-impacted by changing the behavior back to what the public API intended, then
-it may be best to perform a major version release, even though the fix could
-strictly be considered a patch release. Remember, Semantic Versioning is all
-about conveying meaning by how the version number changes. If these changes
-are important to your users, use the version number to inform them.
+Si usi il buon senso. Se si ha un audience così vasta per il proprio package che 
+la modificha avrebbe un impatto evidentemente molto importante, riportando 
+il comportamento ad una situazione coerente con ciò che era inteso dalle specifiche
+della documentazione pubblica delle API, allora potrebbe valer la pena di rilasciare 
+il tutto come una nuova versione major, anche se tecnicamente si tratterebbe solo 
+di una correzione di livello patch. 
+Si ricordi che il Semantic Versioning è funzionale alla definizione di un significato
+condiviso sul cambio del numero i versione. Se queste modifiche sono importanti per i
+vostri utenti, si utilizzi il numero di versione in modo opportuno per informarli in
+merito.
 
-### How should I handle deprecating functionality?
+### Come devo trattare le funzionalità deprecate?
 
-Deprecating existing functionality is a normal part of software development and
-is often required to make forward progress. When you deprecate part of your
-public API, you should do two things: (1) update your documentation to let
-users know about the change, (2) issue a new minor release with the deprecation
-in place. Before you completely remove the functionality in a new major release
-there should be at least one minor release that contains the deprecation so
-that users can smoothly transition to the new API.
+La deprecazione di parti esistenti di funzionalità è un processo normale dello sviluppo
+del software e spesso si rende necessario per realizzare dei progressi. Quando si 
+depreca una parte delle proprie API pubbliche, si devono fare due cose:
+(1) aggiornare la documentazione per notificare gli utenti circa il cambiamento
+(2) preventivare un nuovo rilascio di versione minor contenente la deprecazione.
+Prima di rimuovere completamente la funzionalità in un ulteriore nuovo rilascio major,
+dovrebbe intercorrere almeno una minor release contenente la deprecazione, al fine di permettere
+agli utenti della vostra libreria una transizione non traumatica alle nuove API.
 
 
 About
