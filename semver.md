@@ -75,14 +75,14 @@ version is incremented.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a series of
 dot separated identifiers immediately following the patch version. Identifiers
-MUST be comprised of only ASCII alphanumerics and dash [0-9A-Za-z-].
+MUST be comprised of only ASCII alphanumerics and hyphen [0-9A-Za-z-].
 Pre-release versions satisfy but have a lower precedence than the associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1.0.0-x.7.z.92.
 
 1. A build version MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch version or pre-release
-version. Identifiers MUST be comprised of only ASCII alphanumerics and dash
+version. Identifiers MUST be comprised of only ASCII alphanumerics and hyphen
 [0-9A-Za-z-]. Build versions satisfy and have a higher precedence than the
 associated normal version. Examples: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
 
@@ -91,7 +91,7 @@ patch, pre-release, and build identifiers in that order. Major, minor, and
 patch versions are always compared numerically. Pre-release and build version
 precedence MUST be determined by comparing each dot separated identifier as
 follows: identifiers consisting of only digits are compared numerically and
-identifiers with letters or dashes are compared lexically in ASCII sort order.
+identifiers with letters or hyphens are compared lexically in ASCII sort order.
 Numeric identifiers always have lower precedence than non-numeric identifiers.
 Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 <
 1.0.0-rc.1 < 1.0.0-rc.1+build.1 < 1.0.0 < 1.0.0+0.3.7 < 1.3.7+build <
