@@ -48,7 +48,7 @@ is the patch version. Each element MUST increase numerically by increments of
 one. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
 1. Once a versioned package has been released, the contents of that version
-MUST NOT be modified. Any modifications must be released as a new version.
+MUST NOT be modified. Any modifications MUST be released as a new version.
 
 1. Major version zero (0.y.z) is for initial development. Anything may change
 at any time. The public API should not be considered stable.
