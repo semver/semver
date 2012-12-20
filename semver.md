@@ -149,7 +149,7 @@ probably already be 1.0.0.
 ### Doesn't this discourage rapid development and fast iteration?
 
 Major version zero is all about rapid development. If you're changing the API
-every day you should either still be in version 0.x.x or on a separate
+every day you should either still be in version 0.y.z or on a separate
 development branch working on the next major version.
 
 ### If even the tiniest backwards incompatible changes to the public API require a major version bump, won't I end up at version 42.0.0 very rapidly?
