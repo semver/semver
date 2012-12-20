@@ -57,9 +57,10 @@ at any time. The public API should not be considered stable.
 is incremented after this release is dependent on this public API and how it
 changes.
 
-1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
-compatible bug fixes are introduced. A bug fix is defined as an internal
-change that fixes incorrect behavior.
+1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
+incompatible changes are introduced to the public API. It MAY include minor
+and patch level changes. Patch and minor version MUST be reset to 0 when major
+version is incremented.
 
 1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
 compatible functionality is introduced to the public API. It MUST be
@@ -68,10 +69,9 @@ incremented if substantial new functionality or improvements are introduced
 within the private code. It MAY include patch level changes. Patch version
 MUST be reset to 0 when minor version is incremented.
 
-1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
-incompatible changes are introduced to the public API. It MAY include minor
-and patch level changes. Patch and minor version MUST be reset to 0 when major
-version is incremented.
+1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
+compatible bug fixes are introduced. A bug fix is defined as an internal
+change that fixes incorrect behavior.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a series of
 dot separated identifiers immediately following the patch version. Identifiers
