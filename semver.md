@@ -80,11 +80,16 @@ Pre-release versions satisfy but have a lower precedence than the associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1.0.0-x.7.z.92.
 
-1. A build version MAY be denoted by appending a plus sign and a series of dot
-separated identifiers immediately following the patch version or pre-release
-version. Identifiers MUST be comprised of only ASCII alphanumerics and hyphen
-[0-9A-Za-z-]. Build versions satisfy and have a higher precedence than the
-associated normal version. Examples: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
+1. Unique build versions MAY be denoted by appending a plus and a series of
+dot separated identifiers immediately following the patch or pre-release version.
+Identifiers MUST be comprised of only ASCII alphanumerics and hyphen [0-9A-Za-z-].
+Unique build versions satisfy but have a lower precedence than the associated
+normal or pre-release version. Examples: 1.0.0+build.1, 1.3.7-alpha.1+build.11.e0f985a.
+
+1. Unique build versions MAY be used to declare a reference within an otherwise
+ambiguous sequence, as exists in the artifacts produced by a build server, but
+MUST NOT be used to indicate an upgrade when incrementing the patch or pre-release
+version is semantically appropriate.
 
 1. Precedence MUST be calculated by separating the version into major, minor,
 patch, pre-release, and build identifiers in that order. Major, minor, and
@@ -94,8 +99,8 @@ follows: identifiers consisting of only digits are compared numerically and
 identifiers with letters or hyphens are compared lexically in ASCII sort order.
 Numeric identifiers always have lower precedence than non-numeric identifiers.
 Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 <
-1.0.0-rc.1 < 1.0.0-rc.1+build.1 < 1.0.0 < 1.0.0+0.3.7 < 1.3.7+build <
-1.3.7+build.2.b8f12d7 < 1.3.7+build.11.e0f985a.
+1.0.0-rc.1+build.1 < 1.0.0-rc.1 < 1.0.0+0.3.7 < 1.0.0 < 1.3.7+build <
+1.3.7+build.2.b8f12d7 < 1.3.7+build.11.e0f985a < 1.3.7.
 
 Why Use Semantic Versioning?
 ----------------------------
