@@ -152,7 +152,8 @@ Major version zero is all about rapid development. If you're changing the API
 every day you should either still be in version 0.y.z or on a separate
 development branch working on the next major version.
 
-### If even the tiniest backwards incompatible changes to the public API require a major version bump, won't I end up at version 42.0.0 very rapidly?
+### If even the tiniest backwards incompatible changes to the public API require
+a major version bump, won't I end up at version 42.0.0 very rapidly?
 
 This is a question of responsible development and foresight. Incompatible
 changes should not be introduced lightly to software that has a lot of
@@ -170,7 +171,8 @@ nobody knows how to use your software, or what methods are safe to call. In
 the long run, Semantic Versioning, and the insistence on a well defined public
 API can keep everyone and everything running smoothly.
 
-### What do I do if I accidentally release a backwards incompatible change as a minor version?
+### What do I do if I accidentally release a backwards incompatible change as a 
+minor version?
 
 As soon as you realize that you've broken the Semantic Versioning spec, fix
 the problem and release a new minor version that corrects the problem and
@@ -179,7 +181,8 @@ unacceptable to modify versioned releases. If it's appropriate,
 document the offending version and inform your users of the problem so that
 they are aware of the offending version.
 
-### What should I do if I update my own dependencies without changing the public API?
+### What should I do if I update my own dependencies without changing the public
+API?
 
 That would be considered compatible since it does not affect the public API.
 Software that explicitly depends on the same dependencies as your package
@@ -189,7 +192,9 @@ modification depends on whether you updated your dependencies in order to fix
 a bug or introduce new functionality. I would usually expect additional code
 for the latter instance, in which case it's obviously a minor level increment.
 
-### What should I do if the bug that is being fixed returns the code to being compliant with the public API (i.e. the code was incorrectly out of sync with the public API documentation)?
+### What should I do if the bug that is being fixed returns the code to being 
+compliant with the public API (i.e. the code was incorrectly out of sync with
+the public API documentation)?
 
 Use your best judgment. If you have a huge audience that will be drastically
 impacted by changing the behavior back to what the public API intended, then
