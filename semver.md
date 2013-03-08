@@ -82,7 +82,7 @@ version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 1. Unique build metadata MAY be denoted by appending a plus `+` and a series of
 dot separated identifiers immediately following the patch or pre-release
 version. While identifiers MUST be comprised of only ASCII alphanumerics and
-hyphens [0-9A-Za-z\\-], their values only define uniqueness. The Semantic
+hyphens [0-9A-Za-z\-], their values only define uniqueness. The Semantic
 Versioning specation intentionally omits precedence rule definitions for
 comparing two versions where only build metadata is different. Furthermore,
 this specification does not define precedence rules for comparing a version
