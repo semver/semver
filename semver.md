@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.0-rc.1
+Semantic Versioning 2.0.0-rc.2
 ==============================
 
 In the world of software management there exists a dread place called
@@ -79,22 +79,35 @@ MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. Pre-release
 versions satisfy but have a lower precedence than the associated normal
 version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
-1. A build version MAY be denoted by appending a plus sign and a series of dot
-separated identifiers immediately following the patch version or pre-release
-version. Identifiers MUST be comprised of only ASCII alphanumerics and hyphen
-[0-9A-Za-z-]. Build versions satisfy and have a higher precedence than the
-associated normal version. Examples: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
+1. A pre-release version is used for development and is unstable. A pre-release 
+version can only be considered to be compatible with itself.
+
+1. Unique build metadata MAY be denoted by appending a plus `+` and a series of
+dot separated identifiers immediately following the patch or pre-release
+version. Identifiers MUST be comprised of only ASCII alphanumerics and hyphens 
+[0-9AsZa-z\-].
+
+1. Build metadata does not affect the version of the public API. Any version 
+number is compatible with any other version number using the same major, minor 
+and patch versions with no or different build metadata (unless either version 
+contains a pre-release element). Build metadata is primarily used to uniquely 
+identify a specific build of a package. Thus the Semantic Versioning specification 
+intentionally omits precedence rule definitions for comparing two versions where 
+only build metadata is different.
+Specific implementations of Semantic Versioning MAY define their own precedence 
+rules for those scenarios, but due to the lack of precedence defined within the
+specification, consumers SHOULD NOT rely on build metadata when taking
+dependencies on packages.
 
 1. Precedence MUST be calculated by separating the version into major, minor,
 patch, pre-release, and build identifiers in that order. Major, minor, and
-patch versions are always compared numerically. Pre-release and build version
-precedence MUST be determined by comparing each dot separated identifier as
-follows: identifiers consisting of only digits are compared numerically and
-identifiers with letters or hyphens are compared lexically in ASCII sort order.
-Numeric identifiers always have lower precedence than non-numeric identifiers.
+patch versions are always compared numerically. Pre-release precedence MUST be
+determined by comparing each dot separated identifier as follows: identifiers
+consisting of only digits are compared numerically and identifiers with
+letters or hyphens are compared lexically in ASCII sort order. Numeric
+identifiers always have lower precedence than non-numeric identifiers.
 Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 <
-1.0.0-rc.1 < 1.0.0-rc.1+build.1 < 1.0.0 < 1.0.0+0.3.7 < 1.3.7+build <
-1.3.7+build.2.b8f12d7 < 1.3.7+build.11.e0f985a.
+1.0.0-rc.1 < 1.0.0.
 
 Why Use Semantic Versioning?
 ----------------------------
