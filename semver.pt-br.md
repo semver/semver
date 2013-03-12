@@ -233,7 +233,6 @@ co-founder do GitHub.
 
 A tradução deste documento para Português-Brasil foi iniciada de forma 
 colaborativa pela [Wend Tecnologia] (https://github.com/wendtecnologia) através
-12345678901234567890123456789012345678901234567890123456789012345678901234567890
 de [Walker de Alencar Oliveira] (https://github.com/walkeralencar) e teve a 
 participação de:
 * [William G. Comnisky] (https://github.com/wcomnisky)
