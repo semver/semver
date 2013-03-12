@@ -67,11 +67,10 @@ como uma mudança interna que corrige um comportamento incorreto.
 
 7. Versão Menor Y (x.Y.z | x > 0) DEVE  ser incrementada se uma funcionalidade
 nova e compatível for intruduzida na API pública. DEVE ser incrementada se
-qualquer funcionalidade da API pública for definida como não mais recomendada ou
-obsoleta. PODE ser incrementada se uma nova funcionalidade ou melhoria 
-substancial for introduzida dentro do código privado. PODE incluir mudanças a 
-nível de correção. A versão de Correção deve ser redefinida para 0 quando a 
-versão Menor for incrementada.
+qualquer funcionalidade da API pública for definida como descontinuada. PODE ser
+incrementada se uma nova funcionalidade ou melhoria substancial for introduzida
+dentro do código privado. PODE incluir mudanças a nível de correção. A versão de
+Correção deve ser redefinida para 0 quando a versão Menor for incrementada.
 
 8. Versão Maior X (X.y.z | X > 0) DEVE ser incrementada se forem introduzidas
 mudanças incompatíveis na API pública. PODE incluir alterações a nível de versão
@@ -162,15 +161,15 @@ A versão Maior zero tem o foco exatamente no desenvolvimento rápido. Se você
 está mudando a API todo dia, provavelmente você está na versão 0.y.z ou num
 branch separado de desenvolvimento, trabalhando numa próxima versão Maior.
 
-### If even the tiniest backwards incompatible changes to the public API require
-a major version bump, won't I end up at version 42.0.0 very rapidly?
+### Se mesmo a menor mudança incompatível com a API pública requer aumento da 
+versão maior, não vou acabar na versão 42.0.0 muito rapidamente?
 
-This is a question of responsible development and foresight. Incompatible
-changes should not be introduced lightly to software that has a lot of
-dependent code. The cost that must be incurred to upgrade can be significant.
-Having to bump major versions to release incompatible changes means you'll
-think through the impact of your changes, and evaluate the cost/benefit ratio
-involved.
+Esta é uma questão de desenvolvimento responsável e conhecimento antecipado.
+Mudanças incompatíveis não devem ser levemente introduzidas para o software que
+tem um monte de código dependente. O custo que deve ser incorrido para atualizar
+pode ser significante. Tendo que aumentar a versão maior para lançar mudanças
+incompatíveis, significa que você pensará no impacto das suas mudanças, e 
+avaliará a relação de custo/benefício envolvida.
 
 ### Documentar toda a API pública dá muito trabalho!
 
@@ -184,43 +183,44 @@ podem deixar tudo e todos funcionamente suavemente.
 ### O que eu faço se, acidentalmente, liberar uma mudança incompatível com
 versões anteriores como uma versão menor (minor version)?
 
-As soon as you realize that you've broken the Semantic Versioning spec, fix
-the problem and release a new minor version that corrects the problem and
-restores backwards compatibility. Even under this circumstance, it is 
-unacceptable to modify versioned releases. If it's appropriate,
-document the offending version and inform your users of the problem so that
-they are aware of the offending version.
+Assim que você perceber que quebrou a especificação de versionamento semântico,
+conserte o problema e lance uma nova versão menor, que corrige o problema e
+restaura a compatibilidade. Mesmo sob esta circunstância, é inaceitável 
+modificar versões lançadas. Se for apropriado, documente a versão ofensiva e
+informe seus usuários do problema de forma que eles fiquem cientes da versão em
+questão.
 
 ### O que devo fazer se eu atualizar minhas próprias dependências sem modificar
 a API pública?
 
-That would be considered compatible since it does not affect the public API.
-Software that explicitly depends on the same dependencies as your package
-should have their own dependency specifications and the author will notice any
-conflicts. Determining whether the change is a patch level or minor level
-modification depends on whether you updated your dependencies in order to fix
-a bug or introduce new functionality. I would usually expect additional code
-for the latter instance, in which case it's obviously a minor level increment.
+Isso seria considerado compatível, uma vez que não afeta a API pública. Software
+que depende explicitamente da mesmas dependências que seu pacote, deve ter sua
+própria especificação de dependência e o autor notificará quaisquer conflitos.
+Para determinar se a mudança é a nível de correção ou modificação de nível menor
+dependente se você atualizou suas dependências a fim de corrigir um bug ou
+introduzir nova funcionalidade. Eu normalmente esperaria código adicional para 
+última instância, caso em que é obviamente um incremento no nível menor.
 
-### What should I do if the bug that is being fixed returns the code to being
-compliant with the public API (i.e. the code was incorrectly out of sync with
-the public API documentation)?
+###  O que devo fazer se o erro que está sendo corrigido retorna o código para
+estar em conformidade com a API pública (ou seja, o código estava incorretamente
+fora de sincronia com a documentação da API pública)?
 
-Use your best judgment. If you have a huge audience that will be drastically
-impacted by changing the behavior back to what the public API intended, then
-it may be best to perform a major version release, even though the fix could
-strictly be considered a patch release. Remember, Semantic Versioning is all
-about conveying meaning by how the version number changes. If these changes
-are important to your users, use the version number to inform them.
+Use o bom senso. Se você tem um público enorme que será drasticamente impactado
+pela mudança de comportamento de volta para o que a API pública pretendida, 
+então pode ser melhor realizar um lançamento de uma versão maior, mesmo que a 
+correção pudesse ser considerada estritamente uma versão de correção.Lembre-se, 
+Versionamento Semântico trata de transmitir o conhecimento das mudanças 
+ocorridas na versão. Se estas mudanças são importantes para seus usuários, 
+utilize o número da versão para informá-los.
 
-### Como devo lidar com depreciação de funcionalidades?
+### Como devo lidar com descontinuação de funcionalidades?
 
-Depreciar funcionalidades é um processo comum no desenvolvimento de software e
-muitas vezes é necessário para haver progresso. Quando você deprecia partes de
+Descontinuar funcionalidades é um processo comum no desenvolvimento de software e
+muitas vezes é necessário para haver progresso. Quando você descontinua partes de
 sua API pública, você deve fazer duas coisas: (1) atualizar sua documentação,
 para que os usuários saibam das mudanças, (2) lançar uma versão Menor anunciando
-a depreciação. Antes de remover completamente a funcionalidade em uma versão 
-Maior deve haver ao menos uma versão Menor que possui a depreciação anunciada, 
+a descontinuação. Antes de remover completamente a funcionalidade em uma versão 
+Maior deve haver ao menos uma versão Menor que possui a descontinução anunciada, 
 fazendo com que os usuários realizem uma transição tranquila para a nova API.
 
 
@@ -231,16 +231,24 @@ A Especificação da Semântica de Versionamento é autoria de [Tom
 Preston-Werner](http://tom.preston-werner.com), criador do Gravatars e 
 co-founder do GitHub.
 
-A tradução deste documento para Português-Brasil teve a participação de:
-* Walker de Alencar Oliveira (@walkeralencar)
-* William G. Comnisky (@wcomnisky)
-* Rafael Sirotheau (@rafasirotheau)
-* Arthur Almeida
+A tradução deste documento para Português-Brasil foi iniciada de forma 
+colaborativa pela [Wend Tecnologia] (https://github.com/wendtecnologia) através
+de [Walker de Alencar Oliveira] (https://github.com/walkeralencar) e teve a 
+participação de:
+* [William G. Comnisky] (https://github.com/wcomnisky)
+* [Rafael Sirotheau] (https://github.com/rafasirotheau)
+* [Arthur Almeida] (https://github.com/arthuralmeidap)
+* [Alberto Guimarães Viana] (https://github.com/albertogviana)
 * Rafael Lúcio
-* Alberto Guimarães Viana (@albertogviana)
+* Josiel Rocha
+* Alessandro Leite
+* Vinícius Assef
+
+Toda colaboração na tradução pode ser acompanhada no link:
+http://okfnpad.org/ep/pad/view/Fh9hjBPVu9/latest
 
 Caso queira deixar sua opinião, por favor [abra uma issue no GitHub]
-(https://github.com/mojombo/semver/issues)
+(https://github.com/walkeralencar/semver/issues)
 
 Licença
 -------
