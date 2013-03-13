@@ -8,7 +8,7 @@ encontrar-se neste poço de desespero.
 
 Em sistemas com muitas dependências, lançar novos pacotes de versões pode se
 tornar rapidamente um pesadelo. Se as especificações das dependências são muito
-amarradas você correr o risco de um bloqueio de versão (A falta de capacidade de
+amarradas você corre o risco de um bloqueio de versão (A falta de capacidade de
 atualizar um pacote sem ter de liberar novas versões de cada pacote dependente).
 Se as dependências são vagamente especificadas, você irá inevitavelmente ser
 mordido pela 'promiscuidade da versão' (assumindo compatibilidade com futuras
