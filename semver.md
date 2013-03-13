@@ -87,14 +87,14 @@ precedence. Thus two packages with the same version, but different build
 metadata are considered to be the same version.
 
 1. Precedence MUST be calculated by separating the version into major, minor,
-patch, pre-release, and build identifiers in that order. Major, minor, and
-patch versions are always compared numerically. Pre-release precedence MUST be
-determined by comparing each dot separated identifier as follows: identifiers
-consisting of only digits are compared numerically and identifiers with
-letters or hyphens are compared lexically in ASCII sort order. Numeric
-identifiers always have lower precedence than non-numeric identifiers.
-Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 <
-1.0.0-rc.1 < 1.0.0.
+patch and pre-release identifiers in that order (Build metadata does not figure 
+into precedence). Major, minor, and patch versions are always compared 
+numerically. Pre-release precedence MUST be determined by comparing each dot 
+separated identifier as follows: identifiers consisting of only digits are 
+compared numerically and identifiers with letters or hyphens are compared 
+lexically in ASCII sort order. Numeric identifiers always have lower precedence
+than non-numeric identifiers. Example: 1.0.0-alpha < 1.0.0-alpha.1 < 
+1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Why Use Semantic Versioning?
 ----------------------------
