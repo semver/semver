@@ -2,17 +2,17 @@ Versionamento Semântico 2.0.0-rc.1
 ==================================
 
 No mundo de gerenciamento de software existe algo terrível conhecido como
-inferno das dependências ("dependency hell"). Quanto mais o sistema cresce, e
-mais pacotes são integrados nele, mais provável é que um dia você se encontre
-neste poço de desespero.
+inferno das dependências ("dependency hell"). Quanto mais o sistema cresce, e 
+mais pacotes são adicionados a ele, maior será a possibilidade de, um dia, você
+encontrar-se neste poço de desespero.
 
 Em sistemas com muitas dependências, lançar novos pacotes de versões pode se
 tornar rapidamente um pesadelo. Se as especificações das dependências são muito
-amarradas você corre o risco de um bloqueio de versão (A falta de capacidade de
+amarradas você correr o risco de um bloqueio de versão (A falta de capacidade de
 atualizar um pacote sem ter de liberar novas versões de cada pacote dependente).
 Se as dependências são vagamente especificadas, você irá inevitavelmente ser
 mordido pela 'promiscuidade da versão' (assumindo compatibilidade com futuras
-versões mais do que é razoável). Inferno das dependências é onde você está
+versões mais do que é razoável). O inferno das dependências é onde você está
 quando um bloqueio de versão e/ou promiscuidade de versão te impede de seguir
 em frente com seu projeto de maneira fácil e segura.
 
@@ -24,7 +24,7 @@ Isto pode consistir de documentação ou ser determinada pelo próprio código. 
 qualquer maneira, é importante que esta API seja clara e precisa. Depois de
 identificada a API pública, você comunica as mudanças com incrementos
 específicos para o seu número de versão. Considere o formato de versão X.Y.Z
-(Maior.Menor.Correção). Correção de falhas (Bug Fixes) que não afetam a API,
+(Maior.Menor.Correção). Correção de falhas (bug fixes) que não afetam a API,
 incrementa a versão de Correção, adições/alterações compatíveis com as versões
 anteriores da API incrementa a versão Menor, e alterações incompatíveis com as
 versões anteriores da API incrementa a versão Maior.
@@ -50,7 +50,7 @@ inteiros não negativos. X é a versão Maior, Y é a versão Menor, e Z é a ve
 de Correção. Cada elemento DEVE aumentar numericamente por incrementos de um.
 Por exemplo: 1.9.0 -> 1.10.0 -> 1.11.0.
 
-3. Uma vez que um pacote de versionado foi lançado(released), o conteúdo desta
+3. Uma vez que um pacote versionado foi lançado(released), o conteúdo desta
 versão NÃO DEVE ser modificado. Qualquer modificação DEVE ser lançado como uma
 nova versão.
 
@@ -66,31 +66,31 @@ compatibilidade e introduzir correção de bugs. Uma correção de bug é defini
 como uma mudança interna que corrige um comportamento incorreto.
 
 7. Versão Menor Y (x.Y.z | x > 0) DEVE  ser incrementada se uma funcionalidade
-nova e compatível for intruduzida na API pública. DEVE ser incrementada se
+nova e compatível for introduzida na API pública. DEVE ser incrementada se
 qualquer funcionalidade da API pública for definida como descontinuada. PODE ser
 incrementada se uma nova funcionalidade ou melhoria substancial for introduzida
 dentro do código privado. PODE incluir mudanças a nível de correção. A versão de
-Correção deve ser redefinida para 0 quando a versão Menor for incrementada.
+Correção deve ser redefinida para 0(zero) quando a versão Menor for 
+incrementada.
 
 8. Versão Maior X (X.y.z | X > 0) DEVE ser incrementada se forem introduzidas
 mudanças incompatíveis na API pública. PODE incluir alterações a nível de versão
 Menor e de versão de Correção. Versão de Correção e Versão Menor devem ser 
-redefinidas para 0 quando a versão Maior for incrementada.
+redefinidas para 0(zero) quando a versão Maior for incrementada.
 
-9. Uma versão de pré-lançamento (pre-release) PODE ser identificada adicionando
+9. Uma versão de Pré-Lançamento (pre-release) PODE ser identificada adicionando
 um hífen (dash) e uma série de identificadores separados por ponto (dot)
 imediatamente após a versão de Correção. o identificador DEVE ser composto
-apenas por caracteres alfanumérios e hífen (dash)[0-9A-Za-z-]. Versão de
-Pré-Lançamento (Pré-Release) tem  precedência inferior à versão normal a que
-está associada. Exemplos: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
+apenas por caracteres alfanumérios e hífen [0-9A-Za-z-]. Versão de
+Pré-Lançamento tem  precedência inferior à versão normal a que está associada.
+Exemplos: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
 10. Uma versão de Construção (build) PODE ser identificada por adicionar um
 sinal de adição (+) e uma série de identificadores separados por ponto
-imediatamente após a versão de Correção ou Pré-Lançamento (pre-release). 
-Identificador DEVE ser composto apenas por caracteres alfanumérios e hífen 
-[0-9A-Za-z-]. Versões de Construção têm precedência maior à versão normal a que 
-está associada. Exemplos: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
+imediatamente após a versão de Correção ou Pré-Lançamento. Identificador DEVE 
+ser composto apenas por caracteres alfanumérios e hífen [0-9A-Za-z-]. Versões de
+Construção têm precedência maior à versão normal a que está associada. Exemplos: 
+1.0.0+build.1, 1.3.7+build.11.e0f985a.
 
 11. A precendência DEVE ser calculada separando identificadores de versão em 
 Maior, Menor, Correção, Pré-lançamento e Construção, nesta ordem. Versões Maior,
@@ -105,7 +105,7 @@ Exemplo: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1
 < 1.3.7+build.11.e0f985a.
 
 Por que usar Versionamento Semântico?
-----------------------------
+-------------------------------------
 Esta não é uma ideia nova ou revolucionária. De fato, você provavelmente já faz
 algo próximo a isso. O problema é que "próximo" não é bom o bastante. Sem a
 aderência a algum tipo de especificação formal, os números de versão são
@@ -161,8 +161,7 @@ A versão Maior zero tem o foco exatamente no desenvolvimento rápido. Se você
 está mudando a API todo dia, provavelmente você está na versão 0.y.z ou num
 branch separado de desenvolvimento, trabalhando numa próxima versão Maior.
 
-### Se mesmo a menor mudança incompatível com a API pública requer aumento da 
-versão maior, não vou acabar na versão 42.0.0 muito rapidamente?
+### Se mesmo a menor mudança incompatível com a API pública requer aumento da versão maior, não vou acabar na versão 42.0.0 muito rapidamente?
 
 Esta é uma questão de desenvolvimento responsável e conhecimento antecipado.
 Mudanças incompatíveis não devem ser levemente introduzidas para o software que
@@ -180,8 +179,7 @@ fazer se ninguém sabe como usá-lo ou que métodos são seguros de chamar. A lo
 prazo, Versionamento Semântico e a insistência em uma API pública bem definida
 podem deixar tudo e todos funcionamente suavemente.
 
-### O que eu faço se, acidentalmente, liberar uma mudança incompatível com
-versões anteriores como uma versão menor (minor version)?
+### O que eu faço se, acidentalmente, liberar uma mudança incompatível com versões anteriores como uma versão menor (minor version)?
 
 Assim que você perceber que quebrou a especificação de versionamento semântico,
 conserte o problema e lance uma nova versão menor, que corrige o problema e
@@ -190,8 +188,7 @@ modificar versões lançadas. Se for apropriado, documente a versão ofensiva e
 informe seus usuários do problema de forma que eles fiquem cientes da versão em
 questão.
 
-### O que devo fazer se eu atualizar minhas próprias dependências sem modificar
-a API pública?
+### O que devo fazer se eu atualizar minhas próprias dependências sem modificar a API pública?
 
 Isso seria considerado compatível, uma vez que não afeta a API pública. Software
 que depende explicitamente da mesmas dependências que seu pacote, deve ter sua
@@ -201,9 +198,7 @@ dependente se você atualizou suas dependências a fim de corrigir um bug ou
 introduzir nova funcionalidade. Eu normalmente esperaria código adicional para 
 última instância, caso em que é obviamente um incremento no nível menor.
 
-###  O que devo fazer se o erro que está sendo corrigido retorna o código para
-estar em conformidade com a API pública (ou seja, o código estava incorretamente
-fora de sincronia com a documentação da API pública)?
+###  O que devo fazer se o erro que está sendo corrigido retorna o código para estar em conformidade com a API pública (ou seja, o código estava incorretamente fora de sincronia com a documentação da API pública)?
 
 Use o bom senso. Se você tem um público enorme que será drasticamente impactado
 pela mudança de comportamento de volta para o que a API pública pretendida, 
@@ -229,7 +224,7 @@ Sobre
 
 A Especificação da Semântica de Versionamento é autoria de [Tom
 Preston-Werner](http://tom.preston-werner.com), criador do Gravatars e 
-co-founder do GitHub.
+co-fundador do GitHub.
 
 A tradução deste documento para Português-Brasil foi iniciada de forma 
 colaborativa pela [Wend Tecnologia] (https://github.com/wendtecnologia) através
@@ -239,16 +234,17 @@ participação de:
 * [Rafael Sirotheau] (https://github.com/rafasirotheau)
 * [Arthur Almeida] (https://github.com/arthuralmeidap)
 * [Alberto Guimarães Viana] (https://github.com/albertogviana)
-* Rafael Lúcio
+* [Rafael Lúcio] (https://github.com/poste9)
 * Josiel Rocha
 * Alessandro Leite
 * Vinícius Assef
+* [Silas Ribas Martins] (https://github.com/silasrm)
 
 Toda colaboração na tradução pode ser acompanhada no link:
 http://okfnpad.org/ep/pad/view/Fh9hjBPVu9/latest
 
 Caso queira deixar sua opinião, por favor [abra uma issue no GitHub]
-(https://github.com/walkeralencar/semver/issues)
+(https://github.com/wendtecnologia/semver/issues)
 
 Licença
 -------
