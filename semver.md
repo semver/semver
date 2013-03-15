@@ -81,7 +81,7 @@ version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot 
 separated identifiers immediately following the patch or pre-release version. 
-Identifiers MUST comprise only ASCII alphanumerics and hyphen[0-9A-Za-z-]. 
+Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. 
 Build metadata SHOULD be ignored when determining version precedence. Thus two
 packages with the same version, but different build metadata are considered to
 be the same version. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700, 
