@@ -73,6 +73,10 @@ incompatible changes are introduced to the public API. It MAY include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
+1. Non-existence MAY be considered a bug, which allows for an initial version
+of 0.0.1. However, the next version would introduce new functionality and MUST
+increment the minor version.
+
 1. A pre-release version MAY be denoted by appending a hyphen and a series of
 dot separated identifiers immediately following the patch version. Identifiers
 MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. Pre-release
