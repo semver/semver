@@ -93,8 +93,11 @@ into precedence). Major, minor, and patch versions are always compared
 numerically. Pre-release precedence MUST be determined by comparing each dot 
 separated identifier as follows: identifiers consisting of only digits are 
 compared numerically and identifiers with letters or hyphens are compared 
-lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. Example: 1.0.0-alpha < 1.0.0-alpha.1 < 
+lexically in ASCII sort order (with exception of special identifiers). Numeric 
+identifiers always have lower precedence than non-numeric identifiers.  The special
+identifiers are ordered ['dev', 'alpha', 'beta', 'rc'] and take precedence over
+all other identifiers.
+Example: 1.0.0-foobar < 1.0.0-dev < 1.0.0-alpha < 1.0.0-alpha.1 < 
 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Why Use Semantic Versioning?
