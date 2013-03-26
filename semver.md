@@ -17,6 +17,8 @@ prevent you from easily and safely moving your project forward.
 
 As a solution to this problem, I propose a simple set of rules and
 requirements that dictate how version numbers are assigned and incremented.
+These rules are based on but not necessarily limited to pre-existing
+widespread common practices in use in both closed and open-source software.
 For this system to work, you first need to declare a public API. This may
 consist of documentation or be enforced by the code itself. Regardless, it is
 important that this API be clear and precise. Once you identify your public
@@ -79,22 +81,22 @@ MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. Pre-release
 versions satisfy but have a lower precedence than the associated normal
 version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
-1. Build metadata MAY be denoted by appending a plus sign and a series of dot 
-separated identifiers immediately following the patch or pre-release version. 
-Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. 
+1. Build metadata MAY be denoted by appending a plus sign and a series of dot
+separated identifiers immediately following the patch or pre-release version.
+Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
 Build metadata SHOULD be ignored when determining version precedence. Thus two
 packages with the same version, but different build metadata are considered to
-be the same version. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700, 
+be the same version. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 1.0.0-beta+exp.sha.5114f85.
 
 1. Precedence MUST be calculated by separating the version into major, minor,
-patch and pre-release identifiers in that order (Build metadata does not figure 
-into precedence). Major, minor, and patch versions are always compared 
-numerically. Pre-release precedence MUST be determined by comparing each dot 
-separated identifier as follows: identifiers consisting of only digits are 
-compared numerically and identifiers with letters or hyphens are compared 
+patch and pre-release identifiers in that order (Build metadata does not figure
+into precedence). Major, minor, and patch versions are always compared
+numerically. Pre-release precedence MUST be determined by comparing each dot
+separated identifier as follows: identifiers consisting of only digits are
+compared numerically and identifiers with letters or hyphens are compared
 lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. Example: 1.0.0-alpha < 1.0.0-alpha.1 < 
+than non-numeric identifiers. Example: 1.0.0-alpha < 1.0.0-alpha.1 <
 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Why Use Semantic Versioning?
@@ -174,7 +176,7 @@ API can keep everyone and everything running smoothly.
 
 As soon as you realize that you've broken the Semantic Versioning spec, fix
 the problem and release a new minor version that corrects the problem and
-restores backwards compatibility. Even under this circumstance, it is 
+restores backwards compatibility. Even under this circumstance, it is
 unacceptable to modify versioned releases. If it's appropriate,
 document the offending version and inform your users of the problem so that
 they are aware of the offending version.
