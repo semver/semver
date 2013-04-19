@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.0-rc.1
+Semantic Versioning 2.0.0-rc.2
 ==============================
 
 In the world of software management there exists a dread place called
@@ -36,7 +36,7 @@ Semantic Versioning Specification (SemVer)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in RFC 2119.
+interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
 1. Software using Semantic Versioning MUST declare a public API. This API
 could be declared in the code itself or exist strictly in documentation.
@@ -48,7 +48,7 @@ is the patch version. Each element MUST increase numerically by increments of
 one. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
 1. Once a versioned package has been released, the contents of that version
-MUST NOT be modified. Any modifications must be released as a new version.
+MUST NOT be modified. Any modifications MUST be released as a new version.
 
 1. Major version zero (0.y.z) is for initial development. Anything may change
 at any time. The public API should not be considered stable.
@@ -75,27 +75,27 @@ version is incremented.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a series of
 dot separated identifiers immediately following the patch version. Identifiers
-MUST be comprised of only ASCII alphanumerics and hyphen [0-9A-Za-z-].
-Pre-release versions satisfy but have a lower precedence than the associated
-normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
+MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. Pre-release
+versions satisfy but have a lower precedence than the associated normal
+version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
-1. A build version MAY be denoted by appending a plus sign and a series of dot
-separated identifiers immediately following the patch version or pre-release
-version. Identifiers MUST be comprised of only ASCII alphanumerics and hyphen
-[0-9A-Za-z-]. Build versions satisfy and have a higher precedence than the
-associated normal version. Examples: 1.0.0+build.1, 1.3.7+build.11.e0f985a.
+1. Build metadata MAY be denoted by appending a plus sign and a series of dot 
+separated identifiers immediately following the patch or pre-release version. 
+Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. 
+Build metadata SHOULD be ignored when determining version precedence. Thus two
+packages with the same version, but different build metadata are considered to
+be the same version. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700, 
+1.0.0-beta+exp.sha.5114f85.
 
 1. Precedence MUST be calculated by separating the version into major, minor,
-patch, pre-release, and build identifiers in that order. Major, minor, and
-patch versions are always compared numerically. Pre-release and build version
-precedence MUST be determined by comparing each dot separated identifier as
-follows: identifiers consisting of only digits are compared numerically and
-identifiers with letters or hyphens are compared lexically in ASCII sort order.
-Numeric identifiers always have lower precedence than non-numeric identifiers.
-Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta.2 < 1.0.0-beta.11 <
-1.0.0-rc.1 < 1.0.0-rc.1+build.1 < 1.0.0 < 1.0.0+0.3.7 < 1.3.7+build <
-1.3.7+build.2.b8f12d7 < 1.3.7+build.11.e0f985a.
+patch and pre-release identifiers in that order (Build metadata does not figure 
+into precedence). Major, minor, and patch versions are always compared 
+numerically. Pre-release precedence MUST be determined by comparing each dot 
+separated identifier as follows: identifiers consisting of only digits are 
+compared numerically and identifiers with letters or hyphens are compared 
+lexically in ASCII sort order. Numeric identifiers always have lower precedence
+than non-numeric identifiers. Example: 1.0.0-alpha < 1.0.0-alpha.1 < 
+1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Why Use Semantic Versioning?
 ----------------------------
@@ -149,7 +149,7 @@ probably already be 1.0.0.
 ### Doesn't this discourage rapid development and fast iteration?
 
 Major version zero is all about rapid development. If you're changing the API
-every day you should either still be in version 0.x.x or on a separate
+every day you should either still be in version 0.y.z or on a separate
 development branch working on the next major version.
 
 ### If even the tiniest backwards incompatible changes to the public API require a major version bump, won't I end up at version 42.0.0 very rapidly?
@@ -174,8 +174,8 @@ API can keep everyone and everything running smoothly.
 
 As soon as you realize that you've broken the Semantic Versioning spec, fix
 the problem and release a new minor version that corrects the problem and
-restores backwards compatibility. Remember, it is unacceptable to modify
-versioned releases, even under this circumstance. If it's appropriate,
+restores backwards compatibility. Even under this circumstance, it is 
+unacceptable to modify versioned releases. If it's appropriate,
 document the offending version and inform your users of the problem so that
 they are aware of the offending version.
 
