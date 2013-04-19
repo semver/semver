@@ -4,7 +4,7 @@ npm、AMD架构的成功，越来越说明当下编程技巧的重要性正逐�
 
 该文档介绍了一套软件版本控制方案，旨在通过约定规则，让开发者远离软件管理世界里的“依赖地狱”。让软件在生命周期内能够可靠，持续，方便地为其他成员所用。
 
-*译者吐槽：文中好多专业名词早已超出本人三年前考六级所积累的词汇量，还有一些表述如“roll new versions of dependent packages”也是真心不懂，只能依靠字面理解结合上下文猜测（不确定的表述文中用“\/”标记），所以如有不准确或的错误的地方还望指出、见谅。有条件的建议fork一份修正后push，以省去中间环节，coder的沟通方式，你懂的。*
+*译者吐槽：文中好多专业名词早已超出本人三年前考六级所积累的词汇量，还有一些表述如“roll new versions of dependent packages”也是真心不懂，只能依靠字面理解结合上下文猜测（不确定的表述文中用“''” 标记），所以如有不准确或的错误的地方还望指出、见谅。有条件的建议fork一份修正后push，以省去中间环节，coder的沟通方式，你懂的。*
 
 译文地址：[https://github.com/kainy/semver/blob/master/semver_zh.md](https://github.com/kainy/semver/blob/master/semver_zh.md)
 
