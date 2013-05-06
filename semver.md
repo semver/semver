@@ -1,6 +1,20 @@
 Semantic Versioning 2.0.0-rc.2
 ==============================
 
+Summary
+-------
+
+Given a version number *MAJOR*.*MINOR*.*PATCH*, increment
+
+1. the *MAJOR* version when you make incompatible API changes,
+1. the *MINOR* version when you add functionality in a backwards-compatible
+   manner, and
+1. the *PATCH* version when you make backwards-compatible bug fixes.
+
+
+Introduction
+------------
+
 In the world of software management there exists a dread place called
 "dependency hell." The bigger your system grows and the more packages you
 integrate into your software, the more likely you are to find yourself, one
