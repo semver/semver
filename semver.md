@@ -79,10 +79,9 @@ version is incremented.
 dot separated identifiers immediately following the patch version. Identifiers
 MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. Pre-release
 versions satisfy but have a lower precedence than the associated normal
-version. Any version containing a pre-release tag is considered a development 
-version and to be in an unstable state. It is not guaranteed to follow the 
-compatibility rules as denoted by its major, minor and patch levels. It merely 
-assumes this level of compatibility. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 
+version. A pre-release version indicates that the version is unstable and 
+might not satisfy the intended compatibility requirements as denoted by its 
+associated normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 
 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot 
