@@ -79,7 +79,10 @@ version is incremented.
 dot separated identifiers immediately following the patch version. Identifiers
 MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. Pre-release
 versions satisfy but have a lower precedence than the associated normal
-version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
+version. A pre-release version indicates that the version is unstable and 
+might not satisfy the intended compatibility requirements as denoted by its 
+associated normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 
+1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot 
 separated identifiers immediately following the patch or pre-release version. 
@@ -210,6 +213,11 @@ in place. Before you completely remove the functionality in a new major release
 there should be at least one minor release that contains the deprecation so
 that users can smoothly transition to the new API.
 
+### Does semver have a size limit on the version string?
+
+No, but use good judgment. A 255 character version string is probably overkill, 
+for example. Also, specific systems may impose their own limits on the size of 
+the string.
 
 About
 -----
