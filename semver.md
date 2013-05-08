@@ -213,6 +213,11 @@ in place. Before you completely remove the functionality in a new major release
 there should be at least one minor release that contains the deprecation so
 that users can smoothly transition to the new API.
 
+### Does semver have a size limit on the version string?
+
+No, but use good judgment. A 255 character version string is probably overkill, 
+for example. Also, specific systems may impose their own limits on the size of 
+the string.
 
 About
 -----
