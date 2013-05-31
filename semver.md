@@ -194,7 +194,7 @@ modification depends on whether you updated your dependencies in order to fix
 a bug or introduce new functionality. I would usually expect additional code
 for the latter instance, in which case it's obviously a minor level increment.
 
-### What should I do if the bug that is being fixed returns the code to being compliant with the public API (i.e. the code was incorrectly out of sync with the public API documentation)?
+### What if I inadvertently alter the public API and need to change it back (i.e. the code was incorrectly out of sync with the public API documentation)?
 
 Use your best judgment. If you have a huge audience that will be drastically
 impacted by changing the behavior back to what the public API intended, then
