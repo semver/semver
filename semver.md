@@ -4,17 +4,14 @@ Semantic Versioning 2.0.0-rc.2
 Summary
 -------
 
-Given a version number *MAJOR*.*MINOR*.*PATCH*, increment
+Given a version number MAJOR.MINOR.PATCH, increment
 
-1. the *MAJOR* version when you make incompatible API changes from,
-1. the *MINOR* version when you add functionality in a backwards-compatible
+1. the MAJOR version when you make incompatible API changes from,
+1. the MINOR version when you add functionality in a backwards-compatible
    manner, and
-1. the *PATCH* version when you make backwards-compatible bug fixes.
+1. the PATCH version when you make backwards-compatible bug fixes.
 
-Given a version number *MAJOR*.*MINOR*.*PATCH*\[-*PRE-RELEASE*\]\[+*BUILD METADATA*\] where the optional *PRE-RELEASE* and/or *BUILD METADATA* are used, update
-
-1. the *PRE-RELEASE* label when reaching a new pre-release milestone, and/or
-1. the *BUILD METADATA* with every build.
+Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 Introduction
 ------------
