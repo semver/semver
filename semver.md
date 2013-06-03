@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.0-rc.2
+Semantic Versioning 2.0.0
 ==============================
 
 Summary
