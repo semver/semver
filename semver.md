@@ -150,6 +150,10 @@ that comparisons are performed numerically.
         # eg: "0-a.b" -> PATCH=0, PRERELEASE=a.b
         let PATCH = slice(PATCH_AND_PRERELEASE, 0, HYPHEN)
         let PRERELEASE = slice(PATCH_AND_PRERELEASE, HYPHEN + 1)
+        # split off build metadata
+        if contains(PRERELEASE, "+")
+          let BUILD_START = indexOf(PRERELEASE, "+")
+          let PRERELEASE = slice(PRERELEASE, BUILD_START + 1)
       else
         let PATCH = PATCH_AND_PRERELEASE
 
