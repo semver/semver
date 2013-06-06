@@ -75,32 +75,194 @@ incompatible changes are introduced to the public API. It MAY include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
-1. A pre-release version MAY be denoted by appending a hyphen and a series of
-dot separated identifiers immediately following the patch version. Identifiers
-MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. Pre-release
-versions satisfy but have a lower precedence than the associated normal
-version. A pre-release version indicates that the version is unstable and 
-might not satisfy the intended compatibility requirements as denoted by its 
-associated normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 
-1.0.0-0.3.7, 1.0.0-x.7.z.92.
+1. A pre-release version MAY be denoted by appending a hyphen and a
+series of dot separated identifiers immediately following the patch
+version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
+[0-9A-Za-z-]. Identifiers MUST NOT be empty. Pre-release versions have
+a lower precedence than the associated normal version. A pre-release
+version indicates that the version is unstable and might not satisfy
+the intended compatibility requirements as denoted by its associated
+normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
+1.0.0-x.7.z.92.  See the "Parsing Logic" section below for more
+details and pseudocode.
 
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot 
 separated identifiers immediately following the patch or pre-release version. 
 Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. 
 Build metadata SHOULD be ignored when determining version precedence. Thus two
-packages with the same version, but different build metadata are considered to
-be the same version. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700, 
+packages with the same version, but different build metadata, are
+the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700, 
 1.0.0-beta+exp.sha.5114f85.
 
 1. Precedence MUST be calculated by separating the version into major, minor,
 patch and pre-release identifiers in that order (Build metadata does not figure 
 into precedence). Major, minor, and patch versions are always compared 
 numerically. Pre-release precedence MUST be determined by comparing each dot 
-separated identifier as follows: identifiers consisting of only digits are 
-compared numerically and identifiers with letters or hyphens are compared 
-lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. Example: 1.0.0-alpha < 1.0.0-alpha.1 < 
-1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+separated identifier from left to right as follows: identifiers
+consisting of only digits are compared numerically and identifiers
+with letters or hyphens are compared lexically in ASCII sort order.
+Numeric identifiers always have lower precedence than non-numeric
+identifiers. A larger set of pre-release fields has a higher
+precedence than a smaller set, if all of the existing fields are
+equal. Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta <
+1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+See the "Precedence" section below for more details and pseudocode.
+
+
+Parsing Logic
+-------------
+
+Though expressed as a human-readable string, a semver is an ordered
+set of alphanumeric values.  This set consists of the following
+fields:
+
+- `Major` (numeric)
+- `Minor` (numeric)
+- `Patch` (numeric)
+- `Prerelease` (ordered set, alphanumeric)
+
+Note that, although it appears in the semver string, the `Build`
+segment is ignored in the parsed data.  This is because it is for
+human consumption only, and has no bearing on the precedence of a
+version.  Compliant parsers MAY include the Build metadata string, but
+it MUST NOT be used in calculating precedence.
+
+The `Prerelease` field is itself an ordered set appended to the end, so a
+parsed semver may have 4 or more resulting field in the set.
+
+An example pseudocode implementation of parsing a semver follows.
+Note that `numeric` here implies that it consists of only digits, and
+that comparisons are performed numerically.
+
+    to PARSE (VERSION)
+      let SET = split(VERSION, ".")
+      let MAJOR = SET[0]
+      let MINOR = SET[1]
+      let PATCH_AND_PRERELEASE = SET[2]
+
+      if MAJOR is unset or MAJOR is not numeric or
+         MINOR is unset or MINOR is not numeric or
+         PATCH_AND_PRERELEASE is unset
+        return INVALID VERSION
+
+      if contains(PATCH_AND_PRERELEASE, "-")
+        let HYPHEN = indexOf(PATCH_AND_PRERELEASE, "-")
+        # eg: "0-a.b" -> PATCH=0, PRERELEASE=a.b
+        let PATCH = slice(PATCH_AND_PRERELEASE, 0, HYPHEN)
+        let PRERELEASE = slice(PATCH_AND_PRERELEASE, HYPHEN + 1)
+        # split off build metadata
+        if contains(PRERELEASE, "+")
+          let BUILD_START = indexOf(PRERELEASE, "+")
+          let PRERELEASE = slice(PRERELEASE, BUILD_START + 1)
+      else
+        let PATCH = PATCH_AND_PRERELEASE
+
+      if PATCH is not numeric
+        return INVALID VERSION
+
+      let RETURN_SET = { MAJOR, MINOR, PATCH }
+
+      if (PRERELEASE is unset)
+        return RETURN_SET
+
+      let PRERELEASE_SET = split(PRERELEASE, ".")
+
+      for each PRERELEASE_SET as PRERELEASE_IDENTIFIER
+        if PRERELEASE_IDENTIFIER is not alphanumeric or
+           PRERELEASE_IDENTIER is empty
+          return INVALID_VERSION
+        else
+          push(RETURN_SET, PRERELEASE_IDENTIFIER)
+
+      return RETURN_SET
+
+Precedence
+----------
+
+When arranged in an ascending or descending order, "precedence"
+indicates the version identifiers that are considered "greater than"
+or "less than" other identifiers.  Beyond ordering semantics, this
+specifically does not dictate any semantics around various ways to
+indicate ranges or imply the suitability of a specific version of a
+program to meet a specified range.
+
+For example, a package management system MAY allow packages to
+indicate their dependencies using a single `Maj.Min.Patch` version,
+and then satisfy that requirement with `Maj.Min.(>=Patch)` version of
+the dependency.  Other package systems MAY allow programs to indicate
+dependencies using `>=`, `<=`, and similar comparators.  This behavior
+is implementation-specific in the context of a packaging system.
+
+Whenever the term "precedence" is used in this specification, it
+refers only to ordering logic, and never to the suitability of any
+specific version to satisfy any particular expression of a version
+range.  Version range semantics are outside the scope of this
+specification.
+
+An example pseudocode of comparing two version strings follows.  It
+depends on the `PARSE` pseudocode in the section above.  Note that
+`numeric` here implies that it consists of only digits, and that
+comparisons are performed numerically.
+
+    # returns 1 if A > B, -1 if B > A, or 0 if equal
+    to COMPARE(VERSION_A, VERSION_B)
+      let PARSED_A = PARSE(VERSION_A)
+      let PARSED_B = PARSE(VERSION_B)
+
+      if PARSED_A is INVALID VERSION or PARSED_B is INVALID VERSION
+        return INVALID COMPARISON
+
+      # compare Major, Minor, and Patch
+      for INDEX in { 0, 1, 2 }
+        if PARSED_A[INDEX] > PARSED_B[INDEX]
+          return 1
+        else if PARSED_B[INDEX] > PARSED_A[INDEX]
+          return -1
+
+      # If neither have prerelease sections, then they are now equal
+      if PARSED_A[3] is unset and PARSED_B[3] is unset
+        return 0
+
+      # If only one has a prerelease section, then it is lower
+      if PARSED_A[3] is unset and PARSED_B[3] is set
+        return 1
+      if PARSED_B[3] is unset and PARSED_A[3] is set
+        return -1
+
+      # compare the prerelease set.
+      INDEX = 3
+      loop
+        let PR_ID_A = PARSED_A[INDEX]
+        let PR_ID_B = PARSED_B[INDEX]
+
+        # longer prerelease version is higher precedence
+        # if all the existing fields are otherwise equivalent
+        if PR_ID_A is set and PR_ID_B is unset
+          return 1
+
+        if PR_ID_B is set and PR_ID_A is unset
+          return -1
+
+        if PR_ID_A is numeric and PR_ID_B is not numeric
+          return 1
+
+        if PR_ID_B is numeric and PR_ID_A is not numeric
+          return -1
+
+        # compare as numbers if numeric, else as strings
+        if PR_ID_A > PR_ID_B
+          return 1
+
+        if PR_ID_B > PR_ID_A
+          return -1
+
+        # at this point, they must be equal
+        if PR_ID_A != PR_ID_B
+          return INVALID COMPARISON
+
+        let INDEX = INDEX + 1
+      continue
+
 
 Why Use Semantic Versioning?
 ----------------------------
