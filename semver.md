@@ -75,14 +75,15 @@ incompatible changes are introduced to the public API. It MAY include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
-1. A pre-release version MAY be denoted by appending a hyphen and a series of
-dot separated identifiers immediately following the patch version. Identifiers
-MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. Pre-release
-versions satisfy but have a lower precedence than the associated normal
-version. A pre-release version indicates that the version is unstable and 
-might not satisfy the intended compatibility requirements as denoted by its 
-associated normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 
-1.0.0-0.3.7, 1.0.0-x.7.z.92.
+1. A pre-release version MAY be denoted by appending a hyphen and a
+series of dot separated identifiers immediately following the patch
+version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
+[0-9A-Za-z-]. Identifiers MUST NOT be empty. Pre-release versions have
+a lower precedence than the associated normal version. A pre-release
+version indicates that the version is unstable and might not satisfy
+the intended compatibility requirements as denoted by its associated
+normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
+1.0.0-x.7.z.92.
 
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot 
 separated identifiers immediately following the patch or pre-release version. 
