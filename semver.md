@@ -97,11 +97,12 @@ be the same version. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 patch and pre-release identifiers in that order (Build metadata does not figure 
 into precedence). Major, minor, and patch versions are always compared 
 numerically. Pre-release precedence MUST be determined by comparing each dot 
-separated identifier as follows: identifiers consisting of only digits are 
-compared numerically and identifiers with letters or hyphens are compared 
-lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. A larger set of pre-release fields has a
-higher precedence than a smaller set, if all of the existing fields are
+separated identifier from left to right as follows: identifiers
+consisting of only digits are compared numerically and identifiers
+with letters or hyphens are compared lexically in ASCII sort order.
+Numeric identifiers always have lower precedence than non-numeric
+identifiers. A larger set of pre-release fields has a higher
+precedence than a smaller set, if all of the existing fields are
 equal. Example: 1.0.0-alpha < 1.0.0-alpha.beta < 1.0.0-alpha.1 <
 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
