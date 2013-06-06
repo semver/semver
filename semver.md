@@ -106,6 +106,7 @@ identifiers. A larger set of pre-release fields has a higher
 precedence than a smaller set, if all of the existing fields are
 equal. Example: 1.0.0-alpha < 1.0.0-alpha.beta < 1.0.0-alpha.1 <
 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+See the "Precedence" section below for more details and pseudocode.
 
 
 Parsing Logic
@@ -170,6 +171,93 @@ that comparisons are performed numerically.
           push(RETURN_SET, PRERELEASE_IDENTIFIER)
 
       return RETURN_SET
+
+Precedence
+----------
+
+When arranged in an ascending or descending order, "precedence"
+indicates the version identifiers that are considered "greater than"
+or "less than" other identifiers.  Beyond ordering semantics, this
+specifically does not dictate any semantics around various ways to
+indicate ranges or imply the suitability of a specific version of a
+program to meet a specified range.
+
+For example, a package management system MAY allow packages to
+indicate their dependencies using a single `Maj.Min.Patch` version,
+and then satisfy that requirement with `Maj.Min.(>=Patch)` version of
+the dependency.  Other package systems MAY allow programs to indicate
+dependencies using `>=`, `<=`, and similar comparators.  This behavior
+is implementation-specific in the context of a packaging system.
+
+Whenever the term "precedence" is used in this specification, it
+refers only to ordering logic, and never to the suitability of any
+specific version to satisfy any particular expression of a version
+range.  Version range semantics are outside the scope of this
+specification.
+
+An example pseudocode of comparing two version strings follows.  It
+depends on the `PARSE` pseudocode in the section above.  Note that
+`numeric` here implies that it consists of only digits, and that
+comparisons are performed numerically.
+
+    # returns 1 if A > B, -1 if B > A, or 0 if equal
+    to COMPARE(VERSION_A, VERSION_B)
+      let PARSED_A = PARSE(VERSION_A)
+      let PARSED_B = PARSE(VERSION_B)
+
+      if PARSED_A is INVALID VERSION or PARSED_B is INVALID VERSION
+        return INVALID COMPARISON
+
+      # compare Major, Minor, and Patch
+      for INDEX in { 0, 1, 2 }
+        if PARSED_A[INDEX] > PARSED_B[INDEX]
+          return 1
+        else if PARSED_B[INDEX] > PARSED_A[INDEX]
+          return -1
+
+      # If neither have prerelease sections, then they are now equal
+      if PARSED_A[3] is unset and PARSED_B[3] is unset
+        return 0
+
+      # If only one has a prerelease section, then it is lower
+      if PARSED_A[3] is unset and PARSED_B[3] is set
+        return 1
+      if PARSED_B[3] is unset and PARSED_A[3] is set
+        return -1
+
+      # compare the prerelease set.
+      INDEX = 3
+      loop
+        let PR_ID_A = PARSED_A[INDEX]
+        let PR_ID_B = PARSED_B[INDEX]
+
+        # longer prerelease version is higher precedence
+        # if all the existing fields are otherwise equivalent
+        if PR_ID_A is set and PR_ID_B is unset
+          return 1
+
+        if PR_ID_B is set and PR_ID_A is unset
+          return -1
+
+        if PR_ID_A is numeric and PR_ID_B is not numeric
+          return 1
+
+        if PR_ID_B is numeric and PR_ID_A is not numeric
+          return -1
+
+        # compare as numbers if numeric, else as strings
+        if PR_ID_A > PR_ID_B
+          return 1
+
+        if PR_ID_B > PR_ID_A
+          return -1
+
+        # at this point, they must be equal
+        if PR_ID_A != PR_ID_B
+          return INVALID COMPARISON
+
+        let INDEX = INDEX + 1
+      continue
 
 
 Why Use Semantic Versioning?
