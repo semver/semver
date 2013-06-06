@@ -83,7 +83,8 @@ a lower precedence than the associated normal version. A pre-release
 version indicates that the version is unstable and might not satisfy
 the intended compatibility requirements as denoted by its associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
+1.0.0-x.7.z.92.  See the "Parsing Logic" section below for more
+details and pseudocode.
 
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot 
 separated identifiers immediately following the patch or pre-release version. 
@@ -105,6 +106,71 @@ identifiers. A larger set of pre-release fields has a higher
 precedence than a smaller set, if all of the existing fields are
 equal. Example: 1.0.0-alpha < 1.0.0-alpha.beta < 1.0.0-alpha.1 <
 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+
+
+Parsing Logic
+-------------
+
+Though expressed as a human-readable string, a semver is an ordered
+set of alphanumeric values.  This set consists of the following
+fields:
+
+- `Major` (numeric)
+- `Minor` (numeric)
+- `Patch` (numeric)
+- `Prerelease` (ordered set, alphanumeric)
+
+Note that, although it appears in the semver string, the `Build`
+segment is ignored in the parsed data.  This is because it is for
+human consumption only, and has no bearing on the precedence of a
+version.  Compliant parsers MAY include the Build metadata string, but
+it MUST NOT be used in calculating precedence.
+
+The `Prerelease` field is itself an ordered set appended to the end, so a
+parsed semver may have 4 or more resulting field in the set.
+
+An example pseudocode implementation of parsing a semver follows.
+Note that `numeric` here implies that it consists of only digits, and
+that comparisons are performed numerically.
+
+    to PARSE (VERSION)
+      let SET = split(VERSION, ".")
+      let MAJOR = SET[0]
+      let MINOR = SET[1]
+      let PATCH_AND_PRERELEASE = SET[2]
+
+      if MAJOR is unset or MAJOR is not numeric or
+         MINOR is unset or MINOR is not numeric or
+         PATCH_AND_PRERELEASE is unset
+        return INVALID VERSION
+
+      if contains(PATCH_AND_PRERELEASE, "-")
+        let HYPHEN = indexOf(PATCH_AND_PRERELEASE, "-")
+        # eg: "0-a.b" -> PATCH=0, PRERELEASE=a.b
+        let PATCH = slice(PATCH_AND_PRERELEASE, 0, HYPHEN)
+        let PRERELEASE = slice(PATCH_AND_PRERELEASE, HYPHEN + 1)
+      else
+        let PATCH = PATCH_AND_PRERELEASE
+
+      if PATCH is not numeric
+        return INVALID VERSION
+
+      let RETURN_SET = { MAJOR, MINOR, PATCH }
+
+      if (PRERELEASE is unset)
+        return RETURN_SET
+
+      let PRERELEASE_SET = split(PRERELEASE, ".")
+
+      for each PRERELEASE_SET as PRERELEASE_IDENTIFIER
+        if PRERELEASE_IDENTIFIER is not alphanumeric or
+           PRERELEASE_IDENTIER is empty
+          return INVALID_VERSION
+        else
+          push(RETURN_SET, PRERELEASE_IDENTIFIER)
+
+      return RETURN_SET
+
 
 Why Use Semantic Versioning?
 ----------------------------
