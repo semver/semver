@@ -90,8 +90,8 @@ details and pseudocode.
 separated identifiers immediately following the patch or pre-release version. 
 Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-]. 
 Build metadata SHOULD be ignored when determining version precedence. Thus two
-packages with the same version, but different build metadata are considered to
-be the same version. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700, 
+packages with the same version, but different build metadata, are
+the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700, 
 1.0.0-beta+exp.sha.5114f85.
 
 1. Precedence MUST be calculated by separating the version into major, minor,
