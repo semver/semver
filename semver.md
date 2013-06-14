@@ -62,8 +62,8 @@ However it is done, it should be precise and comprehensive.
 1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
 non-negative integers, and MUST NOT contain leading zeroes. X is the
 major version, Y is the minor version, and Z is the patch version.
-Each element MUST increase numerically by increments of one. For
-instance: 1.9.0 -> 1.10.0 -> 1.11.0.
+Each element MUST increase numerically and SHOULD do so by increments of
+one. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
 1. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications MUST be released as a new version.
