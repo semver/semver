@@ -127,6 +127,66 @@ precedence than a smaller set, if all of the preceding identifiers are equal.
 Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
+Backus–Naur Form Grammar for Valid SemVer Versions
+--------------------------------------------------
+
+    <version> ::= <major> "." <minor> "." <patch>
+                | <major> "." <minor> "." <patch> "-" <pre-release>
+                | <major> "." <minor> "." <patch> "+" <build>
+                | <major> "." <minor> "." <patch> "-" <pre-release> "+" <build>
+
+    <major> ::= <non-negative integer>
+
+    <minor> ::= <non-negative integer>
+
+    <patch> ::= <non-negative integer>
+
+    <pre-release> ::= <dot-separated identifiers>
+
+    <build> ::= <dot-separated build identifiers>
+
+    <dot-separated identifiers> ::= <identifier>
+                                  | <identifier> "." <dot-separated identifiers>
+
+    <dot-separated build identifiers> ::= <build identifier>
+                                        | <build identifier> "." <dot-separated build identifiers>
+
+    <identifier> ::= <non-negative integer>
+                   | <non-numeric identifier>
+
+    <build identifier> ::= <identifier character>
+                         | <identifier character> <build identifier>
+
+    <non-numeric identifier> ::= <non-digit character>
+                               | <non-digit character> <build identifier>
+                               | <build identifier> <non-digit character>
+                               | <build identifier> <non-digit character> <build identifier>
+
+    <non-digit character> ::= <letter> | "-"
+
+    <identifier character> ::= <non-digit character> | <digit>
+
+    <non-negative integer> ::= "0"
+                             | <positive integer>
+
+    <positive integer> ::= <positive digit>
+                         | <positive digit> <digits>
+
+    <digits> ::= <digit>
+               | <digit> <digits>
+
+    <digit> ::= "0" | <positive digit>
+
+    <positive digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+    <letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
+               | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
+               | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d"
+               | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n"
+               | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x"
+               | "y" | "z"
+
+
 Why Use Semantic Versioning?
 ----------------------------
 
