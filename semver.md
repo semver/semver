@@ -60,9 +60,10 @@ could be declared in the code itself or exist strictly in documentation.
 However it is done, it should be precise and comprehensive.
 
 1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
-non-negative integers. X is the major version, Y is the minor version, and Z
-is the patch version. Each element MUST increase numerically by increments of
-one. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
+non-negative integers, and MUST NOT contain leading zeroes. X is the
+major version, Y is the minor version, and Z is the patch version.
+Each element MUST increase numerically by increments of one. For
+instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
 1. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications MUST be released as a new version.
@@ -93,10 +94,11 @@ version is incremented.
 1. A pre-release version MAY be denoted by appending a hyphen and a
 series of dot separated identifiers immediately following the patch
 version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
-[0-9A-Za-z-]. Identifiers MUST NOT be empty. Pre-release versions have
-a lower precedence than the associated normal version. A pre-release
-version indicates that the version is unstable and might not satisfy
-the intended compatibility requirements as denoted by its associated
+[0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
+NOT include leading zeroes. Pre-release versions have a lower
+precedence than the associated normal version. A pre-release version
+indicates that the version is unstable and might not satisfy the
+intended compatibility requirements as denoted by its associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1.0.0-x.7.z.92.
 
