@@ -182,6 +182,112 @@ Backus–Naur Form Grammar for Valid SemVer Versions
                | "y" | "z"
 
 
+Regular Expression Grammar for Valid SemVer Versions
+----------------------------------------------------
+
+The following Regular Expressions can be used for tokenizing,
+validating, and parsing SemVer version strings.
+
+## Numeric Identifier
+
+A single `0`, or a non-zero digit followed by zero or more digits.
+
+```
+/0|[1-9]\d*/
+```
+
+## Non-numeric Identifier
+
+Zero or more digits, followed by a letter or hyphen, and then zero or
+more letters, digits, or hyphens.
+
+```
+/\d*[a-zA-Z-][a-zA-Z0-9-]*/
+```
+
+## Main Version
+
+Three dot-separated numeric identifiers.
+
+```
+/(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)/
+```
+
+## Pre-release Version Identifier
+
+A numeric identifier, or a non-numeric identifier.
+
+```
+/0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*/
+```
+
+## Pre-release Version
+
+Hyphen, followed by zero or more pre-release version identifiers.
+
+```
+/-((?:0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*))*)/
+```
+
+## Build Metadata Identifier
+
+Any combination of digits, letters, or hyphens.
+
+```
+/[0-9A-Za-z-]+/
+```
+
+## Build Metadata
+
+Plus sign, followed by one or more period-separated build metadata
+identifiers.
+
+```
+/\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*/
+```
+
+## Full Version String
+
+A main version, followed optionally by a pre-release version and
+build metadata.
+
+Note that the only major, minor, patch, and pre-release sections of
+the version string are capturing groups.  The build metadata is not a
+capturing group, because it should not ever be used in version
+comparison.
+
+```
+/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*))*))?(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?$/
+```
+
+In JavaScript long regular expression format with comments:
+
+```javascript
+new RegExp(
+  '^' + // start of string
+  '(0|[1-9]\\d*)' + // major
+  '\\.(0|[1-9]\\d*)' + // minor
+  '\\.(0|[1-9]\\d*)' + // patch
+  '(?:-' + // start prerelease, do not capture hyphen
+    '(' + // capture prerelease version
+      '(?:' + // first identifier
+        '0|' + // zero, or
+        '[1-9]\\d*|' + // numeric identifier, or
+        '\\d*[a-zA-Z-][a-zA-Z0-9-]*' + // id with at least one non-number
+      ')' + // end first identifier
+      '(?:\\.' + // dot-separated
+        '(?:0|[1-9]\\d*|\\d*[a-zA-Z-][a-zA-Z0-9-]*)' + // identifier
+      ')*' + // zero or more of those
+    ')' + // end prerelease capture
+  ')?' + // prerelease is optional
+  '(?:' + // build tag (non-capturing)
+    '\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*' +
+  ')?' + // build tag is optional
+  '$' // end of string
+);
+```
+
+
 Why Use Semantic Versioning?
 ----------------------------
 
