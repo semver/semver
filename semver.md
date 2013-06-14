@@ -128,6 +128,166 @@ precedence than a smaller set, if all of the preceding identifiers are equal.
 Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
+Backus–Naur Form Grammar for Valid SemVer Versions
+--------------------------------------------------
+
+    <version> ::= <major> "." <minor> "." <patch>
+                | <major> "." <minor> "." <patch> "-" <pre-release>
+                | <major> "." <minor> "." <patch> "+" <build>
+                | <major> "." <minor> "." <patch> "-" <pre-release> "+" <build>
+
+    <major> ::= <non-negative integer>
+
+    <minor> ::= <non-negative integer>
+
+    <patch> ::= <non-negative integer>
+
+    <pre-release> ::= <dot-separated identifiers>
+
+    <build> ::= <dot-separated identifiers>
+
+    <dot-separated identifiers> ::= <identifier>
+                                  | <identifier> "." <dot-separated identifiers>
+
+    <non-numeric identifier> ::= <non-digit character>
+                               | <non-digit character> <identifier>
+                               | <identifier> <non-digit character>
+                               | <identifier> <non-digit character> <identifier>
+
+    <identifier> ::= <identifier character>
+                   | <identifier character> <identifier>
+
+    <non-digit character> ::= <letter> | "-"
+
+    <identifier character> ::= <non-digit character> | <digit>
+
+    <non-negative integer> ::= "0"
+                             | <positive integer>
+
+    <positive integer> ::= <positive digit>
+                         | <positive digit> <digits>
+
+    <digits> ::= <digit>
+               | <digit> <digits>
+
+    <digit> ::= "0" | <positive digit>
+
+    <positive digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+    <letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
+               | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
+               | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d"
+               | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n"
+               | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x"
+               | "y" | "z"
+
+
+Regular Expression Grammar for Valid SemVer Versions
+----------------------------------------------------
+
+The following Regular Expressions can be used for tokenizing,
+validating, and parsing SemVer version strings.
+
+## Numeric Identifier
+
+A single `0`, or a non-zero digit followed by zero or more digits.
+
+```
+/0|[1-9]\d*/
+```
+
+## Non-numeric Identifier
+
+Zero or more digits, followed by a letter or hyphen, and then zero or
+more letters, digits, or hyphens.
+
+```
+/\d*[a-zA-Z-][a-zA-Z0-9-]*/
+```
+
+## Main Version
+
+Three dot-separated numeric identifiers.
+
+```
+/(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)/
+```
+
+## Pre-release Version Identifier
+
+A numeric identifier, or a non-numeric identifier.
+
+```
+/0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*/
+```
+
+## Pre-release Version
+
+Hyphen, followed by zero or more pre-release version identifiers.
+
+```
+/-((?:0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*))*)/
+```
+
+## Build Metadata Identifier
+
+Any combination of digits, letters, or hyphens.
+
+```
+/[0-9A-Za-z-]+/
+```
+
+## Build Metadata
+
+Plus sign, followed by one or more period-separated build metadata
+identifiers.
+
+```
+/\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*/
+```
+
+## Full Version String
+
+A main version, followed optionally by a pre-release version and
+build metadata.
+
+Note that the only major, minor, patch, and pre-release sections of
+the version string are capturing groups.  The build metadata is not a
+capturing group, because it should not ever be used in version
+comparison.
+
+```
+/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][a-zA-Z0-9-]*))*))?(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?$/
+```
+
+In JavaScript long regular expression format with comments:
+
+```javascript
+new RegExp(
+  '^' + // start of string
+  '(0|[1-9]\\d*)' + // major
+  '\\.(0|[1-9]\\d*)' + // minor
+  '\\.(0|[1-9]\\d*)' + // patch
+  '(?:-' + // start prerelease, do not capture hyphen
+    '(' + // capture prerelease version
+      '(?:' + // first identifier
+        '0|' + // zero, or
+        '[1-9]\\d*|' + // numeric identifier, or
+        '\\d*[a-zA-Z-][a-zA-Z0-9-]*' + // id with at least one non-number
+      ')' + // end first identifier
+      '(?:\\.' + // dot-separated
+        '(?:0|[1-9]\\d*|\\d*[a-zA-Z-][a-zA-Z0-9-]*)' + // identifier
+      ')*' + // zero or more of those
+    ')' + // end prerelease capture
+  ')?' + // prerelease is optional
+  '(?:' + // build tag (non-capturing)
+    '\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*' +
+  ')?' + // build tag is optional
+  '$' // end of string
+);
+```
+
+
 Why Use Semantic Versioning?
 ----------------------------
 
