@@ -174,9 +174,6 @@ Backus–Naur Form Grammar for Valid SemVer Versions
     <identifier character> ::= <digit>
                              | <non-digit>
 
-    <non-digits> ::= <non-digit>
-                   | <non-digit> <non-digits>
-
     <non-digit> ::= <letter>
                   | "-"
 
@@ -187,9 +184,6 @@ Backus–Naur Form Grammar for Valid SemVer Versions
               | <positive digit>
 
     <positive digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-
-    <letters> ::= <letter>
-                | <letter> <letters>
 
     <letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
                | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
