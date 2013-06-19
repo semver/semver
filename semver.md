@@ -159,13 +159,10 @@ Backus–Naur Form Grammar for Valid SemVer Versions
     <build identifier> ::= <alphanumeric identifier>
                          | <digits>
 
-    <alphanumeric identifier> ::= <letters>
-                                | <letters> <identifier characters>
-                                | <digits> <non-digits>
-                                | <digits> <non-digits> <identifier characters>
-                                | <digits> <identifier characters> <non-digits>
-                                | <digits> <identifier characters> <non-digits> <identifier characters>
-                                | "-" <identifier characters>
+    <alphanumeric identifier> ::= <non-digit>
+                                | <non-digit> <identifier characters>
+                                | <identifier characters> <non-digit>
+                                | <identifier characters> <non-digit> <identifier characters>
 
     <numeric identifier> ::= "0"
                            | <positive digit>
@@ -176,7 +173,7 @@ Backus–Naur Form Grammar for Valid SemVer Versions
 
     <identifier character> ::= <digit>
                              | <non-digit>
-    
+
     <non-digits> ::= <non-digit>
                    | <non-digit> <non-digits>
 
@@ -186,7 +183,7 @@ Backus–Naur Form Grammar for Valid SemVer Versions
     <digits> ::= <digit>
                | <digit> <digits>
 
-    <digit> ::= "0" 
+    <digit> ::= "0"
               | <positive digit>
 
     <positive digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
