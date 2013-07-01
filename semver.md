@@ -67,8 +67,15 @@ Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 1. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications MUST be released as a new version.
 
-1. Major version zero (0.y.z) is for initial development. Anything may change
-at any time. The public API should not be considered stable.
+1. Major version zero (0.y.z) is for initial development. The public API should not be considered stable.
+
+1. Major version zero's minor version (0.Y.z) MUST be incremented if any backwards
+incompatible changes are introduced to the public API. Patch version MUST be reset to 0 when minor
+version is incremented.
+
+1. Major version zero's patch version (0.y.Z) MUST be incremented if new, backwards
+compatible functionality is introduced to the public API or backwards
+compatible bug fixes are introduced to the public API.
 
 1. Version 1.0.0 defines the public API. The way in which the version number
 is incremented after this release is dependent on this public API and how it
