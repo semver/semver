@@ -86,7 +86,7 @@ within the private code. It MAY include patch level changes. Patch version
 MUST be reset to 0 when minor version is incremented.
 
 1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
-incompatible changes are introduced to the public API. It MAY include minor
+incompatible changes are introduced to the public API. It MAY also include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
