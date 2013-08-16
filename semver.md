@@ -295,21 +295,22 @@ strictly be considered a patch release. Remember, Semantic Versioning is all
 about conveying meaning by how the version number changes. If these changes
 are important to your users, use the version number to inform them.
 
-### How should I handle deprecating functionality?
+### Como lidar com a descontinuação de funcionalidade?
 
-Deprecating existing functionality is a normal part of software development and
-is often required to make forward progress. When you deprecate part of your
-public API, you should do two things: (1) update your documentation to let
-users know about the change, (2) issue a new minor release with the deprecation
-in place. Before you completely remove the functionality in a new major release
-there should be at least one minor release that contains the deprecation so
-that users can smoothly transition to the new API.
+Descontinuar uma funcionalidade existente é algo normal no desenvolvimento de
+software e geralmente necessário para que se possa progredir. Quando você
+descontinuar parte da sua API pública, você precisa fazer duas coisas:
+(1) atualizar a sua documentação para que seus usuários possam saber da
+alteração, (2) lançar uma versão menor já com o aviso de descontinuação,
+antes de você, em um release maior, remover completamente a funcionalidade
+descontinuada, permitindo que seus usuários façam tranquilamente a transição
+para a nova API.
 
-### Does SemVer have a size limit on the version string?
+### SemVer tem um limite de tamanho para a string de versão?
 
-No, but use good judgment. A 255 character version string is probably overkill,
-for example. Also, specific systems may impose their own limits on the size of
-the string.
+Não, mas use de bom senso. Por exemplo, uma string de versão de 255
+caracteres provavelmente é um exagero, bem ainda, alguns sistemas podem
+impor seus próprios limites no tamanho da string de versão.
 
 Sobre
 -----
