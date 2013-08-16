@@ -311,18 +311,18 @@ No, but use good judgment. A 255 character version string is probably overkill,
 for example. Also, specific systems may impose their own limits on the size of
 the string.
 
-About
+Sobre
 -----
 
-The Semantic Versioning specification is authored by [Tom
-Preston-Werner](http://tom.preston-werner.com), inventor of Gravatars and
-cofounder of GitHub.
+A especificação do Versionamento Semântico é de autoria de [Tom
+Preston-Werner](http://tom.preston-werner.com), criador do Gravatars
+e cofundador do GitHub.
 
-If you'd like to leave feedback, please [open an issue on
+Se você quiser dar feedback, por favor [abra um issue no
 GitHub](https://github.com/mojombo/semver/issues).
 
 
-License
+Licença
 -------
 
 Creative Commons - CC BY 3.0
