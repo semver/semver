@@ -194,39 +194,16 @@ Backus–Naur Form Grammar for Valid SemVer Versions
                | "y" | "z"
 
 
-Why Use Semantic Versioning?
+Porque usar o Versionamento Semântico?
 ----------------------------
 
-This is not a new or revolutionary idea. In fact, you probably do something
-close to this already. The problem is that "close" isn't good enough. Without
-compliance to some sort of formal specification, version numbers are
-essentially useless for dependency management. By giving a name and clear
-definition to the above ideas, it becomes easy to communicate your intentions
-to the users of your software. Once these intentions are clear, flexible (but
-not too flexible) dependency specifications can finally be made.
+Esta não é uma idéia nova ou revolucionária. Na verdade, você provavelmente já faz algo mais ou menos assim. O problema é que "mais ou menos" não é o suficiente. Sem observância a algum tipo formal de especificação, os números de versão são essencialmente inúteis para a gestão de dependências. Ao dar um nome e uma definição clara para as idéias acima, fica mais fácil comunicar as suas intenções aos usuários do seu software. Uma vez que estas intenções são claras, pode-se fazer especificações de dependencias flexíveis (mas não muito flexíveis).
 
-A simple example will demonstrate how Semantic Versioning can make dependency
-hell a thing of the past. Consider a library called "Firetruck." It requires a
-Semantically Versioned package named "Ladder." At the time that Firetruck is
-created, Ladder is at version 3.1.0. Since Firetruck uses some functionality
-that was first introduced in 3.1.0, you can safely specify the Ladder
-dependency as greater than or equal to 3.1.0 but less than 4.0.0. Now, when
-Ladder version 3.1.1 and 3.2.0 become available, you can release them to your
-package management system and know that they will be compatible with existing
-dependent software.
+Um simples exemplo demonstrará como o Versionamento Semântico pode transformar o inferno das dependências algo do passado. Considere uma biblioteca chamada "Firetruck". Ela requer um pacote semânticamente versionado chamado "Ladder". No momento em que Firetruck está sendo criado, Ladder está na versão 3.1.0. Já que Firetruck usa algumas funcionalidades que foram introduzidas na versão 3.1.0, você pode seguramente especificar a dependência de Ladder em uma versão sendo maior ou igual a 3.1.0 mas menor que 4.0.0. Agora, quando Ladder versão 3.1.1 e 3.2.0 estiverem disponíveis, você pode utilizá-las no ser sistema de gestão de pacotes sabendo que elas serão compatíveis com o seu software.
 
-As a responsible developer you will, of course, want to verify that any
-package upgrades function as advertised. The real world is a messy place;
-there's nothing we can do about that but be vigilant. What you can do is let
-Semantic Versioning provide you with a sane way to release and upgrade
-packages without having to roll new versions of dependent packages, saving you
-time and hassle.
+Como um desenvolvedor responsável você irá, claro, querer verificar que qualquer atualização de pacotes funciona como anunciado. O mundo real é bem bagunçado e não podemos fazer nada além de estarmos sempre vigilantes e atentos. O que você pode fazer é deixar o Versionamento Semântico prover como uma forma sã de liberar atualizações de pacotes sem ter de lançar novas versões de pacotes dependentes, poupando tempo e aborrecimentos.
 
-If all of this sounds desirable, all you need to do to start using Semantic
-Versioning is to declare that you are doing so and then follow the rules. Link
-to this website from your README so others know the rules and can benefit from
-them.
-
+Se tudo isso soa desejável, o que você tem de fazer é começar a usar o Versionamento Semântico e anunciar para o seu usuário, e então, seguir as regras. No seu arquivo LEIAME aponte para este site para que outros saibam destas regras e possam também se beneficiar delas.
 
 FAQ
 ---
