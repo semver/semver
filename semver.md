@@ -286,14 +286,9 @@ modification depends on whether you updated your dependencies in order to fix
 a bug or introduce new functionality. I would usually expect additional code
 for the latter instance, in which case it's obviously a minor level increment.
 
-### What if I inadvertently alter the public API in a way that is not compliant with the version number change (i.e. the code incorrectly introduces a major breaking change in a patch release)
+### E se eu inadvertidamente alterei a API pública de uma forma que é incompatível com a forma como o número de versão foi trocado (ex. a alteração quebra a compatibilidade entre as versões, mas está numerada como se fosse um patch)
 
-Use your best judgment. If you have a huge audience that will be drastically
-impacted by changing the behavior back to what the public API intended, then
-it may be best to perform a major version release, even though the fix could
-strictly be considered a patch release. Remember, Semantic Versioning is all
-about conveying meaning by how the version number changes. If these changes
-are important to your users, use the version number to inform them.
+Use de bom senso. Se você tem uma grande audiência que será drasticamente impactada pela troca no comportamento da API pública, então o melhor é liberá-la como uma versão maior, mesmo que a alteração possa ser considerada somente como um patch. Lembre-se, versionamento semântico é transmitir significado pela forma como o número de versão muda. Se as modificações são importantes para os seus usuários, use o número da versão para informá-los.
 
 ### Como lidar com a descontinuação de funcionalidade?
 
