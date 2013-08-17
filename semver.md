@@ -231,32 +231,25 @@ them.
 FAQ
 ---
 
-### How should I deal with revisions in the 0.y.z initial development phase?
+### Como que eu devo lidar com revisões 0.y.z na fase inicial de desenvolvimento?
 
-The simplest thing to do is start your initial development release at 0.1.0
-and then increment the minor version for each subsequent release.
+A forma mais simples a fazer é iniciar seu desenvolvimento na versão 0.1.0 e ir incrementando o número da versão menor a cada nova liberação.
 
-### How do I know when to release 1.0.0?
+### Como saber quando liberar a versão 1.0.0?
 
-If your software is being used in production, it should probably already be
-1.0.0. If you have a stable API on which users have come to depend, you should
-be 1.0.0. If you're worrying a lot about backwards compatibility, you should
-probably already be 1.0.0.
+Se o seu software já está sendo usado em produção, então provavelmente ele deveria ser 1.0.0. Se você tem uma API estável da qual usuários dependem, você deveria ser 1.0.0. Se você está muito preocupado com quebras de compatibilidade, você provavelmente deveria ser 1.0.0.
 
-### Doesn't this discourage rapid development and fast iteration?
+### Isto não desencoraja o desenvolvimento ágil e iterações rápidas?
 
-Major version zero is all about rapid development. If you're changing the API
-every day you should either still be in version 0.y.z or on a separate
-development branch working on the next major version.
+A verão maior em zero é estar falando sobre desenvolvimento ágil. Se você está trocando a API todo o dia, então você precisa ou estar na versão 0.y.z ou em um outro branch de desenvolvimento, trabalhando na próxima versão maior.
 
-### If even the tiniest backwards incompatible changes to the public API require a major version bump, won't I end up at version 42.0.0 very rapidly?
+### Se as menores alterações que quebram a compatibilidade entre versões da API pública requerem o lançamento de uma versão maior, eu não vou acabar chegando na verão 42.0.0 muito rapidamente?
 
-This is a question of responsible development and foresight. Incompatible
-changes should not be introduced lightly to software that has a lot of
-dependent code. The cost that must be incurred to upgrade can be significant.
-Having to bump major versions to release incompatible changes means you'll
-think through the impact of your changes, and evaluate the cost/benefit ratio
-involved.
+Esta é uma questão de desenvolvimento responsável e previsão. Alterações que gerem incompatibilidade entre versões não devem ser introduzidas aos poucos em um software que tem muitos consumidores, afinal, o custo de fazer um upgrade pode ser significativo. Ser obrigado a liberar versões maiores para as alterações que geram quebras de compatibilidade significa que você terá de pensar nos impactos gerados pelas suas modificações e avaliar o custo/benefício envolvido.
+
+### Documentar toda a API pública é muito trabalho!
+
+É sua responsabilidade como um desenvolvedor profissional documentar corretamente o software que se destina a ser utilizado por outras pessoas. Gerir a complexidade do software é uma parte muito importante para manter um projeto eficiente, e isso é difícil de fazer se ninguém sabe como usar o software, ou quais métodos são seguros para chamar. No longo prazo, o versionamento semântico, e a insistência em tem uma API pública bem definida pode manter todos e tudo funcionando perfeitamente.
 
 ### Documenting the entire public API is too much work!
 
@@ -267,24 +260,14 @@ nobody knows how to use your software, or what methods are safe to call. In
 the long run, Semantic Versioning, and the insistence on a well defined public
 API can keep everyone and everything running smoothly.
 
-### What do I do if I accidentally release a backwards incompatible change as a minor version?
+### O que eu faço se eu acidentalmente liberar uma mudança incompatível como uma versão menor?
 
-As soon as you realize that you've broken the Semantic Versioning spec, fix
-the problem and release a new minor version that corrects the problem and
-restores backwards compatibility. Even under this circumstance, it is
-unacceptable to modify versioned releases. If it's appropriate,
-document the offending version and inform your users of the problem so that
-they are aware of the offending version.
+Assim que você perceber que você quebrou a especificação de versão semântica, conserte o problema e lançe uma nova versão menor para que a correção restaure a compatibilidade com versões anteriores. Mesmo nesta circunstância, é inaceitável modificar releases já versionados. Se for o caso,
+documente a versão modificada e informe os seus usuários sobre o problema para que eles fiquem cientes da versão modificada.
 
-### What should I do if I update my own dependencies without changing the public API?
+### O que devo fazer se eu atualizar minhas próprias dependências, sem alterar a API pública?
 
-That would be considered compatible since it does not affect the public API.
-Software that explicitly depends on the same dependencies as your package
-should have their own dependency specifications and the author will notice any
-conflicts. Determining whether the change is a patch level or minor level
-modification depends on whether you updated your dependencies in order to fix
-a bug or introduce new functionality. I would usually expect additional code
-for the latter instance, in which case it's obviously a minor level increment.
+Isso seria considerado compatível, uma vez que não afeta a API pública. Software que depende explicitamente nas mesmas dependências que o seu pacote deve ter suas próprias especificações de dependência e o autor vai notar quaisquer conflitos. Determinar se a mudança é um nível de patch ou de menor nível modificação depende se você atualizou suas dependências a fim de corrigir um bug, ou introduzir novas funcionalidades. Eu costumo esperar código adicional em última instância, no caso em que é, obviamente, um incremento do nível secundário.
 
 ### E se eu inadvertidamente alterei a API pública de uma forma que é incompatível com a forma como o número de versão foi trocado (ex. a alteração quebra a compatibilidade entre as versões, mas está numerada como se fosse um patch)
 
