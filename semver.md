@@ -251,15 +251,6 @@ Esta é uma questão de desenvolvimento responsável e previsão. Alterações q
 
 É sua responsabilidade como um desenvolvedor profissional documentar corretamente o software que se destina a ser utilizado por outras pessoas. Gerir a complexidade do software é uma parte muito importante para manter um projeto eficiente, e isso é difícil de fazer se ninguém sabe como usar o software, ou quais métodos são seguros para chamar. No longo prazo, o versionamento semântico, e a insistência em tem uma API pública bem definida pode manter todos e tudo funcionando perfeitamente.
 
-### Documenting the entire public API is too much work!
-
-It is your responsibility as a professional developer to properly document
-software that is intended for use by others. Managing software complexity is a
-hugely important part of keeping a project efficient, and that's hard to do if
-nobody knows how to use your software, or what methods are safe to call. In
-the long run, Semantic Versioning, and the insistence on a well defined public
-API can keep everyone and everything running smoothly.
-
 ### O que eu faço se eu acidentalmente liberar uma mudança incompatível como uma versão menor?
 
 Assim que você perceber que você quebrou a especificação de versão semântica, conserte o problema e lançe uma nova versão menor para que a correção restaure a compatibilidade com versões anteriores. Mesmo nesta circunstância, é inaceitável modificar releases já versionados. Se for o caso,
