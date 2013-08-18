@@ -1,18 +1,16 @@
-Semantic Versioning 2.0.0
-==============================
+Versionamento Semântico 2.0.0
+=============================
 
-Summary
+Sumário
 -------
 
-Given a version number MAJOR.MINOR.PATCH, increment the:
+Dado um número de versão MAIOR.MENOR.PATCH, incremente a:
 
-1. MAJOR version when you make incompatible API changes,
-1. MINOR version when you add functionality in a backwards-compatible
-   manner, and
-1. PATCH version when you make backwards-compatible bug fixes.
+1. versão MAIOR quando você fizer alterações que tornem a API incompatível;
+1. versão MENOR quando você adicionar funcionalidades de uma forma em que a compatibilidade seja mantida, e;
+1. versão PATCH quando você fizer consertos de falhas que mantém a compatibilidade.
 
-Additional labels for pre-release and build metadata are available as extensions
-to the MAJOR.MINOR.PATCH format.
+Etiquetas adicionais para pre-release e metadado de build estão disponíveis como extensões ao formato MAIOR.MENOR.PATCH.
 
 Introdução
 ----------
