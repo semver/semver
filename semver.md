@@ -1,328 +1,196 @@
-Semantic Versioning 2.0.0
-==============================
+Versionamento Semântico 2.0.0
+=============================
 
-Summary
+Sumário
 -------
 
-Given a version number MAJOR.MINOR.PATCH, increment the:
+Dado um número de versão MAIOR.MENOR.PATCH, incremente a:
 
-1. MAJOR version when you make incompatible API changes,
-1. MINOR version when you add functionality in a backwards-compatible
-   manner, and
-1. PATCH version when you make backwards-compatible bug fixes.
+1. versão MAIOR quando você fizer alterações que tornem a API incompatível;
+1. versão MENOR quando você adicionar funcionalidades de uma forma em que a compatibilidade seja mantida, e;
+1. versão PATCH quando você fizer consertos de falhas que mantém a compatibilidade.
 
-Additional labels for pre-release and build metadata are available as extensions
-to the MAJOR.MINOR.PATCH format.
+Etiquetas adicionais para pre-release e metadado de build estão disponíveis como extensões ao formato MAIOR.MENOR.PATCH.
 
-Introduction
-------------
+Introdução
+----------
 
-In the world of software management there exists a dread place called
-"dependency hell." The bigger your system grows and the more packages you
-integrate into your software, the more likely you are to find yourself, one
-day, in this pit of despair.
+No mundo da gestão de software existe um lugar pavoroso chamado "inferno das dependências". Quanto mais cresce o seu sistema e mais pacotes você integra nele, é mais provável que você se encontre, um dia, no poço do desespero. 
 
-In systems with many dependencies, releasing new package versions can quickly
-become a nightmare. If the dependency specifications are too tight, you are in
-danger of version lock (the inability to upgrade a package without having to
-release new versions of every dependent package). If dependencies are
-specified too loosely, you will inevitably be bitten by version promiscuity
-(assuming compatibility with more future versions than is reasonable).
-Dependency hell is where you are when version lock and/or version promiscuity
-prevent you from easily and safely moving your project forward.
+Em sistemas com muitas dependências, a liberação de novas versões de pacotes podem rápidamente se tornar um pesadelo. Se as especificações de dependência forem muito apertadas, você corre o risco de travar a versão (a incapacidade de atualizar um pacote sem ter de lançar novas versões de todos os pacotes que dependem dele). Se as dependências estão especificadas muito vagamente, você inevitávelmente será mordido pela promiscuidade entre versões (isso assumindo que a compatibilidade com outras versões fututas é razoável). Inferno das dependências é o lugar onde você está quando o bloqueio e/ou promiscuidade da versão vai impedi-lo, de forma fácil e segura, de mover o projeto adiante.
 
-As a solution to this problem, I propose a simple set of rules and
-requirements that dictate how version numbers are assigned and incremented.
-These rules are based on but not necessarily limited to pre-existing
-widespread common practices in use in both closed and open-source software.
-For this system to work, you first need to declare a public API. This may
-consist of documentation or be enforced by the code itself. Regardless, it is
-important that this API be clear and precise. Once you identify your public
-API, you communicate changes to it with specific increments to your version
-number. Consider a version format of X.Y.Z (Major.Minor.Patch). Bug fixes not
-affecting the API increment the patch version, backwards compatible API
-additions/changes increment the minor version, and backwards incompatible API
-changes increment the major version.
+Como solução para este problema, eu proponho um simples conjunto de regras e requisitos que ditam como os números de versão são atribuídos e incrementados. Estas regras são baseadas, mas não necessáriamente limitadas as bem difundidas práticas comumente em uso tanto nos softwares de código aberto quanto nos de código fechado. Para este sistema funcionar, você primeiramente precisa declarar uma API pública. Isso pode consistir de documentação ou ser executada pelo próprio código. Independentemente disso, é importante que esta API ser clara e precisa. Uma vez que você identifique sua API pública, você comunica as trocas efetuadas com incrementos específicos no seu número de versão. Considere uma versão no formato X.Y.Z (maior.menor.patch). Consertos de erros que não afetam a API incrementam a versão patch, inclusões/modificações que não afetam a compatibilidade entre versões da API incrementam a versão menor e modificações que quebrem a compatibilidade entre versões da API incrementam o valor da versão maior.
 
-I call this system "Semantic Versioning." Under this scheme, version numbers
-and the way they change convey meaning about the underlying code and what has
-been modified from one version to the next.
+Eu chamo este sistema de "Versionamento Semântico". Nele, os números de versão e a forma como eles mudam transmitem sentido sobre o código e sobre o que foi modificado de uma versão para outra do texto.
 
+Especificação do Versionamento Semântico (SemVer)
+-------------------------------------------------
 
-Semantic Versioning Specification (SemVer)
-------------------------------------------
+As palavras chave "PRECISA", "NÃO PRECISA", "REQUERIDO", "DEVE", "NÃO DEVE", "DEVERIA", "NÃO DEVERIA", "RECOMENDADO", "PODE", e "OPCIONAL" neste documento devem ser interpretadas como descrito na [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
+1. Software usando o Versionamento Semântico PRECISA declarar uma API pública. Esta API pode ser declarada no próprio código fonte ou existir estritamente na documentação. Contudo ao ser feita, deve ser precisa e abrangente.
 
-1. Software using Semantic Versioning MUST declare a public API. This API
-could be declared in the code itself or exist strictly in documentation.
-However it is done, it should be precise and comprehensive.
+1. Um número de versão normal PRECISA ter o formato X.Y.Z, onde, X, Y e Z são números inteiros não negativos e NÃO PRECISA conter zeros à esquerda. X é a versão maior, Y a versão menor e Z é a versão de patch. Cada elemento PRECISA ser incrementado numericamente. Por exemplo: 1.9.0 -> 1.10.0 -> 1.11.0.
 
-1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
-non-negative integers, and MUST NOT contain leading zeroes. X is the
-major version, Y is the minor version, and Z is the patch version.
-Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
+1. Uma vez publicado um pacote versionado, o conteúdo daquela versão NÃO PRECISA ser modificado. Quaisquer modificações PRECISAM ser liberadas sob uma nova versão.
 
-1. Once a versioned package has been released, the contents of that version
-MUST NOT be modified. Any modifications MUST be released as a new version.
+1. A versão maior zero (0.y.z) é para o desenvolvimento inicial. Qualquer coisa pode mudar a qualquer momento. A API pública não deve ser considerada estável.
 
-1. Major version zero (0.y.z) is for initial development. Anything may change
-at any time. The public API should not be considered stable.
+1. A versão 1.0.0 define a API pública. A forma como o número de versão é incrementado depois desta liberação depende da API pública e em como ela é modificada.
 
-1. Version 1.0.0 defines the public API. The way in which the version number
-is incremented after this release is dependent on this public API and how it
-changes.
+1. A versão de patch Z (x.y.Z | x > 0) PRECISA ser incrementada somente se reparos de falhas que não quebrem a compatibilidade entre versões foram introduzidos. Um reparo de falha é definido como uma alteração interna que corrige um comportamento indesejado.
 
-1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
-compatible bug fixes are introduced. A bug fix is defined as an internal
-change that fixes incorrect behavior.
+1. Versão menor Y (x.Y.z | x > 0) PRECISA ser incrementada se novas funcionalidades, que não quebrem compatibilidade entre versões, foram introduzidas na API pública. PRECISA ser incrementada se qualquer funcionalidade da API pública for marcada como obsoleta. PODE ser incrementada se substanciais novas funcionalidades ou melhorias foram introduzidas no código privado. PODE incluir alterações de patch. A versão patch PRECISA ser reiniciada para 0 quando a versão menor for incrementada.
 
-1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
-compatible functionality is introduced to the public API. It MUST be
-incremented if any public API functionality is marked as deprecated. It MAY be
-incremented if substantial new functionality or improvements are introduced
-within the private code. It MAY include patch level changes. Patch version
-MUST be reset to 0 when minor version is incremented.
+1. A versão maior X (X.y.z | X > 0) PRECISA ser incrementada se alguma modificação levou à incompatibilidade entre versões da API pública. PODE também incluir alterações de versão menor ou patch. Patch e a versão menor PRECISAM ser reiniciadas para 0 quando a versão maior é incrementada.
 
-1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
-incompatible changes are introduced to the public API. It MAY also include minor
-and patch level changes. Patch and minor version MUST be reset to 0 when major
-version is incremented.
+1. Uma versão pre-release PODE ser indicada anexando um hífen e uma série de identificadores separados por pontos imediatamente após o número de versão patch. Identificadores PRECISAM abranger somente alfanuméricos ASCII e hífen [0-9A-Za-z-]. Identificadores NÃO PRECISAM estar vazios. Identificadores numéricos NÃO PRECISA incluir zeros à esquerda. Versões de pre-release tem uma precedência menor que a verão normal associada. Uma versão pre-release indica que a versão é instável e pode não satisfazer os requisitos de compatibilidade desejados, como indicado pelas suas versões normais associadas. Exemplos: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
-1. A pre-release version MAY be denoted by appending a hyphen and a
-series of dot separated identifiers immediately following the patch
-version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
-[0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
-NOT include leading zeroes. Pre-release versions have a lower
-precedence than the associated normal version. A pre-release version
-indicates that the version is unstable and might not satisfy the
-intended compatibility requirements as denoted by its associated
-normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
+1. Metadado de build PODE ser indicado ao anexar um sinal de mais e uma série de identificadores separados por pontos imediatamente após o número de versão patch ou o de pre-release. Identificadores PRECISAM abranger somente alfanuméricos ASCII e hífen [0-9A-Za-z-]. Identificadores NÃO PRECISAM estar vazios. Metadados de build PRECISAM ser ignorados quando determinando a precedência de versão. Assim, duas versões que diferem apenas nos metadados de construção, têm a mesma precedência. Exemplos: 1.0.0-alpha+001, 1.0.0+20130313144700, 1.0.0-beta+exp.sha.5114f85.
 
-1. Build metadata MAY be denoted by appending a plus sign and a series of dot
-separated identifiers immediately following the patch or pre-release version.
-Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
-Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
-version precedence. Thus two versions that differ only in the build metadata,
-have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
-1.0.0-beta+exp.sha.5114f85.
+1. A precedência refere-se a como versões são comparadas umas com as outras quando solicitado. A precedência PRECISA ser calculada separando a versão em maior, menor, patch e pre-release, nesta ordem (metadado de build não figura na precedência). A precedência é dererminada pela primeira diferença quando comparando cada um destes identificadores, da esquerda para a direita, como segue: As versões maior, menor e patch são sempre comparadas numéricamente. Exemplo: 1.0.0 < 2.0.0 < 2.1.0 < 2.1.1. Quando maior, menor e patch são iguais, um pre-release tem sempre menor precedência do que uma versão normal. Exemplo: 1.0.0-alpha < 1.0.0. A precedência entre duas versões pre-release com os mesmos valores para as versões maior, menor e patch PRECISAM ser determinada comparando cada identificador separado por pontos, da esquerda para a direita, até encontrar uma diferença, como segue: identificadores consistindo somente de dígitos são comparados numéricamente e identificadores com letras ou hífens são comparados lexicamente usando a ordenação de caracteres ASCII. Identificadores numéricos sempre tem precedência inferior do que os identificadore não numéricos. Um grande conjunto de campos de pre-release tem uma precedência maior do que um conjunto menor, se todos os identificadores precedentes forem iguais. Exemplo: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
-1. Precedence refers to how versions are compared to each other when ordered.
-Precedence MUST be calculated by separating the version into major, minor, patch
-and pre-release identifiers in that order (Build metadata does not figure
-into precedence). Precedence is determined by the first difference when
-comparing each of these identifiers from left to right as follows: Major, minor,
-and patch versions are always compared numerically. Example: 1.0.0 < 2.0.0 <
-2.1.0 < 2.1.1. When major, minor, and patch are equal, a pre-release version has
-lower precedence than a normal version. Example: 1.0.0-alpha < 1.0.0. Precedence
-for two pre-release versions with the same major, minor, and patch version MUST
-be determined by comparing each dot separated identifier from left to right
-until a difference is found as follows: identifiers consisting of only digits
-are compared numerically and identifiers with letters or hyphens are compared
-lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. A larger set of pre-release fields has a higher
-precedence than a smaller set, if all of the preceding identifiers are equal.
-Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
-1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+Backus–Naur Form Grammar para versões SemVer válidas
+----------------------------------------------------
 
-Backus–Naur Form Grammar for Valid SemVer Versions
---------------------------------------------------
+    <semver válido> ::= <versão core>
+                     | <versão core> "-" <pre-release>
+                     | <versão core> "+" <build>
+                     | <versão core> "-" <pre-release> "+" <build>
 
-    <valid semver> ::= <version core>
-                     | <version core> "-" <pre-release>
-                     | <version core> "+" <build>
-                     | <version core> "-" <pre-release> "+" <build>
+    <versão core> ::= <maior> "." <menor> "." <patch>
 
-    <version core> ::= <major> "." <minor> "." <patch>
+    <maior> ::= <identificador numérico>
 
-    <major> ::= <numeric identifier>
+    <menor> ::= <identificador numérico>
 
-    <minor> ::= <numeric identifier>
+    <patch> ::= <identificador numérico>
 
-    <patch> ::= <numeric identifier>
+    <pre-release> ::= <identificadores pre-release separados-por-ponto>
 
-    <pre-release> ::= <dot-separated pre-release identifiers>
+    <identificadores pre-release separados-por-ponto> ::= <pre-release identifier>
+                                              | <pre-release identifier> "." <identificadores pre-release separados-por-ponto>
 
-    <dot-separated pre-release identifiers> ::= <pre-release identifier>
-                                              | <pre-release identifier> "." <dot-separated pre-release identifiers>
+    <build> ::= <identificadores build separados-por-ponto>
 
-    <build> ::= <dot-separated build identifiers>
+    <identificadores build separados-por-ponto> ::= <identificador build>
+                                        | <identificador build> "." <identificadores build separados-por-ponto>
 
-    <dot-separated build identifiers> ::= <build identifier>
-                                        | <build identifier> "." <dot-separated build identifiers>
-
-    <pre-release identifier> ::= <alphanumeric identifier>
+    <pre-release identifier> ::= <identificadores alfanuméricos>
                                | <numeric identifier>
 
-    <build identifier> ::= <alphanumeric identifier>
-                         | <digits>
+    <identificador build> ::= <identificadores alfanuméricos>
+                         | <dígitos>
 
-    <alphanumeric identifier> ::= <non-digit>
-                                | <non-digit> <identifier characters>
-                                | <identifier characters> <non-digit>
-                                | <identifier characters> <non-digit> <identifier characters>
+    <identificadores alfanuméricos> ::= <não-dígitos>
+                                | <não-dígitos> <identificador caracteres>
+                                | <identificador caracteres> <não-dígitos>
+                                | <identificador caracteres> <não-dígitos> <identificador caracteres>
 
-    <numeric identifier> ::= "0"
-                           | <positive digit>
-                           | <positive digit> <digits>
+    <identificador numérico> ::= "0"
+                           | <dígitos positivos>
+                           | <dígitos positivos> <dígitos>
 
-    <identifier characters> ::= <identifier character>
-                              | <identifier character> <identifier characters>
+    <identificador caracteres> ::= <identificador caracter>
+                              | <identificador caracter> <identificador caracteres>
 
-    <identifier character> ::= <digit>
-                             | <non-digit>
+    <identificador caracter> ::= <dígito>
+                             | <não-dígitos>
 
-    <non-digit> ::= <letter>
+    <não-dígitos> ::= <letras>
                   | "-"
 
-    <digits> ::= <digit>
-               | <digit> <digits>
+    <dígitos> ::= <dígito>
+               | <dígito> <dígitos>
 
-    <digit> ::= "0"
-              | <positive digit>
+    <dígito> ::= "0"
+              | <dígitos positivos>
 
-    <positive digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+    <dígitos positivos> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
-    <letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
+    <letras> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
                | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
                | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d"
                | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n"
                | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x"
                | "y" | "z"
 
-
-Why Use Semantic Versioning?
+Porque usar o Versionamento Semântico?
 ----------------------------
 
-This is not a new or revolutionary idea. In fact, you probably do something
-close to this already. The problem is that "close" isn't good enough. Without
-compliance to some sort of formal specification, version numbers are
-essentially useless for dependency management. By giving a name and clear
-definition to the above ideas, it becomes easy to communicate your intentions
-to the users of your software. Once these intentions are clear, flexible (but
-not too flexible) dependency specifications can finally be made.
+Esta não é uma idéia nova ou revolucionária. Na verdade, você provavelmente já faz algo mais ou menos assim. O problema é que "mais ou menos" não é o suficiente. Sem observância a algum tipo formal de especificação, os números de versão são essencialmente inúteis para a gestão de dependências. Ao dar um nome e uma definição clara para as idéias acima, fica mais fácil comunicar as suas intenções aos usuários do seu software. Uma vez que estas intenções são claras, pode-se fazer especificações de dependencias flexíveis (mas não muito flexíveis).
 
-A simple example will demonstrate how Semantic Versioning can make dependency
-hell a thing of the past. Consider a library called "Firetruck." It requires a
-Semantically Versioned package named "Ladder." At the time that Firetruck is
-created, Ladder is at version 3.1.0. Since Firetruck uses some functionality
-that was first introduced in 3.1.0, you can safely specify the Ladder
-dependency as greater than or equal to 3.1.0 but less than 4.0.0. Now, when
-Ladder version 3.1.1 and 3.2.0 become available, you can release them to your
-package management system and know that they will be compatible with existing
-dependent software.
+Um simples exemplo demonstrará como o Versionamento Semântico pode transformar o inferno das dependências algo do passado. Considere uma biblioteca chamada "Firetruck". Ela requer um pacote semânticamente versionado chamado "Ladder". No momento em que Firetruck está sendo criado, Ladder está na versão 3.1.0. Já que Firetruck usa algumas funcionalidades que foram introduzidas na versão 3.1.0, você pode seguramente especificar a dependência de Ladder em uma versão sendo maior ou igual a 3.1.0 mas menor que 4.0.0. Agora, quando Ladder versão 3.1.1 e 3.2.0 estiverem disponíveis, você pode utilizá-las no ser sistema de gestão de pacotes sabendo que elas serão compatíveis com o seu software.
 
-As a responsible developer you will, of course, want to verify that any
-package upgrades function as advertised. The real world is a messy place;
-there's nothing we can do about that but be vigilant. What you can do is let
-Semantic Versioning provide you with a sane way to release and upgrade
-packages without having to roll new versions of dependent packages, saving you
-time and hassle.
+Como um desenvolvedor responsável você irá, claro, querer verificar que qualquer atualização de pacotes funciona como anunciado. O mundo real é bem bagunçado e não podemos fazer nada além de estarmos sempre vigilantes e atentos. O que você pode fazer é deixar o Versionamento Semântico prover como uma forma sã de liberar atualizações de pacotes sem ter de lançar novas versões de pacotes dependentes, poupando tempo e aborrecimentos.
 
-If all of this sounds desirable, all you need to do to start using Semantic
-Versioning is to declare that you are doing so and then follow the rules. Link
-to this website from your README so others know the rules and can benefit from
-them.
-
+Se tudo isso soa desejável, o que você tem de fazer é começar a usar o Versionamento Semântico e anunciar para o seu usuário, e então, seguir as regras. No seu arquivo LEIAME aponte para este site para que outros saibam destas regras e possam também se beneficiar delas.
 
 FAQ
 ---
 
-### How should I deal with revisions in the 0.y.z initial development phase?
+### Como que eu devo lidar com revisões 0.y.z na fase inicial de desenvolvimento?
 
-The simplest thing to do is start your initial development release at 0.1.0
-and then increment the minor version for each subsequent release.
+A forma mais simples a fazer é iniciar seu desenvolvimento na versão 0.1.0 e ir incrementando o número da versão menor a cada nova liberação.
 
-### How do I know when to release 1.0.0?
+### Como saber quando liberar a versão 1.0.0?
 
-If your software is being used in production, it should probably already be
-1.0.0. If you have a stable API on which users have come to depend, you should
-be 1.0.0. If you're worrying a lot about backwards compatibility, you should
-probably already be 1.0.0.
+Se o seu software já está sendo usado em produção, então provavelmente ele deveria ser 1.0.0. Se você tem uma API estável da qual usuários dependem, você deveria ser 1.0.0. Se você está muito preocupado com quebras de compatibilidade, você provavelmente deveria ser 1.0.0.
 
-### Doesn't this discourage rapid development and fast iteration?
+### Isto não desencoraja o desenvolvimento ágil e iterações rápidas?
 
-Major version zero is all about rapid development. If you're changing the API
-every day you should either still be in version 0.y.z or on a separate
-development branch working on the next major version.
+A verão maior em zero é estar falando sobre desenvolvimento ágil. Se você está trocando a API todo o dia, então você precisa ou estar na versão 0.y.z ou em um outro branch de desenvolvimento, trabalhando na próxima versão maior.
 
-### If even the tiniest backwards incompatible changes to the public API require a major version bump, won't I end up at version 42.0.0 very rapidly?
+### Se as menores alterações que quebram a compatibilidade entre versões da API pública requerem o lançamento de uma versão maior, eu não vou acabar chegando na verão 42.0.0 muito rapidamente?
 
-This is a question of responsible development and foresight. Incompatible
-changes should not be introduced lightly to software that has a lot of
-dependent code. The cost that must be incurred to upgrade can be significant.
-Having to bump major versions to release incompatible changes means you'll
-think through the impact of your changes, and evaluate the cost/benefit ratio
-involved.
+Esta é uma questão de desenvolvimento responsável e previsão. Alterações que gerem incompatibilidade entre versões não devem ser introduzidas aos poucos em um software que tem muitos consumidores, afinal, o custo de fazer um upgrade pode ser significativo. Ser obrigado a liberar versões maiores para as alterações que geram quebras de compatibilidade significa que você terá de pensar nos impactos gerados pelas suas modificações e avaliar o custo/benefício envolvido.
 
-### Documenting the entire public API is too much work!
+### Documentar toda a API pública é muito trabalho!
 
-It is your responsibility as a professional developer to properly document
-software that is intended for use by others. Managing software complexity is a
-hugely important part of keeping a project efficient, and that's hard to do if
-nobody knows how to use your software, or what methods are safe to call. In
-the long run, Semantic Versioning, and the insistence on a well defined public
-API can keep everyone and everything running smoothly.
+É sua responsabilidade como um desenvolvedor profissional documentar corretamente o software que se destina a ser utilizado por outras pessoas. Gerir a complexidade do software é uma parte muito importante para manter um projeto eficiente, e isso é difícil de fazer se ninguém sabe como usar o software, ou quais métodos são seguros para chamar. No longo prazo, o versionamento semântico, e a insistência em tem uma API pública bem definida pode manter todos e tudo funcionando perfeitamente.
 
-### What do I do if I accidentally release a backwards incompatible change as a minor version?
+### O que eu faço se eu acidentalmente liberar uma mudança incompatível como uma versão menor?
 
-As soon as you realize that you've broken the Semantic Versioning spec, fix
-the problem and release a new minor version that corrects the problem and
-restores backwards compatibility. Even under this circumstance, it is
-unacceptable to modify versioned releases. If it's appropriate,
-document the offending version and inform your users of the problem so that
-they are aware of the offending version.
+Assim que você perceber que você quebrou a especificação de versão semântica, conserte o problema e lançe uma nova versão menor para que a correção restaure a compatibilidade com versões anteriores. Mesmo nesta circunstância, é inaceitável modificar releases já versionados. Se for o caso,
+documente a versão modificada e informe os seus usuários sobre o problema para que eles fiquem cientes da versão modificada.
 
-### What should I do if I update my own dependencies without changing the public API?
+### O que devo fazer se eu atualizar minhas próprias dependências, sem alterar a API pública?
 
-That would be considered compatible since it does not affect the public API.
-Software that explicitly depends on the same dependencies as your package
-should have their own dependency specifications and the author will notice any
-conflicts. Determining whether the change is a patch level or minor level
-modification depends on whether you updated your dependencies in order to fix
-a bug or introduce new functionality. I would usually expect additional code
-for the latter instance, in which case it's obviously a minor level increment.
+Isso seria considerado compatível, uma vez que não afeta a API pública. Software que depende explicitamente nas mesmas dependências que o seu pacote deve ter suas próprias especificações de dependência e o autor vai notar quaisquer conflitos. Determinar se a mudança é um nível de patch ou de menor nível modificação depende se você atualizou suas dependências a fim de corrigir um bug, ou introduzir novas funcionalidades. Eu costumo esperar código adicional em última instância, no caso em que é, obviamente, um incremento do nível secundário.
 
-### What if I inadvertently alter the public API in a way that is not compliant with the version number change (i.e. the code incorrectly introduces a major breaking change in a patch release)
+### E se eu inadvertidamente alterei a API pública de uma forma que é incompatível com a forma como o número de versão foi trocado (ex. a alteração quebra a compatibilidade entre as versões, mas está numerada como se fosse um patch)
 
-Use your best judgment. If you have a huge audience that will be drastically
-impacted by changing the behavior back to what the public API intended, then
-it may be best to perform a major version release, even though the fix could
-strictly be considered a patch release. Remember, Semantic Versioning is all
-about conveying meaning by how the version number changes. If these changes
-are important to your users, use the version number to inform them.
+Use de bom senso. Se você tem uma grande audiência que será drasticamente impactada pela troca no comportamento da API pública, então o melhor é liberá-la como uma versão maior, mesmo que a alteração possa ser considerada somente como um patch. Lembre-se, versionamento semântico é transmitir significado pela forma como o número de versão muda. Se as modificações são importantes para os seus usuários, use o número da versão para informá-los.
 
-### How should I handle deprecating functionality?
+### Como lidar com a descontinuação de funcionalidade?
 
-Deprecating existing functionality is a normal part of software development and
-is often required to make forward progress. When you deprecate part of your
-public API, you should do two things: (1) update your documentation to let
-users know about the change, (2) issue a new minor release with the deprecation
-in place. Before you completely remove the functionality in a new major release
-there should be at least one minor release that contains the deprecation so
-that users can smoothly transition to the new API.
+Descontinuar uma funcionalidade existente é algo normal no desenvolvimento de
+software e geralmente necessário para que se possa progredir. Quando você
+descontinuar parte da sua API pública, você precisa fazer duas coisas:
+(1) atualizar a sua documentação para que seus usuários possam saber da
+alteração, (2) lançar uma versão menor já com o aviso de descontinuação,
+antes de você, em um release maior, remover completamente a funcionalidade
+descontinuada, permitindo que seus usuários façam tranquilamente a transição
+para a nova API.
 
-### Does SemVer have a size limit on the version string?
+### SemVer tem um limite de tamanho para a string de versão?
 
-No, but use good judgment. A 255 character version string is probably overkill,
-for example. Also, specific systems may impose their own limits on the size of
-the string.
+Não, mas use de bom senso. Por exemplo, uma string de versão de 255
+caracteres provavelmente é um exagero, bem ainda, alguns sistemas podem
+impor seus próprios limites no tamanho da string de versão.
 
-About
+Sobre
 -----
 
-The Semantic Versioning specification is authored by [Tom
-Preston-Werner](http://tom.preston-werner.com), inventor of Gravatars and
-cofounder of GitHub.
+A especificação do Versionamento Semântico é de autoria de [Tom
+Preston-Werner](http://tom.preston-werner.com), criador do Gravatars
+e cofundador do GitHub.
 
-If you'd like to leave feedback, please [open an issue on
+Se você quiser dar feedback, por favor [abra um issue no
 GitHub](https://github.com/mojombo/semver/issues).
 
 
-License
+Licença
 -------
 
 Creative Commons - CC BY 3.0
