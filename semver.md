@@ -14,40 +14,16 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions
 to the MAJOR.MINOR.PATCH format.
 
-Introduction
-------------
+Introdução
+----------
 
-In the world of software management there exists a dread place called
-"dependency hell." The bigger your system grows and the more packages you
-integrate into your software, the more likely you are to find yourself, one
-day, in this pit of despair.
+No mundo da gestão de software existe um lugar pavoroso chamado "inferno das dependências". Quanto mais cresce o seu sistema e mais pacotes você integra nele, é mais provável que você se encontre, um dia, no poço do desespero. 
 
-In systems with many dependencies, releasing new package versions can quickly
-become a nightmare. If the dependency specifications are too tight, you are in
-danger of version lock (the inability to upgrade a package without having to
-release new versions of every dependent package). If dependencies are
-specified too loosely, you will inevitably be bitten by version promiscuity
-(assuming compatibility with more future versions than is reasonable).
-Dependency hell is where you are when version lock and/or version promiscuity
-prevent you from easily and safely moving your project forward.
+Em sistemas com muitas dependências, a liberação de novas versões de pacotes podem rápidamente se tornar um pesadelo. Se as especificações de dependência forem muito apertadas, você corre o risco de travar a versão (a incapacidade de atualizar um pacote sem ter de lançar novas versões de todos os pacotes que dependem dele). Se as dependências estão especificadas muito vagamente, você inevitávelmente será mordido pela promiscuidade entre versões (isso assumindo que a compatibilidade com outras versões fututas é razoável). Inferno das dependências é o lugar onde você está quando o bloqueio e/ou promiscuidade da versão vai impedi-lo, de forma fácil e segura, de mover o projeto adiante.
 
-As a solution to this problem, I propose a simple set of rules and
-requirements that dictate how version numbers are assigned and incremented.
-These rules are based on but not necessarily limited to pre-existing
-widespread common practices in use in both closed and open-source software.
-For this system to work, you first need to declare a public API. This may
-consist of documentation or be enforced by the code itself. Regardless, it is
-important that this API be clear and precise. Once you identify your public
-API, you communicate changes to it with specific increments to your version
-number. Consider a version format of X.Y.Z (Major.Minor.Patch). Bug fixes not
-affecting the API increment the patch version, backwards compatible API
-additions/changes increment the minor version, and backwards incompatible API
-changes increment the major version.
+Como solução para este problema, eu proponho um simples conjunto de regras e requisitos que ditam como os números de versão são atribuídos e incrementados. Estas regras são baseadas, mas não necessáriamente limitadas as bem difundidas práticas comumente em uso tanto nos softwares de código aberto quanto nos de código fechado. Para este sistema funcionar, você primeiramente precisa declarar uma API pública. Isso pode consistir de documentação ou ser executada pelo próprio código. Independentemente disso, é importante que esta API ser clara e precisa. Uma vez que você identifique sua API pública, você comunica as trocas efetuadas com incrementos específicos no seu número de versão. Considere uma versão no formato X.Y.Z (maior.menor.patch). Consertos de erros que não afetam a API incrementam a versão patch, inclusões/modificações que não afetam a compatibilidade entre versões da API incrementam a versão menor e modificações que quebrem a compatibilidade entre versões da API incrementam o valor da versão maior.
 
-I call this system "Semantic Versioning." Under this scheme, version numbers
-and the way they change convey meaning about the underlying code and what has
-been modified from one version to the next.
-
+Eu chamo este sistema de "Versionamento Semântico". Nele, os números de versão e a forma como eles mudam transmitem sentido sobre o código e sobre o que foi modificado de uma versão para outra do texto.
 
 Especificação do Versionamento Semântico (SemVer)
 -------------------------------------------------
