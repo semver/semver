@@ -49,84 +49,32 @@ and the way they change convey meaning about the underlying code and what has
 been modified from one version to the next.
 
 
-Semantic Versioning Specification (SemVer)
-------------------------------------------
+Especificação do Versionamento Semântico (SemVer)
+-------------------------------------------------
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
+As palavras chave "PRECISA", "NÃO PRECISA", "REQUERIDO", "DEVE", "NÃO DEVE", "DEVERIA", "NÃO DEVERIA", "RECOMENDADO", "PODE", e "OPCIONAL" neste documento devem ser interpretadas como descrito na [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
-1. Software using Semantic Versioning MUST declare a public API. This API
-could be declared in the code itself or exist strictly in documentation.
-However it is done, it should be precise and comprehensive.
+1. Software usando o Versionamento Semântico PRECISA declarar uma API pública. Esta API pode ser declarada no próprio código fonte ou existir estritamente na documentação. Contudo ao ser feita, deve ser precisa e abrangente.
 
-1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
-non-negative integers, and MUST NOT contain leading zeroes. X is the
-major version, Y is the minor version, and Z is the patch version.
-Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
+1. Um número de versão normal PRECISA ter o formato X.Y.Z, onde, X, Y e Z são números inteiros não negativos e NÃO PRECISA conter zeros à esquerda. X é a versão maior, Y a versão menor e Z é a versão de patch. Cada elemento PRECISA ser incrementado numericamente. Por exemplo: 1.9.0 -> 1.10.0 -> 1.11.0.
 
-1. Once a versioned package has been released, the contents of that version
-MUST NOT be modified. Any modifications MUST be released as a new version.
+1. Uma vez publicado um pacote versionado, o conteúdo daquela versão NÃO PRECISA ser modificado. Quaisquer modificações PRECISAM ser liberadas sob uma nova versão.
 
-1. Major version zero (0.y.z) is for initial development. Anything may change
-at any time. The public API should not be considered stable.
+1. A versão maior zero (0.y.z) é para o desenvolvimento inicial. Qualquer coisa pode mudar a qualquer momento. A API pública não deve ser considerada estável.
 
-1. Version 1.0.0 defines the public API. The way in which the version number
-is incremented after this release is dependent on this public API and how it
-changes.
+1. A versão 1.0.0 define a API pública. A forma como o número de versão é incrementado depois desta liberação depende da API pública e em como ela é modificada.
 
-1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
-compatible bug fixes are introduced. A bug fix is defined as an internal
-change that fixes incorrect behavior.
+1. A versão de patch Z (x.y.Z | x > 0) PRECISA ser incrementada somente se reparos de falhas que não quebrem a compatibilidade entre versões foram introduzidos. Um reparo de falha é definido como uma alteração interna que corrige um comportamento indesejado.
 
-1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
-compatible functionality is introduced to the public API. It MUST be
-incremented if any public API functionality is marked as deprecated. It MAY be
-incremented if substantial new functionality or improvements are introduced
-within the private code. It MAY include patch level changes. Patch version
-MUST be reset to 0 when minor version is incremented.
+1. Versão menor Y (x.Y.z | x > 0) PRECISA ser incrementada se novas funcionalidades, que não quebrem compatibilidade entre versões, foram introduzidas na API pública. PRECISA ser incrementada se qualquer funcionalidade da API pública for marcada como obsoleta. PODE ser incrementada se substanciais novas funcionalidades ou melhorias foram introduzidas no código privado. PODE incluir alterações de patch. A versão patch PRECISA ser reiniciada para 0 quando a versão menor for incrementada.
 
-1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
-incompatible changes are introduced to the public API. It MAY also include minor
-and patch level changes. Patch and minor version MUST be reset to 0 when major
-version is incremented.
+1. A versão maior X (X.y.z | X > 0) PRECISA ser incrementada se alguma modificação levou à incompatibilidade entre versões da API pública. PODE também incluir alterações de versão menor ou patch. Patch e a versão menor PRECISAM ser reiniciadas para 0 quando a versão maior é incrementada.
 
-1. A pre-release version MAY be denoted by appending a hyphen and a
-series of dot separated identifiers immediately following the patch
-version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
-[0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
-NOT include leading zeroes. Pre-release versions have a lower
-precedence than the associated normal version. A pre-release version
-indicates that the version is unstable and might not satisfy the
-intended compatibility requirements as denoted by its associated
-normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
+1. Uma versão pre-release PODE ser indicada anexando um hífen e uma série de identificadores separados por pontos imediatamente após o número de versão patch. Identificadores PRECISAM abranger somente alfanuméricos ASCII e hífen [0-9A-Za-z-]. Identificadores NÃO PRECISAM estar vazios. Identificadores numéricos NÃO PRECISA incluir zeros à esquerda. Versões de pre-release tem uma precedência menor que a verão normal associada. Uma versão pre-release indica que a versão é instável e pode não satisfazer os requisitos de compatibilidade desejados, como indicado pelas suas versões normais associadas. Exemplos: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
 
-1. Build metadata MAY be denoted by appending a plus sign and a series of dot
-separated identifiers immediately following the patch or pre-release version.
-Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
-Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
-version precedence. Thus two versions that differ only in the build metadata,
-have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
-1.0.0-beta+exp.sha.5114f85.
+1. Metadado de build PODE ser indicado ao anexar um sinal de mais e uma série de identificadores separados por pontos imediatamente após o número de versão patch ou o de pre-release. Identificadores PRECISAM abranger somente alfanuméricos ASCII e hífen [0-9A-Za-z-]. Identificadores NÃO PRECISAM estar vazios. Metadados de build PRECISAM ser ignorados quando determinando a precedência de versão. Assim, duas versões que diferem apenas nos metadados de construção, têm a mesma precedência. Exemplos: 1.0.0-alpha+001, 1.0.0+20130313144700, 1.0.0-beta+exp.sha.5114f85.
 
-1. Precedence refers to how versions are compared to each other when ordered.
-Precedence MUST be calculated by separating the version into major, minor, patch
-and pre-release identifiers in that order (Build metadata does not figure
-into precedence). Precedence is determined by the first difference when
-comparing each of these identifiers from left to right as follows: Major, minor,
-and patch versions are always compared numerically. Example: 1.0.0 < 2.0.0 <
-2.1.0 < 2.1.1. When major, minor, and patch are equal, a pre-release version has
-lower precedence than a normal version. Example: 1.0.0-alpha < 1.0.0. Precedence
-for two pre-release versions with the same major, minor, and patch version MUST
-be determined by comparing each dot separated identifier from left to right
-until a difference is found as follows: identifiers consisting of only digits
-are compared numerically and identifiers with letters or hyphens are compared
-lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. A larger set of pre-release fields has a higher
-precedence than a smaller set, if all of the preceding identifiers are equal.
-Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
-1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+1. A precedência refere-se a como versões são comparadas umas com as outras quando solicitado. A precedência PRECISA ser calculada separando a versão em maior, menor, patch e pre-release, nesta ordem (metadado de build não figura na precedência). A precedência é dererminada pela primeira diferença quando comparando cada um destes identificadores, da esquerda para a direita, como segue: As versões maior, menor e patch são sempre comparadas numéricamente. Exemplo: 1.0.0 < 2.0.0 < 2.1.0 < 2.1.1. Quando maior, menor e patch são iguais, um pre-release tem sempre menor precedência do que uma versão normal. Exemplo: 1.0.0-alpha < 1.0.0. A precedência entre duas versões pre-release com os mesmos valores para as versões maior, menor e patch PRECISAM ser determinada comparando cada identificador separado por pontos, da esquerda para a direita, até encontrar uma diferença, como segue: identificadores consistindo somente de dígitos são comparados numéricamente e identificadores com letras ou hífens são comparados lexicamente usando a ordenação de caracteres ASCII. Identificadores numéricos sempre tem precedência inferior do que os identificadore não numéricos. Um grande conjunto de campos de pre-release tem uma precedência maior do que um conjunto menor, se todos os identificadores precedentes forem iguais. Exemplo: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Backus–Naur Form Grammar para versões SemVer válidas
 ----------------------------------------------------
