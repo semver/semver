@@ -102,6 +102,23 @@ intended compatibility requirements as denoted by its associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1.0.0-x.7.z.92.
 
+1. Pre-release identifiers must be comprised of Major, Minor, and Patch numbers 
+which must also follow the semantic versioning standard defined in this document 
+OR one of the following words: "alpha", "a" "beta", "b", "release_canidate", "rc", 
+"nightly", "n" or "pre-alpha" followed by a series of dot separated identifiers. 
+Any version numbers containing the identifiers "alpha", "a", "pre-alpha", "nightly" or,
+"n" will be assumed to be in an unstable "not ready for use" state.  Any version 
+numbers containing the identifiers "beta", or "b" will be assumed to be in a semi-stable
+usable state that may still contain incorrect behavior. Any version numbers containing
+the identifiers "release_canidate" or "rc" will be assumed to be in a stable usable state
+that may still contain incorrect behavior.
+
+1. Any changes made to the public API that excisted in the last version not
+containing the current pre-release identifier MUST increment the Major version, Minor 
+version, or Patch version accordingly.  Any changes made to the public API that did 
+not excist in the last version not containing the current pre-release identifier MAY 
+increment the pre-release version.   
+
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch or pre-release version.
 Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
