@@ -1,0 +1,828 @@
+<svg height="339.09375" version="1.1" width="2325" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative;">
+<path fill="none" stroke="#000000" d="M2223,180.140625H2233" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1827,180.140625H1837" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M898,180.140625H908" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M651,180.140625H661" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M620,180.140625H630" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M373,180.140625H383" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M342,180.140625H352" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M95,180.140625H105" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1837,180.140625Q1847,180.140625,1847,170.140625V70.921875Q1847,60.921875,1857,60.921875H2203Q2213,60.921875,2213,70.921875V170.140625Q2213,180.140625,2223,180.140625" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2223,180.140625H2203" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1837,180.140625H1857" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1882,180.140625H1892" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2203,180.140625H2193" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1892,180.140625H1902" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1997,180.140625H2007" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2163,180.140625Q2173,180.140625,2173,190.140625V256.984375Q2173,266.984375,2163,266.984375H2037Q2027,266.984375,2027,256.984375V190.140625Q2027,180.140625,2037,180.140625" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2007,180.140625Q2017,180.140625,2017,170.140625V102.109375Q2017,92.109375,2027,92.109375H2173Q2183,92.109375,2183,102.109375V170.140625Q2183,180.140625,2193,180.140625" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2193,180.140625H2163" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2007,180.140625H2037" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2058,180.140625H2068" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2153,180.140625Q2163,180.140625,2163,190.140625V246.984375Q2163,256.984375,2153,256.984375H2078Q2068,256.984375,2068,246.984375V190.140625Q2068,180.140625,2078,180.140625" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2163,180.140625H2153" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M2068,180.140625H2078" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1987,180.140625Q1997,180.140625,1997,190.140625V246.984375Q1997,256.984375,1987,256.984375H1912Q1902,256.984375,1902,246.984375V190.140625Q1902,180.140625,1912,180.140625" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1997,180.140625H1987" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1902,180.140625H1912" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M908,180.140625Q918,180.140625,918,170.140625V20Q918,10,928,10H1807Q1817,10,1817,20V170.140625Q1817,180.140625,1827,180.140625" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1827,180.140625H1807" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M908,180.140625H928" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M950,180.140625H960" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1807,180.140625H1797" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M960,180.140625H970" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1333,180.140625H1343" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1767,180.140625Q1777,180.140625,1777,190.140625V309.09375Q1777,319.09375,1767,319.09375H1373Q1363,319.09375,1363,309.09375V190.140625Q1363,180.140625,1373,180.140625" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1343,180.140625Q1353,180.140625,1353,170.140625V51.1875Q1353,41.1875,1363,41.1875H1777Q1787,41.1875,1787,51.1875V170.140625Q1787,180.140625,1797,180.140625" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1797,180.140625H1767" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1343,180.140625H1373" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1394,180.140625H1404" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1767,180.140625Q1757,180.140625,1757,190.140625V222.25Q1757,232.25,1747,232.25H1747" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1404,180.140625Q1414,180.140625,1414,190.140625V222.25Q1414,232.25,1424,232.25H1424" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1602,232.25H1612" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1517,232.25H1527" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1717,232.25Q1727,232.25,1727,242.25V299.09375Q1727,309.09375,1717,309.09375H1642Q1632,309.09375,1632,299.09375V242.25Q1632,232.25,1642,232.25" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1612,232.25Q1622,232.25,1622,222.25V154.21875Q1622,144.21875,1632,144.21875H1727Q1737,144.21875,1737,154.21875V222.25Q1737,232.25,1747,232.25" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1747,232.25H1717" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1612,232.25H1642" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1487,232.25Q1497,232.25,1497,242.25V243.9609375Q1497,253.9609375,1487,253.9609375H1454Q1444,253.9609375,1444,243.9609375V242.25Q1444,232.25,1454,232.25" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1424,232.25Q1434,232.25,1434,222.25V220.5390625Q1434,210.5390625,1444,210.5390625H1497Q1507,210.5390625,1507,220.5390625V222.25Q1507,232.25,1517,232.25" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1517,232.25H1487" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1424,232.25H1454" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1767,180.140625Q1757,180.140625,1757,170.140625V122.5078125Q1757,112.5078125,1747,112.5078125H1674" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1404,180.140625Q1414,180.140625,1414,170.140625V122.5078125Q1414,112.5078125,1424,112.5078125H1497" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1571,112.5078125H1581" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1644,112.5078125Q1654,112.5078125,1654,122.5078125V124.21875Q1654,134.21875,1644,134.21875H1611Q1601,134.21875,1601,124.21875V122.5078125Q1601,112.5078125,1611,112.5078125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1581,112.5078125Q1591,112.5078125,1591,102.5078125V100.796875Q1591,90.796875,1601,90.796875H1654Q1664,90.796875,1664,100.796875V102.5078125Q1664,112.5078125,1674,112.5078125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1674,112.5078125H1644" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1581,112.5078125H1611" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1767,180.140625Q1757,180.140625,1757,170.140625V72.8984375Q1757,62.8984375,1747,62.8984375H1598" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1404,180.140625Q1414,180.140625,1414,170.140625V72.8984375Q1414,62.8984375,1424,62.8984375H1573" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1333,180.140625Q1323,180.140625,1323,190.140625V222.25Q1323,232.25,1313,232.25H1313" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M970,180.140625Q980,180.140625,980,190.140625V222.25Q980,232.25,990,232.25H990" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1168,232.25H1178" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1083,232.25H1093" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1283,232.25Q1293,232.25,1293,242.25V299.09375Q1293,309.09375,1283,309.09375H1208Q1198,309.09375,1198,299.09375V242.25Q1198,232.25,1208,232.25" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1178,232.25Q1188,232.25,1188,222.25V154.21875Q1188,144.21875,1198,144.21875H1293Q1303,144.21875,1303,154.21875V222.25Q1303,232.25,1313,232.25" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1313,232.25H1283" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1178,232.25H1208" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1053,232.25Q1063,232.25,1063,242.25V243.9609375Q1063,253.9609375,1053,253.9609375H1020Q1010,253.9609375,1010,243.9609375V242.25Q1010,232.25,1020,232.25" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M990,232.25Q1000,232.25,1000,222.25V220.5390625Q1000,210.5390625,1010,210.5390625H1063Q1073,210.5390625,1073,220.5390625V222.25Q1073,232.25,1083,232.25" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1083,232.25H1053" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M990,232.25H1020" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1333,180.140625Q1323,180.140625,1323,170.140625V122.5078125Q1323,112.5078125,1313,112.5078125H1240" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M970,180.140625Q980,180.140625,980,170.140625V122.5078125Q980,112.5078125,990,112.5078125H1063" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1137,112.5078125H1147" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1210,112.5078125Q1220,112.5078125,1220,122.5078125V124.21875Q1220,134.21875,1210,134.21875H1177Q1167,134.21875,1167,124.21875V122.5078125Q1167,112.5078125,1177,112.5078125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1147,112.5078125Q1157,112.5078125,1157,102.5078125V100.796875Q1157,90.796875,1167,90.796875H1220Q1230,90.796875,1230,100.796875V102.5078125Q1230,112.5078125,1240,112.5078125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1240,112.5078125H1210" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1147,112.5078125H1177" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M1333,180.140625Q1323,180.140625,1323,170.140625V72.8984375Q1323,62.8984375,1313,62.8984375H1164" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M970,180.140625Q980,180.140625,980,170.140625V72.8984375Q980,62.8984375,990,62.8984375H1139" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M898,180.140625H888" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M661,180.140625H671" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M888,180.140625Q878,180.140625,878,190.140625V189.9453125Q878,199.9453125,868,199.9453125H868" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M671,180.140625Q681,180.140625,681,190.140625V189.9453125Q681,199.9453125,691,199.9453125H691" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M765,199.9453125H775" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M838,199.9453125Q848,199.9453125,848,209.9453125V211.65625Q848,221.65625,838,221.65625H805Q795,221.65625,795,211.65625V209.9453125Q795,199.9453125,805,199.9453125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M775,199.9453125Q785,199.9453125,785,189.9453125V188.234375Q785,178.234375,795,178.234375H848Q858,178.234375,858,188.234375V189.9453125Q858,199.9453125,868,199.9453125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M868,199.9453125H838" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M775,199.9453125H805" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M888,180.140625Q878,180.140625,878,170.140625V160.3359375Q878,150.3359375,868,150.3359375H792" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M671,180.140625Q681,180.140625,681,170.140625V160.3359375Q681,150.3359375,691,150.3359375H767" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M620,180.140625H610" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M383,180.140625H393" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M610,180.140625Q600,180.140625,600,190.140625V189.9453125Q600,199.9453125,590,199.9453125H590" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M393,180.140625Q403,180.140625,403,190.140625V189.9453125Q403,199.9453125,413,199.9453125H413" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M487,199.9453125H497" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M560,199.9453125Q570,199.9453125,570,209.9453125V211.65625Q570,221.65625,560,221.65625H527Q517,221.65625,517,211.65625V209.9453125Q517,199.9453125,527,199.9453125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M497,199.9453125Q507,199.9453125,507,189.9453125V188.234375Q507,178.234375,517,178.234375H570Q580,178.234375,580,188.234375V189.9453125Q580,199.9453125,590,199.9453125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M590,199.9453125H560" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M497,199.9453125H527" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M610,180.140625Q600,180.140625,600,170.140625V160.3359375Q600,150.3359375,590,150.3359375H514" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M393,180.140625Q403,180.140625,403,170.140625V160.3359375Q403,150.3359375,413,150.3359375H489" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M342,180.140625H332" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M105,180.140625H115" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M332,180.140625Q322,180.140625,322,190.140625V189.9453125Q322,199.9453125,312,199.9453125H312" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M115,180.140625Q125,180.140625,125,190.140625V189.9453125Q125,199.9453125,135,199.9453125H135" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M209,199.9453125H219" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M282,199.9453125Q292,199.9453125,292,209.9453125V211.65625Q292,221.65625,282,221.65625H249Q239,221.65625,239,211.65625V209.9453125Q239,199.9453125,249,199.9453125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M219,199.9453125Q229,199.9453125,229,189.9453125V188.234375Q229,178.234375,239,178.234375H292Q302,178.234375,302,188.234375V189.9453125Q302,199.9453125,312,199.9453125" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M312,199.9453125H282" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M219,199.9453125H249" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M332,180.140625Q322,180.140625,322,170.140625V160.3359375Q322,150.3359375,312,150.3359375H236" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<path fill="none" stroke="#000000" d="M115,180.140625Q125,180.140625,125,170.140625V160.3359375Q125,150.3359375,135,150.3359375H211" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0
+</desc>
+<defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</defs>
+<rect x="105" y="128.625" width="237" height="103.03125" r="0" rx="3" ry="3" fill="none" stroke="#a0a0a0" stroke-dasharray="6,2" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="127" y="123.03125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">Major
+</tspan>
+</text>
+<rect x="249" y="188.234375" width="33" height="23.421875" r="0" rx="3" ry="3" fill="#bada55" stroke="#bada55" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="265.5" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">digit
+</tspan>
+</text>
+<rect x="135" y="183.234375" width="74" height="33.421875" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="152.5" y="177.640625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">One of:
+</tspan>
+</text>
+<text x="172" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="179" y="188.234375" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="191.5" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"9"
+</tspan>
+</text>
+<rect x="140" y="188.234375" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="152.5" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"1"
+</tspan>
+</text>
+<rect x="211" y="138.625" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="223.5" y="150.3359375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"0"
+</tspan>
+</text>
+<rect x="352" y="168.4296875" width="21" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="362.5" y="180.140625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"."
+</tspan>
+</text>
+<rect x="383" y="128.625" width="237" height="103.03125" r="0" rx="3" ry="3" fill="none" stroke="#a0a0a0" stroke-dasharray="6,2" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="405" y="123.03125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">Minor
+</tspan>
+</text>
+<rect x="527" y="188.234375" width="33" height="23.421875" r="0" rx="3" ry="3" fill="#bada55" stroke="#bada55" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="543.5" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">digit
+</tspan>
+</text>
+<rect x="413" y="183.234375" width="74" height="33.421875" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="430.5" y="177.640625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">One of:
+</tspan>
+</text>
+<text x="450" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="457" y="188.234375" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="469.5" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"9"
+</tspan>
+</text>
+<rect x="418" y="188.234375" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="430.5" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"1"
+</tspan>
+</text>
+<rect x="489" y="138.625" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="501.5" y="150.3359375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"0"
+</tspan>
+</text>
+<rect x="630" y="168.4296875" width="21" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="640.5" y="180.140625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"."
+</tspan>
+</text>
+<rect x="661" y="128.625" width="237" height="103.03125" r="0" rx="3" ry="3" fill="none" stroke="#a0a0a0" stroke-dasharray="6,2" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="683" y="123.03125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">Patch
+</tspan>
+</text>
+<rect x="805" y="188.234375" width="33" height="23.421875" r="0" rx="3" ry="3" fill="#bada55" stroke="#bada55" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="821.5" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">digit
+</tspan>
+</text>
+<rect x="691" y="183.234375" width="74" height="33.421875" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="708.5" y="177.640625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">One of:
+</tspan>
+</text>
+<text x="728" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="735" y="188.234375" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="747.5" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"9"
+</tspan>
+</text>
+<rect x="696" y="188.234375" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="708.5" y="199.9453125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"1"
+</tspan>
+</text>
+<rect x="767" y="138.625" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="779.5" y="150.3359375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"0"
+</tspan>
+</text>
+<rect x="928" y="168.4296875" width="22" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="939" y="180.140625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"-"
+</tspan>
+</text>
+<rect x="960" y="31.1875" width="847" height="297.90625" r="0" rx="3" ry="3" fill="none" stroke="#a0a0a0" stroke-dasharray="6,2" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="982" y="25.59375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">Pre-release
+</tspan>
+</text>
+<rect x="1642" y="165.40625" width="75" height="133.6875" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1659.5" y="159.8125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">One of:
+</tspan>
+</text>
+<rect x="1668.5" y="270.671875" width="22" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1679.5" y="282.3828125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"-"
+</tspan>
+</text>
+<text x="1679.5" y="248.9609375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1686.5" y="237.25" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1699" y="248.9609375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"9"
+</tspan>
+</text>
+<rect x="1647.5" y="237.25" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1660" y="248.9609375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"0"
+</tspan>
+</text>
+<text x="1679.5" y="215.5390625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1687" y="203.828125" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1699.5" y="215.5390625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"Z"
+</tspan>
+</text>
+<rect x="1647" y="203.828125" width="26" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1660" y="215.5390625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"A"
+</tspan>
+</text>
+<text x="1679.5" y="182.1171875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1687" y="170.40625" width="24" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1699" y="182.1171875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"z"
+</tspan>
+</text>
+<rect x="1648" y="170.40625" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1660.5" y="182.1171875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"a"
+</tspan>
+</text>
+<rect x="1527" y="182.1171875" width="75" height="100.265625" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1544.5" y="176.5234375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.4609375">One of:
+</tspan>
+</text>
+<rect x="1553.5" y="253.9609375" width="22" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1564.5" y="265.671875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"-"
+</tspan>
+</text>
+<text x="1564.5" y="232.25" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">-
+</tspan>
+</text>
+<rect x="1572" y="220.5390625" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1584.5" y="232.25" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"Z"
+</tspan>
+</text>
+<rect x="1532" y="220.5390625" width="26" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1545" y="232.25" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"A"
+</tspan>
+</text>
+<text x="1564.5" y="198.828125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">-
+</tspan>
+</text>
+<rect x="1572" y="187.1171875" width="24" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1584" y="198.828125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"z"
+</tspan>
+</text>
+<rect x="1533" y="187.1171875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1545.5" y="198.828125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"a"
+</tspan>
+</text>
+<rect x="1454" y="220.5390625" width="33" height="23.421875" r="0" rx="3" ry="3" fill="#bada55" stroke="#bada55" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1470.5" y="232.25" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">digit
+</tspan>
+</text>
+<rect x="1611" y="100.796875" width="33" height="23.421875" r="0" rx="3" ry="3" fill="#bada55" stroke="#bada55" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1627.5" y="112.5078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">digit
+</tspan>
+</text>
+<rect x="1497" y="95.796875" width="74" height="33.421875" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1514.5" y="90.203125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">One of:
+</tspan>
+</text>
+<text x="1534" y="112.5078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1541" y="100.796875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1553.5" y="112.5078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"9"
+</tspan>
+</text>
+<rect x="1502" y="100.796875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1514.5" y="112.5078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"1"
+</tspan>
+</text>
+<rect x="1573" y="51.1875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1585.5" y="62.8984375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"0"
+</tspan>
+</text>
+<rect x="1373" y="168.4296875" width="21" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1383.5" y="180.140625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"."
+</tspan>
+</text>
+<rect x="1208" y="165.40625" width="75" height="133.6875" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1225.5" y="159.8125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">One of:
+</tspan>
+</text>
+<rect x="1234.5" y="270.671875" width="22" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1245.5" y="282.3828125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"-"
+</tspan>
+</text>
+<text x="1245.5" y="248.9609375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1252.5" y="237.25" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1265" y="248.9609375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"9"
+</tspan>
+</text>
+<rect x="1213.5" y="237.25" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1226" y="248.9609375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"0"
+</tspan>
+</text>
+<text x="1245.5" y="215.5390625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1253" y="203.828125" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1265.5" y="215.5390625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"Z"
+</tspan>
+</text>
+<rect x="1213" y="203.828125" width="26" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1226" y="215.5390625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"A"
+</tspan>
+</text>
+<text x="1245.5" y="182.1171875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1253" y="170.40625" width="24" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1265" y="182.1171875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"z"
+</tspan>
+</text>
+<rect x="1214" y="170.40625" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1226.5" y="182.1171875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"a"
+</tspan>
+</text>
+<rect x="1093" y="182.1171875" width="75" height="100.265625" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1110.5" y="176.5234375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.4609375">One of:
+</tspan>
+</text>
+<rect x="1119.5" y="253.9609375" width="22" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1130.5" y="265.671875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"-"
+</tspan>
+</text>
+<text x="1130.5" y="232.25" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">-
+</tspan>
+</text>
+<rect x="1138" y="220.5390625" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1150.5" y="232.25" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"Z"
+</tspan>
+</text>
+<rect x="1098" y="220.5390625" width="26" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1111" y="232.25" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"A"
+</tspan>
+</text>
+<text x="1130.5" y="198.828125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">-
+</tspan>
+</text>
+<rect x="1138" y="187.1171875" width="24" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1150" y="198.828125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"z"
+</tspan>
+</text>
+<rect x="1099" y="187.1171875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1111.5" y="198.828125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"a"
+</tspan>
+</text>
+<rect x="1020" y="220.5390625" width="33" height="23.421875" r="0" rx="3" ry="3" fill="#bada55" stroke="#bada55" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1036.5" y="232.25" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">digit
+</tspan>
+</text>
+<rect x="1177" y="100.796875" width="33" height="23.421875" r="0" rx="3" ry="3" fill="#bada55" stroke="#bada55" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1193.5" y="112.5078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">digit
+</tspan>
+</text>
+<rect x="1063" y="95.796875" width="74" height="33.421875" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1080.5" y="90.203125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">One of:
+</tspan>
+</text>
+<text x="1100" y="112.5078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1107" y="100.796875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1119.5" y="112.5078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"9"
+</tspan>
+</text>
+<rect x="1068" y="100.796875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1080.5" y="112.5078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"1"
+</tspan>
+</text>
+<rect x="1139" y="51.1875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1151.5" y="62.8984375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"0"
+</tspan>
+</text>
+<rect x="1857" y="168.4296875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1869.5" y="180.140625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"+"
+</tspan>
+</text>
+<rect x="1892" y="82.109375" width="311" height="194.875" r="0" rx="3" ry="3" fill="none" stroke="#a0a0a0" stroke-dasharray="6,2" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1914" y="76.515625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">Build
+</tspan>
+</text>
+<rect x="2078" y="113.296875" width="75" height="133.6875" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2095.5" y="107.703125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">One of:
+</tspan>
+</text>
+<rect x="2104.5" y="218.5625" width="22" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2115.5" y="230.2734375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"-"
+</tspan>
+</text>
+<text x="2115.5" y="196.8515625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="2123" y="185.140625" width="24" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2135" y="196.8515625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"z"
+</tspan>
+</text>
+<rect x="2084" y="185.140625" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2096.5" y="196.8515625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"a"
+</tspan>
+</text>
+<text x="2115.5" y="163.4296875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="2123" y="151.71875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2135.5" y="163.4296875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"Z"
+</tspan>
+</text>
+<rect x="2083" y="151.71875" width="26" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2096" y="163.4296875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"A"
+</tspan>
+</text>
+<text x="2115.5" y="130.0078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="2122.5" y="118.296875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2135" y="130.0078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"9"
+</tspan>
+</text>
+<rect x="2083.5" y="118.296875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2096" y="130.0078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"0"
+</tspan>
+</text>
+<rect x="2037" y="168.4296875" width="21" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2047.5" y="180.140625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">"."
+</tspan>
+</text>
+<rect x="1912" y="113.296875" width="75" height="133.6875" r="0" rx="3" ry="3" fill="#cbcbba" stroke="#cbcbba" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1929.5" y="107.703125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;" font-size="10px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="3.46875">One of:
+</tspan>
+</text>
+<rect x="1938.5" y="218.5625" width="22" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1949.5" y="230.2734375" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"-"
+</tspan>
+</text>
+<text x="1949.5" y="196.8515625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1957" y="185.140625" width="24" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1969" y="196.8515625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"z"
+</tspan>
+</text>
+<rect x="1918" y="185.140625" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1930.5" y="196.8515625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"a"
+</tspan>
+</text>
+<text x="1949.5" y="163.4296875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1957" y="151.71875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1969.5" y="163.4296875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"Z"
+</tspan>
+</text>
+<rect x="1917" y="151.71875" width="26" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1930" y="163.4296875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"A"
+</tspan>
+</text>
+<text x="1949.5" y="130.0078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px" font-weight="bold">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">-
+</tspan>
+</text>
+<rect x="1956.5" y="118.296875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1969" y="130.0078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"9"
+</tspan>
+</text>
+<rect x="1917.5" y="118.296875" width="25" height="23.421875" r="0" rx="3" ry="3" fill="#dae9e5" stroke="#dae9e5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="1930" y="130.0078125" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.15625">"0"
+</tspan>
+</text>
+<rect x="20" y="168.4296875" width="75" height="23.421875" r="0" rx="0" ry="0" fill="#6b6659" stroke="#6b6659" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="57.5" y="180.140625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">Start
+</tspan>
+</text>
+<rect x="2233" y="168.4296875" width="72" height="23.421875" r="0" rx="0" ry="0" fill="#6b6659" stroke="#6b6659" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</rect>
+<text x="2269" y="180.140625" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: Arial;" font-size="12px">
+<tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" dy="4.1640625">End
+</tspan>
+</text>
+<path fill="none" stroke="#000000" d="M10,180.140625H20" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<circle cx="10" cy="180.140625" r="5" fill="#6b6659" stroke="#000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</circle>
+<path fill="none" stroke="#000000" d="M2315,180.140625H2305" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</path>
+<circle cx="2315" cy="180.140625" r="5" fill="#6b6659" stroke="#000" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+</circle>
+</svg>
