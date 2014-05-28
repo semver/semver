@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.0
+Semantic Versioning 2.1.0
 ==============================
 
 Summary
@@ -105,30 +105,41 @@ normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch or pre-release version.
 Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
-Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
-version precedence. Thus two versions that differ only in the build metadata,
-have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
-1.0.0-beta+exp.sha.5114f85.
+Identifiers MUST NOT be empty. Build metadata SHOULD be considered when
+determining version precedence. Versions with metadata have a *higher*
+precedence than the associated normal or pre-release version.
 
 1. Precedence refers to how versions are compared to each other when ordered.
-Precedence MUST be calculated by separating the version into major, minor, patch
-and pre-release identifiers in that order (Build metadata does not figure
-into precedence). Precedence is determined by the first difference when
+Precedence MUST be calculated by separating the version into major, minor, patch,
+pre-release, and metadata identifiers in that order.
+Precedence is determined by the first difference when
 comparing each of these identifiers from left to right as follows: Major, minor,
 and patch versions are always compared numerically. Example: 1.0.0 < 2.0.0 <
 2.1.0 < 2.1.1. When major, minor, and patch are equal, a pre-release version has
-lower precedence than a normal version. Example: 1.0.0-alpha < 1.0.0. Precedence
+*lower* precedence than a normal version. Example: 1.0.0-alpha < 1.0.0. Precedence
 for two pre-release versions with the same major, minor, and patch version MUST
 be determined by comparing each dot separated identifier from left to right
 until a difference is found as follows: identifiers consisting of only digits
 are compared numerically and identifiers with letters or hyphens are compared
 lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. A larger set of pre-release fields has a higher
-precedence than a smaller set, if all of the preceding identifiers are equal.
+than non-numeric identifiers. A larger sequence of pre-release fields has a higher
+precedence than a sequence which is a strict prefix of that that sequence.
 Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+When major, minor, patch, and pre-release identifiers are equal, a version with
+metadata has a *higher* precedence than a normal or pre-release version. Example:
+1.0.0-alpha < 1.0.0-alpha+dev.1 < 1.0.0 < 1.0.0+dev.1. Precedence for two metadata
+versions with the same major, minor, patch, and pre-release version SHOULD be
+determined by comparing the metadata identifiers in the same way as pre-release
+identifiers: one dot separated identifier at a time from left to right, identifiers
+consisting entirely of digits being compared numerically, non-numerical identifiers
+compared lexically in ASCII sort order, numerical identifiers having a lower
+precedence than non-numerical identifiers, and any sequence of metadata
+identifiers having a higher precedence than a proper prefix of that sequence.
+Example: 1.0.0 < 1.0.0+dev < 1.0.0+dev.1 < 1.0.0+dev.nightly < 1.0.0+nightly <
+1.0.0+nightly.2 < 1.0.0+nightly.11 < 1.0.0+stable.1.
 
-Backus–Naur Form Grammar for Valid SemVer Versions
+BackusâNaur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
 
     <valid semver> ::= <version core>
@@ -310,6 +321,23 @@ that users can smoothly transition to the new API.
 No, but use good judgment. A 255 character version string is probably overkill,
 for example. Also, specific systems may impose their own limits on the size of
 the string.
+
+### How do I handle nightly or other development releases?
+
+Development releases can be handled using either the pre-release or the
+metadata / build component of the version string. If you know the version
+number you are working towards for the next official release, you can use that
+version number for development releases and add pre-release identifiers to mark
+them as such, since pre-release versions have a lower precedence than the
+corresponding normal version.
+
+If you don't know the version number of the next official release, you can
+keep using the previous version number for development releases, and add
+metadata identifiers to mark them as "post-release" development releases,
+since metadata versions have higher precedence than the corresponding normal
+and pre-release versions (note that this applies since version 2.1.0 of the
+specification).
+
 
 About
 -----
