@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.1
+Semantic Versioning 2.1.0
 ==============================
 
 Summary
