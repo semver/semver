@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.0
+Semantic Versioning 2.1.0
 ==============================
 
 Summary
@@ -122,11 +122,11 @@ for two pre-release versions with the same major, minor, and patch version MUST
 be determined by comparing each dot separated identifier from left to right
 until a difference is found as follows: identifiers consisting of only digits
 are compared numerically and identifiers with letters or hyphens are compared
-lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. A larger set of pre-release fields has a higher
-precedence than a smaller set, if all of the preceding identifiers are equal.
-Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
-1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+lexically in ASCII sort order but without case sensitivity. Numeric identifiers
+always have lower precedence than non-numeric identifiers. A larger set of
+pre-release fields has a higher precedence than a smaller set, if all of the
+preceding identifiers are equal. Example: 1.0.0-alpha < 1.0.0-Alpha.1 <
+1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-BETA.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Backus–Naur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
@@ -310,6 +310,13 @@ that users can smoothly transition to the new API.
 No, but use good judgment. A 255 character version string is probably overkill,
 for example. Also, specific systems may impose their own limits on the size of
 the string.
+
+### Are SemVer pre-release labels and build metadata case-sensitive?
+
+No, they are not case-sensitive. In practice, standardizing on lower-case
+pre-release labels and build metadata can be beneficial, especially when
+cross-platform scenarios are considered. Systems must be case-insensitive when
+comparing and ordering pre-release labels and when comparing build metadata.
 
 About
 -----
