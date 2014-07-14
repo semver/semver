@@ -91,14 +91,13 @@ incompatible changes are introduced to the public API. It MAY also include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
-1. A pre-release version MAY be denoted by appending a hyphen and a
-series of dot separated identifiers immediately following the patch
-version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
-[0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
-NOT include leading zeroes. Pre-release versions have a lower
-precedence than the associated normal version. A pre-release version
-indicates that the version is unstable and might not satisfy the
-intended compatibility requirements as denoted by its associated
+1. A pre-release version MAY be denoted by appending either a hyphen or a tilda 
+and then a series of dot separated identifiers immediately following the patch
+version. Identifiers MUST comprise only ASCII alphanumerics [0-9A-Za-z-]. 
+Identifiers MUST NOT be empty. Numeric identifiers MUST NOT include leading 
+zeroes. Pre-release versions have a lower precedence than the associated normal 
+version. A pre-release version indicates that the version is unstable and might 
+not satisfy the intended compatibility requirements as denoted by its associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1.0.0-x.7.z.92.
 
@@ -133,8 +132,10 @@ Backus–Naur Form Grammar for Valid SemVer Versions
 
     <valid semver> ::= <version core>
                      | <version core> "-" <pre-release>
+                     | <version core> "~" <pre-release>
                      | <version core> "+" <build>
                      | <version core> "-" <pre-release> "+" <build>
+                     | <version core> "~" <pre-release> "+" <build>
 
     <version core> ::= <major> "." <minor> "." <patch>
 
@@ -160,10 +161,10 @@ Backus–Naur Form Grammar for Valid SemVer Versions
     <build identifier> ::= <alphanumeric identifier>
                          | <digits>
 
-    <alphanumeric identifier> ::= <non-digit>
-                                | <non-digit> <identifier characters>
-                                | <identifier characters> <non-digit>
-                                | <identifier characters> <non-digit> <identifier characters>
+    <alphanumeric identifier> ::= <letter>
+                                | <letter> <identifier characters>
+                                | <identifier characters> <letter>
+                                | <identifier characters> <letter> <identifier characters>
 
     <numeric identifier> ::= "0"
                            | <positive digit>
@@ -173,10 +174,7 @@ Backus–Naur Form Grammar for Valid SemVer Versions
                               | <identifier character> <identifier characters>
 
     <identifier character> ::= <digit>
-                             | <non-digit>
-
-    <non-digit> ::= <letter>
-                  | "-"
+                             | <letter>
 
     <digits> ::= <digit>
                | <digit> <digits>
