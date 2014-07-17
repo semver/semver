@@ -91,7 +91,7 @@ incompatible changes are introduced to the public API. It MAY also include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
-1. A pre-release version MAY be denoted by appending either a hyphen or a tilda 
+1. A pre-release version MAY be denoted by appending either a hyphen or a tilde 
 and then a series of dot separated identifiers immediately following the patch
 version. Identifiers MUST comprise only ASCII alphanumerics [0-9A-Za-z]. 
 Identifiers MUST NOT be empty. Numeric identifiers MUST NOT include leading 
