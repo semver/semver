@@ -121,12 +121,12 @@ lower precedence than a normal version. Example: 1.0.0-alpha < 1.0.0. Precedence
 for two pre-release versions with the same major, minor, and patch version MUST
 be determined by comparing each dot separated identifier from left to right
 until a difference is found as follows: identifiers consisting of only digits
-are compared numerically and identifiers with letters or hyphens are compared
-lexically in ASCII sort order but without case sensitivity. Numeric identifiers
-always have lower precedence than non-numeric identifiers. A larger set of
-pre-release fields has a higher precedence than a smaller set, if all of the
-preceding identifiers are equal. Example: 1.0.0-alpha < 1.0.0-Alpha.1 <
-1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-BETA.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+are compared numerically and identifiers with letters or hyphens are compared in
+a case-insensitive lexical ASCII sort order. Numeric identifiers always have
+lower precedence than non-numeric identifiers. A larger set of pre-release
+fields has a higher precedence than a smaller set, if all of the preceding
+identifiers are equal. Example: 1.0.0-alpha < 1.0.0-Alpha.1 < 1.0.0-alpha.beta <
+1.0.0-beta < 1.0.0-BETA.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Backus–Naur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
