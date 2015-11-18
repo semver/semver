@@ -1,7 +1,7 @@
 Semantic Versioning 2.0.0
 ==============================
 
-Summary
+# Summary
 -------
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
@@ -14,7 +14,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions
 to the MAJOR.MINOR.PATCH format.
 
-Introduction
+# Introduction
 ------------
 
 In the world of software management there exists a dreaded place called
@@ -49,48 +49,65 @@ and the way they change convey meaning about the underlying code and what has
 been modified from one version to the next.
 
 
-Semantic Versioning Specification (SemVer)
+# Semantic Versioning Specification (SemVer)
 ------------------------------------------
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
+<a name="semver-spec-1"></a>
 1. Software using Semantic Versioning MUST declare a public API. This API
 could be declared in the code itself or exist strictly in documentation.
 However it is done, it should be precise and comprehensive.
+<sup>[[link](#semver-spec-1)]</sup>
 
+<a name="semver-spec-2"></a>
 1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
 non-negative integers, and MUST NOT contain leading zeroes. X is the
 major version, Y is the minor version, and Z is the patch version.
 Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
+<sup>[[link](#semver-spec-2)]</sup>
 
+<a name="semver-spec-3"></a>
 1. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications MUST be released as a new version.
+<sup>[[link](#semver-spec-3)]</sup>
 
+<a name="semver-spec-4"></a>
 1. Major version zero (0.y.z) is for initial development. Anything may change
 at any time. The public API should not be considered stable.
+<sup>[[link](#semver-spec-4)]</sup>
 
+<a name="semver-spec-5"></a>
 1. Version 1.0.0 defines the public API. The way in which the version number
 is incremented after this release is dependent on this public API and how it
 changes.
+<sup>[[link](#semver-spec-5)]</sup>
 
+<a name="semver-spec-6"></a>
 1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
 compatible bug fixes are introduced. A bug fix is defined as an internal
 change that fixes incorrect behavior.
+<sup>[[link](#semver-spec-7)]</sup>
 
+<a name="semver-spec-7"></a>
 1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
 compatible functionality is introduced to the public API. It MUST be
 incremented if any public API functionality is marked as deprecated. It MAY be
 incremented if substantial new functionality or improvements are introduced
 within the private code. It MAY include patch level changes. Patch version
 MUST be reset to 0 when minor version is incremented.
+<sup>[[link](#semver-spec-7)]</sup>
 
+<a name="semver-spec-8"></a>
 1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
 incompatible changes are introduced to the public API. It MAY also include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
+<sup>[[link](#semver-spec-8)]</sup>
 
+<a name="semver-spec-9"></a>
 1. A pre-release version MAY be denoted by appending a hyphen and a
 series of dot separated identifiers immediately following the patch
 version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
@@ -101,7 +118,9 @@ indicates that the version is unstable and might not satisfy the
 intended compatibility requirements as denoted by its associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1.0.0-x.7.z.92.
+<sup>[[link](#semver-spec-9)]</sup>
 
+<a name="semver-spec-10"></a>
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch or pre-release version.
 Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
@@ -109,7 +128,9 @@ Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
 version precedence. Thus two versions that differ only in the build metadata,
 have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 1.0.0-beta+exp.sha.5114f85.
+<sup>[[link](#semver-spec-10)]</sup>
 
+<a name="semver-spec-11"></a>
 1. Precedence refers to how versions are compared to each other when ordered.
 Precedence MUST be calculated by separating the version into major, minor, patch
 and pre-release identifiers in that order (Build metadata does not figure
@@ -127,8 +148,9 @@ than non-numeric identifiers. A larger set of pre-release fields has a higher
 precedence than a smaller set, if all of the preceding identifiers are equal.
 Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+<sup>[[link](#semver-spec-11)]</sup>
 
-Backus–Naur Form Grammar for Valid SemVer Versions
+# Backus–Naur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
 
     <valid semver> ::= <version core>
@@ -194,7 +216,7 @@ Backus–Naur Form Grammar for Valid SemVer Versions
                | "y" | "z"
 
 
-Why Use Semantic Versioning?
+# Why Use Semantic Versioning?
 ----------------------------
 
 This is not a new or revolutionary idea. In fact, you probably do something
@@ -228,7 +250,7 @@ to this website from your README so others know the rules and can benefit from
 them.
 
 
-FAQ
+# FAQ
 ---
 
 ### How should I deal with revisions in the 0.y.z initial development phase?
@@ -311,7 +333,7 @@ No, but use good judgment. A 255 character version string is probably overkill,
 for example. Also, specific systems may impose their own limits on the size of
 the string.
 
-About
+# About
 -----
 
 The Semantic Versioning specification is authored by [Tom
@@ -322,7 +344,7 @@ If you'd like to leave feedback, please [open an issue on
 GitHub](https://github.com/mojombo/semver/issues).
 
 
-License
+# License
 -------
 
 Creative Commons - CC BY 3.0
