@@ -14,8 +14,10 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions
 to the MAJOR.MINOR.PATCH format.
 
+<a name="intro"></a>
 # Introduction
 ------------
+<sup>[[link](#intro)]</sup>  
 
 In the world of software management there exists a dreaded place called
 "dependency hell." The bigger your system grows and the more packages you
@@ -150,8 +152,10 @@ Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 <sup>[[link](#semver-spec-11)]</sup>
 
+<a name="grammar"></a>
 # Backus–Naur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
+<sup>[[link](#grammar)]</sup>  
 
     <valid semver> ::= <version core>
                      | <version core> "-" <pre-release>
@@ -216,8 +220,10 @@ Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
                | "y" | "z"
 
 
+<a name="why-use"></a>
 # Why Use Semantic Versioning?
 ----------------------------
+<sup>[[link](#why-use)]</sup>
 
 This is not a new or revolutionary idea. In fact, you probably do something
 close to this already. The problem is that "close" isn't good enough. Without
@@ -253,25 +259,33 @@ them.
 # FAQ
 ---
 
+<a name="faq-1"></a>
 ### How should I deal with revisions in the 0.y.z initial development phase?
+<sup>[[link](#faq-1)]</sup>
 
 The simplest thing to do is start your initial development release at 0.1.0
 and then increment the minor version for each subsequent release.
 
+<a name="faq-2"></a>
 ### How do I know when to release 1.0.0?
+<sup>[[link](#faq-2)]</sup>
 
 If your software is being used in production, it should probably already be
 1.0.0. If you have a stable API on which users have come to depend, you should
 be 1.0.0. If you're worrying a lot about backwards compatibility, you should
 probably already be 1.0.0.
 
+<a name="faq-3"></a>
 ### Doesn't this discourage rapid development and fast iteration?
+<sup>[[link](#faq-3)]</sup>
 
 Major version zero is all about rapid development. If you're changing the API
 every day you should either still be in version 0.y.z or on a separate
 development branch working on the next major version.
 
+<a name="faq-4"></a>
 ### If even the tiniest backwards incompatible changes to the public API require a major version bump, won't I end up at version 42.0.0 very rapidly?
+<sup>[[link](#faq-4)]</sup>
 
 This is a question of responsible development and foresight. Incompatible
 changes should not be introduced lightly to software that has a lot of
@@ -280,7 +294,9 @@ Having to bump major versions to release incompatible changes means you'll
 think through the impact of your changes, and evaluate the cost/benefit ratio
 involved.
 
+<a name="faq-5"></a>
 ### Documenting the entire public API is too much work!
+<sup>[[link](#faq-5)]</sup>
 
 It is your responsibility as a professional developer to properly document
 software that is intended for use by others. Managing software complexity is a
@@ -289,7 +305,9 @@ nobody knows how to use your software, or what methods are safe to call. In
 the long run, Semantic Versioning, and the insistence on a well defined public
 API can keep everyone and everything running smoothly.
 
+<a name="faq-6"></a>
 ### What do I do if I accidentally release a backwards incompatible change as a minor version?
+<sup>[[link](#faq-6)]</sup>
 
 As soon as you realize that you've broken the Semantic Versioning spec, fix
 the problem and release a new minor version that corrects the problem and
@@ -298,7 +316,9 @@ unacceptable to modify versioned releases. If it's appropriate,
 document the offending version and inform your users of the problem so that
 they are aware of the offending version.
 
+<a name="faq-7"></a>
 ### What should I do if I update my own dependencies without changing the public API?
+<sup>[[link](#faq-7)]</sup>
 
 That would be considered compatible since it does not affect the public API.
 Software that explicitly depends on the same dependencies as your package
@@ -308,7 +328,9 @@ modification depends on whether you updated your dependencies in order to fix
 a bug or introduce new functionality. I would usually expect additional code
 for the latter instance, in which case it's obviously a minor level increment.
 
+<a name="faq-8"></a>
 ### What if I inadvertently alter the public API in a way that is not compliant with the version number change (i.e. the code incorrectly introduces a major breaking change in a patch release)
+<sup>[[link](#faq-8)]</sup>
 
 Use your best judgment. If you have a huge audience that will be drastically
 impacted by changing the behavior back to what the public API intended, then
@@ -317,7 +339,9 @@ strictly be considered a patch release. Remember, Semantic Versioning is all
 about conveying meaning by how the version number changes. If these changes
 are important to your users, use the version number to inform them.
 
+<a name="faq-9"></a>
 ### How should I handle deprecating functionality?
+<sup>[[link](#faq-9)]</sup>
 
 Deprecating existing functionality is a normal part of software development and
 is often required to make forward progress. When you deprecate part of your
@@ -327,14 +351,19 @@ in place. Before you completely remove the functionality in a new major release
 there should be at least one minor release that contains the deprecation so
 that users can smoothly transition to the new API.
 
+<a name="faq-10"></a>
 ### Does SemVer have a size limit on the version string?
+<sup>[[link](#faq-10)]</sup>
 
 No, but use good judgment. A 255 character version string is probably overkill,
 for example. Also, specific systems may impose their own limits on the size of
 the string.
 
+
+<a name="about"></a>
 # About
 -----
+<sup>[[link](#about)]</sup>
 
 The Semantic Versioning specification is authored by [Tom
 Preston-Werner](http://tom.preston-werner.com), inventor of Gravatars and
@@ -344,8 +373,10 @@ If you'd like to leave feedback, please [open an issue on
 GitHub](https://github.com/mojombo/semver/issues).
 
 
+<a name="license"></a>
 # License
 -------
+<sup>[[link](#license)]</sup>
 
 Creative Commons - CC BY 3.0
 http://creativecommons.org/licenses/by/3.0/
