@@ -311,6 +311,15 @@ No, but use good judgment. A 255 character version string is probably overkill,
 for example. Also, specific systems may impose their own limits on the size of
 the string.
 
+### Is "v1.2.3" a semantic version?
+
+No, "v1.2.3" is not a semantic version. However, prefixing a semantic version
+with a "v" is a common way (in English) to indicate it is a version number.
+Abbreviating "version" as "v" is often seen with version control. Example:
+`git tag v1.2.3 -m "Release version 1.2.3"`, in which case "v1.2.3" is a tag
+name and the semantic version is "1.2.3".
+
+
 About
 -----
 
