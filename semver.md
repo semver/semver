@@ -102,8 +102,10 @@ intended compatibility requirements as denoted by its associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1.0.0-x.7.z.92, 1.0.0-x-y-z.--.
 
-1. Build metadata MAY be denoted by appending a plus sign and a series of dot
-separated identifiers immediately following the patch or pre-release version.
+1. Build metadata MAY be denoted by appending a plus sign followed by one
+or more identifiers. The plus sign immediately follows the patch or
+pre-release version and is followed by the first identifier. If multiple
+identifiers are used, they are separated with dots.
 Identifiers MUST comprise only ASCII alphanumerics and hyphens [0-9A-Za-z-].
 Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
 version precedence. Thus two versions that differ only in the build metadata,
