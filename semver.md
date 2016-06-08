@@ -58,7 +58,7 @@ interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
 1. Software using Semantic Versioning MUST declare a public API. This API
 could be declared in the code itself or exist strictly in documentation.
-However it is done, it should be precise and comprehensive.
+However it is done, it SHOULD be precise and comprehensive.
 
 1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
 non-negative integers, and MUST NOT contain leading zeroes. X is the
@@ -69,7 +69,7 @@ Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 MUST NOT be modified. Any modifications MUST be released as a new version.
 
 1. Major version zero (0.y.z) is for initial development. Anything MAY change
-at any time. The public API should not be considered stable.
+at any time. The public API SHOULD NOT be considered stable.
 
 1. Version 1.0.0 defines the public API. The way in which the version number
 is incremented after this release is dependent on this public API and how it
