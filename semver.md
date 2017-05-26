@@ -320,6 +320,12 @@ Abbreviating "version" as "v" is often seen with version control. Example:
 name and the semantic version is "1.2.3".
 
 
+Semantic Versioning In Other Languages
+-----
+
+[semver.ir](http://semver.ir) - Persian
+
+
 About
 -----
 
