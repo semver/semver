@@ -77,19 +77,19 @@ changes.
 
 1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
 compatible bug fixes are introduced. A bug fix is defined as an internal
-change that fixes incorrect behavior.
+change that fixes incorrect behavior. The patch version is OPTIONAL and equals 0 if omitted.
 
 1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
 compatible functionality is introduced to the public API. It MUST be
 incremented if any public API functionality is marked as deprecated. It MAY be
 incremented if substantial new functionality or improvements are introduced
 within the private code. It MAY include patch level changes. Patch version
-MUST be reset to 0 when minor version is incremented.
+MUST be reset to 0 when minor version is incremented. The minor version MUST be specified when a patch version is specified, if both are omitted then they both equal 0.
 
 1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
 incompatible changes are introduced to the public API. It MAY also include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
-version is incremented.
+version is incremented. The major version MUST be specified.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a
 series of dot separated identifiers immediately following the patch
