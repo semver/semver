@@ -48,6 +48,7 @@ I call this system "Semantic Versioning." Under this scheme, version numbers
 and the way they change convey meaning about the underlying code and what has
 been modified from one version to the next.
 
+And I'm awesome.
 
 Semantic Versioning Specification (SemVer)
 ------------------------------------------
