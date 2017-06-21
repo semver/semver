@@ -17,7 +17,7 @@ to the MAJOR.MINOR.PATCH format.
 Introduction
 ------------
 
-In the world of software management there exists a dreaded place called
+In the world of software management, there exists a dreaded place called
 "dependency hell." The bigger your system grows and the more packages you
 integrate into your software, the more likely you are to find yourself, one
 day, in this pit of despair.
@@ -57,7 +57,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
 1. Software using Semantic Versioning MUST declare a public API. This API
-could be declared in the code itself or exist strictly in documentation.
+could be declared in the code itself or exist strictly in the documentation.
 However it is done, it SHOULD be precise and comprehensive.
 
 1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
@@ -77,7 +77,7 @@ changes.
 
 1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
 compatible bug fixes are introduced. A bug fix is defined as an internal
-change that fixes incorrect behavior.
+change that fixes the incorrect behavior.
 
 1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
 compatible functionality is introduced to the public API. It MUST be
@@ -88,7 +88,7 @@ MUST be reset to 0 when minor version is incremented.
 
 1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
 incompatible changes are introduced to the public API. It MAY also include minor
-and patch level changes. Patch and minor version MUST be reset to 0 when major
+and patch level changes. Patch and minor version MUST be reset to 0 when the major
 version is incremented.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a
@@ -215,7 +215,7 @@ Ladder version 3.1.1 and 3.2.0 become available, you can release them to your
 package management system and know that they will be compatible with existing
 dependent software.
 
-As a responsible developer you will, of course, want to verify that any
+As a responsible developer, you will, of course, want to verify that any
 package upgrades function as advertised. The real world is a messy place;
 there's nothing we can do about that but be vigilant. What you can do is let
 Semantic Versioning provide you with a sane way to release and upgrade
