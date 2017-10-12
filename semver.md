@@ -287,7 +287,7 @@ impact of your changes, and evaluate the cost/benefit ratio involved.
 
 You might, but you don't necessarily have to. However, in a world of insanely
 long cryptographic keys and million-line programs, it is not unreasonable to see
-the inherent usefulness of infinitely precice versioning. SemVer has never
+the inherent usefulness of infinitely precise versioning. SemVer has never
 claimed that its goal is to create "short" version numbers. Rather, it aims to
 create useful, consistent version numbers. `SemVer 2.1` is just the latest step
 in the realization of this goal. However, you are allowed to reduce this
@@ -296,7 +296,7 @@ number at some arbitrary point, and drop the rest. So, the above version could
 be shortened to `2`, or `1.2`, or `1.1.2`, or `1.1.1.2`, etc... Just know that
 as the version number becomes shorter and shorter, fewer and fewer projects will
 deem the new version "safe" to use. Even if the version number is kept at 3
-places (as in `SemVer 2.0.0`), `SemVer 2.1` still commuinicates the same (or in
+places (as in `SemVer 2.0.0`), `SemVer 2.1` still communicates the same (or in
 many cases, more) information about compatibility than earlier numbering schemes
 did.
 
