@@ -75,9 +75,9 @@ MUST NOT be modified. Any modifications MUST be released as a new version.
 0. Major version zero (0.y.z) is for initial development. Anything MAY change
 at any time. The public API SHOULD NOT be considered stable.
 
-0. Version 1.0.0 defines the public API. The way in which the version number
-is incremented after this release is dependent on this public API and how it
-changes.
+0. Version 1.0.0 SHOULD define the public API. The way in which the version
+number is incremented after this release is dependent on this public API and
+how it changes.
 
 0. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
 compatible bug fixes are introduced. A bug fix is defined as an internal
