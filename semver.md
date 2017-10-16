@@ -56,53 +56,58 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
-1. Software using Semantic Versioning MUST declare a public API. This API
+0. Incrementation MUST be by a strictly positive integer which MAY be 2 or
+greater.
+
+0. Software using Semantic Versioning MUST declare a public API. This API
 could be declared in the code itself or exist strictly in documentation.
 However it is done, it SHOULD be precise and comprehensive.
 
-1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
-non-negative integers, and MUST NOT contain leading zeroes. X is the
-major version, Y is the minor version, and Z is the patch version.
-Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
+0. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
+positive integers or 0. The strings representing these numbers MUST NOT
+contain leading zeroes. X is the major version, Y is the minor version,
+and Z is the patch version. Each element MUST increase numerically.
+For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
-1. Once a versioned package has been released, the contents of that version
+0. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications MUST be released as a new version.
 
-1. Major version zero (0.y.z) is for initial development. Anything MAY change
+0. Major version zero (0.y.z) is for initial development. Anything MAY change
 at any time. The public API SHOULD NOT be considered stable.
 
-1. Version 1.0.0 defines the public API. The way in which the version number
+0. Version 1.0.0 defines the public API. The way in which the version number
 is incremented after this release is dependent on this public API and how it
 changes.
 
-1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
+0. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
 compatible bug fixes are introduced. A bug fix is defined as an internal
 change that fixes incorrect behavior.
 
-1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
+0. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
 compatible functionality is introduced to the public API. It MUST be
 incremented if any public API functionality is marked as deprecated. It MAY be
 incremented if substantial new functionality or improvements are introduced
 within the private code. It MAY include patch level changes. Patch version
 MUST be reset to 0 when minor version is incremented.
 
-1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
-incompatible changes are introduced to the public API. It MAY also include minor
-and patch level changes. Patch and minor version MUST be reset to 0 when major
-version is incremented.
+0. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
+incompatible changes are introduced to the public API and MAY be
+incremented otherwise. It MAY also include minor and patch level changes.
+Patch and minor version MUST be reset to 0 when major version is incremented.
 
-1. A pre-release version MAY be denoted by appending a hyphen and a
-series of dot separated identifiers immediately following the patch
-version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
-[0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
-NOT include leading zeroes. Pre-release versions have a lower
-precedence than the associated normal version. A pre-release version
-indicates that the version is unstable and might not satisfy the
-intended compatibility requirements as denoted by its associated
-normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
+0. A pre-release version MAY be denoted by appending a hyphen and a
+series of dot-separated identifiers immediately following the patch version.
+Identifiers MUST comprise only ASCII alphanumerics and hyphens [0-9A-Za-z-].
+The dots MUST BE unicode character U+002E 'FULL STOP' (ASCII ".") and the
+hyphens MUST BE unicode character U+002D 'HYPHEN-MINUS' (ASCII "-").
+Identifiers MUST NOT be empty. Numeric identifiers MUST NOT include leading
+zeroes. Pre-release versions have a lower precedence than the associated
+normal version. A pre-release version indicates that the version is unstable
+and might not satisfy the intended compatibility requirements as denoted by
+its associated normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1,
+1.0.0-0.3.7, 1.0.0-x.7.z.92, 1.0.0--, 1.0.0--.-, 1.0.0--.---.-foo- and others.
 
-1. Build metadata MAY be denoted by appending a plus sign and a series of dot
+0. Build metadata MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch or pre-release version.
 Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
 Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
@@ -110,7 +115,7 @@ version precedence. Thus two versions that differ only in the build metadata,
 have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 1.0.0-beta+exp.sha.5114f85.
 
-1. Precedence refers to how versions are compared to each other when ordered.
+0. Precedence refers to how versions are compared to each other when ordered.
 Precedence MUST be calculated by separating the version into major, minor, patch
 and pre-release identifiers in that order (Build metadata does not figure
 into precedence). Precedence is determined by the first difference when
