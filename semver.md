@@ -18,7 +18,7 @@ Introduction
 ------------
 
 In the world of software management there exists a dreaded place called
-"dependency hell." The bigger your system grows and the more packages you
+"dependency hell". The bigger your system grows and the more packages you
 integrate into your software, the more likely you are to find yourself, one
 day, in this pit of despair.
 
@@ -44,7 +44,7 @@ affecting the API increment the patch version, backwards compatible API
 additions/changes increment the minor version, and backwards incompatible API
 changes increment the major version.
 
-I call this system "Semantic Versioning." Under this scheme, version numbers
+I call this system "Semantic Versioning". Under this scheme, version numbers
 and the way they change convey meaning about the underlying code and what has
 been modified from one version to the next.
 
@@ -206,9 +206,9 @@ to the users of your software. Once these intentions are clear, flexible (but
 not too flexible) dependency specifications can finally be made.
 
 A simple example will demonstrate how Semantic Versioning can make dependency
-hell a thing of the past. Consider a library called "Firetruck." It requires a
-Semantically Versioned package named "Ladder." At the time that Firetruck is
-created, Ladder is at version 3.1.0. Since Firetruck uses some functionality
+hell a thing of the past. Consider a library called "Firetruck", that requires a
+Semantically Versioned package named "Ladder", at the time that Firetruck is
+created Ladder is at version 3.1.0. Since Firetruck uses some functionality
 that was first introduced in 3.1.0, you can safely specify the Ladder
 dependency as greater than or equal to 3.1.0 but less than 4.0.0. Now, when
 Ladder version 3.1.1 and 3.2.0 become available, you can release them to your
