@@ -286,6 +286,19 @@ modification depends on whether you updated your dependencies in order to fix
 a bug or introduce new functionality. I would usually expect additional code
 for the latter instance, in which case it's obviously a minor level increment.
 
+#### Special note for JVM or similar environments
+
+In JVM or other environments where only one version of a library could 
+be present in a running system, the transitive dependencies effectively become
+part of the public API and thus the version of the user library SHOULD be 
+incremented to the same degree:
+  - for MAJOR change in transitive dependency we SHOULD increment MAJOR part of our version,
+  - for MINOR change in transitive dependency we SHOULD increment MINOR part of our version,
+  - for PATCH change in transitive dependency we SHOULD increment PATCH part of our version.
+  
+If a few dependencies are being changed, only the highest degree is required to be incremented. 
+(See also [the discussion](https://github.com/semver/semver/issues/341).)
+
 ### What if I inadvertently alter the public API in a way that is not compliant with the version number change (i.e. the code incorrectly introduces a major breaking change in a patch release)?
 
 Use your best judgment. If you have a huge audience that will be drastically
