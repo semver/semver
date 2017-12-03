@@ -9,7 +9,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 1. MAJOR version when you make incompatible API changes,
 1. MINOR version when you add functionality in a backwards-compatible
    manner, and
-1. PATCH version when you make backwards-compatible bug fixes.
+1. PATCH version when you make backwards-compatible changes.
 
 Additional labels for pre-release and build metadata are available as extensions
 to the MAJOR.MINOR.PATCH format.
@@ -76,8 +76,8 @@ is incremented after this release is dependent on this public API and how it
 changes.
 
 1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
-compatible bug fixes are introduced. A bug fix is defined as an internal
-change that fixes incorrect behavior.
+compatible changes are made. Such changes include but are not limited to:
+internal changes that fix incorrect behavior, or refactorings.
 
 1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
 compatible functionality is introduced to the public API. It MUST be
