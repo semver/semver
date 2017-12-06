@@ -319,6 +319,24 @@ Abbreviating "version" as "v" is often seen with version control. Example:
 `git tag v1.2.3 -m "Release version 1.2.3"`, in which case "v1.2.3" is a tag
 name and the semantic version is "1.2.3".
 
+### What does SemVer consider a package?
+
+With "package" SemVer describes deployment units, independent of the actual
+technology used. Packages could be built from source artifacts or assemble
+binary artifacts.
+
+An actual ecosystem might have a different terminology. For example In *Java*
+a typical deployment unit would be a *JAR file*. On the other hand a *Java
+package* is typically not independently versioned. When using *OSGi bundles*
+a *Java package* is a manageable unit and Semantic Versioning supports the
+change lifecycle.
+
+### Does SemVer apply to APIs?
+
+Web APIs, Specifications, logical collections of programming interfaces
+or implementations might not consist of actual deployment units, however
+Semantic Versioning can still be used to describe the impact of changes.
+
 
 About
 -----
