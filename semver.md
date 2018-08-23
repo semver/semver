@@ -319,6 +319,20 @@ Abbreviating "version" as "v" is often seen with version control. Example:
 `git tag v1.2.3 -m "Release version 1.2.3"`, in which case "v1.2.3" is a tag
 name and the semantic version is "1.2.3".
 
+### Is there an efficient regex?
+
+There are two. One with named groups for those systems that support them:
+
+```
+^(?<major>0|[1-9]\d*)\.(?<minor>0|[1-9]\d*)\.(?<patch>0|[1-9]\d*)(?:-(?<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
+```
+
+And one with non-capturing groups instead (so cg1 = major, cg2 = minor,
+cg3 = patch, cg4 = prerelease and cg5 = buildmetadata):
+
+```
+^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
+```
 
 About
 -----
