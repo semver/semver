@@ -319,7 +319,7 @@ Abbreviating "version" as "v" is often seen with version control. Example:
 `git tag v1.2.3 -m "Release version 1.2.3"`, in which case "v1.2.3" is a tag
 name and the semantic version is "1.2.3".
 
-### Is there an efficient regex?
+### Is there a regular expression (RegEx) to check a SemVer string?
 
 There are two. One with named groups for those systems that support them:
 
