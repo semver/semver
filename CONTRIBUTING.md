@@ -23,7 +23,7 @@ all team members (see below) to merge.
 
 We welcome feedback from anyone on the direction of SemVer. However, a group of people, "the SemVer team," are responsible for making decisions about RFC PRs. The SemVer team is made up of representatives from package managers that use SemVer. 
 
-Team members are added and removed based on the consensus of the existing team members. The @maintainers team on GitHub contains the official list of the members of "the SemVer team."
+Team members are added and removed based on the consensus of the existing team members. The @semver/maintainers team on GitHub contains the official list of the members of "the SemVer team."
 
 The maintainers are:
 
