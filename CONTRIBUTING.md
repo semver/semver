@@ -23,7 +23,16 @@ all team members (see below) to merge.
 
 We welcome feedback from anyone on the direction of SemVer. However, a group of people, "the SemVer team," are responsible for making decisions about RFC PRs. The SemVer team is made up of representatives from package managers that use SemVer. 
 
-Team members are added and removed based on the consensus of the existing team members. The [@maintainers](https://github.com/orgs/semver/teams/maintainers) team on GitHub contains the official list of the members of "the SemVer team."
+Team members are added and removed based on the consensus of the existing team members. The @maintainers team on GitHub contains the official list of the members of "the SemVer team."
+
+The maintainers are:
+
+* anangaur (NuGet)
+* dherman (Notion)
+* indirect (Bundler)
+* isaacs (NPM)
+* segiddins (CocoaPods)
+* steveklabnik (Cargo)
 
 ## Participation commitment
 
@@ -33,7 +42,6 @@ Participation in the SemVer governance process requires a commitment to maintain
 * No RFC will be approved if it is deemed to cause significant breakage to any of the SemVer-using  communities represented by the SemVer Maintainers group.  It is the responsibility of the SemVer Maintainers group to advocate for their communities in good faith.
 * With the understanding that implementation may present challenges and require time to complete, refusal on principle to implement approved RFCs will result in removal from the group.
 * Implementations may add functionality in advance of an approved RFC (in fact, they have to!) but all such functionality must be flagged as "experimental", so that users understand it may change in the future.  (Maintainers are encouraged to perform these experimental changes on forks rather than the implementation in use by their package management communities, to reduce the chance of users coming to rely on experimental functionality.)
-
 
 ## The lifecycle of an RFC
 
