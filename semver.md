@@ -345,7 +345,7 @@ See: <https://regex101.com/r/vkijKf/1/>
 About
 -----
 
-The Semantic Versioning specification is authored by [Tom
+The Semantic Versioning specification was originally authored by [Tom
 Preston-Werner](https://tom.preston-werner.com), inventor of Gravatar and
 cofounder of GitHub.
 
