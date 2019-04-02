@@ -30,7 +30,7 @@ The maintainers are:
 * [anangaur](https://github.com/anangaur) ([NuGet](https://www.nuget.org/))
 * [dherman](https://github.com/dherman) ([Notion](https://www.notionjs.com/))
 * [indirect](https://github.com/indirect) ([Bundler](https://bundler.io/))
-* [isaacs](https://github.com/isaacs) ([NPM](https://www.npmjs.com/))
+* [isaacs](https://github.com/isaacs) ([npm](https://www.npmjs.com/))
 * [segiddins](https://github.com/segiddins) ([CocoaPods](https://cocoapods.org/))
 * [steveklabnik](https://github.com/steveklabnik) ([Cargo](https://crates.io/))
 
