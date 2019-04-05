@@ -33,6 +33,7 @@ The maintainers are:
 * [isaacs](https://github.com/isaacs) ([npm](https://www.npmjs.com/))
 * [segiddins](https://github.com/segiddins) ([CocoaPods](https://cocoapods.org/))
 * [steveklabnik](https://github.com/steveklabnik) ([Cargo](https://crates.io/))
+* [Seldaek](https://github.com/Seldaek) ([Composer](https://getcomposer.org/))
 
 ## Participation commitment
 
