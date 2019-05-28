@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.0
+Semantic Versioning 3.0.0
 ==============================
 
 Summary
@@ -91,7 +91,7 @@ incompatible changes are introduced to the public API. It MAY also include minor
 and patch level changes. Patch and minor version MUST be reset to 0 when major
 version is incremented.
 
-1. A pre-release version MAY be denoted by appending a hyphen and a
+1. A pre-release version MAY be denoted by appending a hyphen sign `-` and a
 series of dot separated identifiers immediately following the patch
 version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
 [0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
@@ -102,13 +102,21 @@ intended compatibility requirements as denoted by its associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1.0.0-x.7.z.92.
 
-1. Build metadata MAY be denoted by appending a plus sign and a series of dot
+1. A post-release version MAY be denoted by appending a plus sign `+` and a
+series of dot separated identifiers immediately following the patch
+version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
+[0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
+NOT include leading zeroes. Post-release versions have a greater
+precedence than the associated normal version. Examples: 1.0.0+fix.1,
+1.0.0+patchset.7.
+
+1. Build metadata MAY be denoted by appending a tilde sign `~` and a series of dot
 separated identifiers immediately following the patch or pre-release version.
 Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
 Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
 version precedence. Thus two versions that differ only in the build metadata,
-have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
-1.0.0-beta+exp.sha.5114f85.
+have the same precedence. Examples: 1.0.0-alpha~001, 1.0.0~20130313144700,
+1.0.0-beta~exp.sha.5114f85, 1.0.0+fix.1~go1.12.
 
 1. Precedence refers to how versions are compared to each other when ordered.
 Precedence MUST be calculated by separating the version into major, minor, patch
@@ -126,15 +134,17 @@ lexically in ASCII sort order. Numeric identifiers always have lower precedence
 than non-numeric identifiers. A larger set of pre-release fields has a higher
 precedence than a smaller set, if all of the preceding identifiers are equal.
 Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
-1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0 < 1.0.0+fix.1.
 
 Backus–Naur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
 
     <valid semver> ::= <version core>
                      | <version core> "-" <pre-release>
-                     | <version core> "+" <build>
-                     | <version core> "-" <pre-release> "+" <build>
+                     | <version core> "+" <post-release>
+                     | <version core> "~" <build>
+                     | <version core> "-" <pre-release> "~" <build>
+                     | <version core> "+" <post-release> "~" <build>
 
     <version core> ::= <major> "." <minor> "." <patch>
 
@@ -146,8 +156,13 @@ Backus–Naur Form Grammar for Valid SemVer Versions
 
     <pre-release> ::= <dot-separated pre-release identifiers>
 
+    <post-release> ::= <dot-separated post-release identifiers>
+
     <dot-separated pre-release identifiers> ::= <pre-release identifier>
                                               | <pre-release identifier> "." <dot-separated pre-release identifiers>
+
+    <dot-separated post-release identifiers> ::= <post-release identifier>
+                                               | <post-release identifier> "." <dot-separated post-release identifiers>
 
     <build> ::= <dot-separated build identifiers>
 
@@ -156,6 +171,9 @@ Backus–Naur Form Grammar for Valid SemVer Versions
 
     <pre-release identifier> ::= <alphanumeric identifier>
                                | <numeric identifier>
+
+    <post-release identifier> ::= <alphanumeric identifier>
+                                | <numeric identifier>
 
     <build identifier> ::= <alphanumeric identifier>
                          | <digits>
