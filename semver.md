@@ -7,9 +7,9 @@ Summary
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
 1. MAJOR version when you make incompatible API changes,
-1. MINOR version when you add functionality in a backwards-compatible
+1. MINOR version when you add functionality in a backwards compatible
    manner, and
-1. PATCH version when you make backwards-compatible bug fixes.
+1. PATCH version when you make backwards compatible bug fixes.
 
 Additional labels for pre-release and build metadata are available as extensions
 to the MAJOR.MINOR.PATCH format.
@@ -54,7 +54,7 @@ Semantic Versioning Specification (SemVer)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
+interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 1. Software using Semantic Versioning MUST declare a public API. This API
 could be declared in the code itself or exist strictly in documentation.
@@ -319,20 +319,41 @@ Abbreviating "version" as "v" is often seen with version control. Example:
 `git tag v1.2.3 -m "Release version 1.2.3"`, in which case "v1.2.3" is a tag
 name and the semantic version is "1.2.3".
 
+### Is there a suggested regular expression (RegEx) to check a SemVer string?
+
+There are two. One with named groups for those systems that support them
+(PCRE [Perl Compatible Regular Expressions, i.e. Perl, PHP and R], Python
+and Go).
+
+See: <https://regex101.com/r/Ly7O1x/3/>
+
+```
+^(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P<patch>0|[1-9]\d*)(?:-(?P<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
+```
+
+And one with numbered capture groups instead (so cg1 = major, cg2 = minor,
+cg3 = patch, cg4 = prerelease and cg5 = buildmetadata) that is compatible
+with ECMA Script (JavaScript), PCRE (Perl Compatible Regular Expressions,
+i.e. Perl, PHP and R), Python and Go.
+
+See: <https://regex101.com/r/vkijKf/1/>
+
+```
+^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
+```
 
 About
 -----
 
 The Semantic Versioning specification is authored by [Tom
-Preston-Werner](http://tom.preston-werner.com), inventor of Gravatar and
+Preston-Werner](https://tom.preston-werner.com), inventor of Gravatar and
 cofounder of GitHub.
 
 If you'd like to leave feedback, please [open an issue on
-GitHub](https://github.com/mojombo/semver/issues).
+GitHub](https://github.com/semver/semver/issues).
 
 
 License
 -------
 
-Creative Commons - CC BY 3.0
-http://creativecommons.org/licenses/by/3.0/
+[Creative Commons - CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
