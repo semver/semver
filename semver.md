@@ -93,22 +93,22 @@ version is incremented.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a
 series of dot separated identifiers immediately following the patch
-version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
+version. Identifiers MUST comprise only ASCII alphanumerics and hyphens
 [0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
 NOT include leading zeroes. Pre-release versions have a lower
 precedence than the associated normal version. A pre-release version
 indicates that the version is unstable and might not satisfy the
 intended compatibility requirements as denoted by its associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
+1.0.0-x.7.z.92, 1.0.0-x-y-z.--.
 
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch or pre-release version.
-Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
+Identifiers MUST comprise only ASCII alphanumerics and hyphens [0-9A-Za-z-].
 Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
 version precedence. Thus two versions that differ only in the build metadata,
 have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
-1.0.0-beta+exp.sha.5114f85.
+1.0.0-beta+exp.sha.5114f85, 1.0.0+21AF26D3----117B344092BD.
 
 1. Precedence refers to how versions are compared to each other when ordered.
 Precedence MUST be calculated by separating the version into major, minor, patch
