@@ -4,7 +4,7 @@ The "RFC" (request for comments) process is intended to provide a consistent and
 
 ## When you need to follow this process
 
-You need to follow this process if you intend to make "substantial" changes to the specification or the RFC process itself. What constitutes a "substantial" change is evolving based on community norms and varies depending on what part of the specification you are proposing to change, but may include the following:
+You need to follow this process if you intend to make "substantial" changes to the specification or to the RFC process itself. What constitutes a "substantial" change is evolving based on community norms and varies depending on what part of the specification you are proposing to change, but may include the following:
 
 * Changes to the meaning of the specification.
 
@@ -15,9 +15,9 @@ Some changes do not require an RFC:
 
 ## What the process is
 
-When pull requests are opened against the specification or this repository, they may be
-tagged with an "RFC" tag ("RFC" from here forward). RFCs require the consensus of
-all team members (see below) to merge.
+When a pull request ("PR" from here forward) is opened against the specification or
+this repository, it may be tagged with an "RFC" tag ("RFC" from here forward).
+RFCs require the consensus of all team members (see below) to merge.
 
 ## The SemVer Team
 
