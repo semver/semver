@@ -54,7 +54,7 @@ Semantic Versioning Specification (SemVer)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
+interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 1. Software using Semantic Versioning MUST declare a public API. This API
 could be declared in the code itself or exist strictly in documentation.
@@ -93,22 +93,22 @@ version is incremented.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a
 series of dot separated identifiers immediately following the patch
-version. Identifiers MUST comprise only ASCII alphanumerics and hyphen
+version. Identifiers MUST comprise only ASCII alphanumerics and hyphens
 [0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
 NOT include leading zeroes. Pre-release versions have a lower
 precedence than the associated normal version. A pre-release version
 indicates that the version is unstable and might not satisfy the
 intended compatibility requirements as denoted by its associated
 normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92.
+1.0.0-x.7.z.92, 1.0.0-x-y-z.--.
 
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch or pre-release version.
-Identifiers MUST comprise only ASCII alphanumerics and hyphen [0-9A-Za-z-].
+Identifiers MUST comprise only ASCII alphanumerics and hyphens [0-9A-Za-z-].
 Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
 version precedence. Thus two versions that differ only in the build metadata,
 have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
-1.0.0-beta+exp.sha.5114f85.
+1.0.0-beta+exp.sha.5114f85, 1.0.0+21AF26D3----117B344092BD.
 
 1. Precedence refers to how versions are compared to each other when ordered.
 Precedence MUST be calculated by separating the version into major, minor, patch
@@ -345,8 +345,8 @@ See: <https://regex101.com/r/vkijKf/1/>
 About
 -----
 
-The Semantic Versioning specification is authored by [Tom
-Preston-Werner](http://tom.preston-werner.com), inventor of Gravatar and
+The Semantic Versioning specification was originally authored by [Tom
+Preston-Werner](https://tom.preston-werner.com), inventor of Gravatar and
 cofounder of GitHub.
 
 If you'd like to leave feedback, please [open an issue on
@@ -356,4 +356,4 @@ GitHub](https://github.com/semver/semver/issues).
 License
 -------
 
-[Creative Commons - CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
+[Creative Commons - CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
