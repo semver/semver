@@ -1,0 +1,33 @@
+{
+  "name": "semver-spec",
+  "version": "2.0.0",
+  "description": "Semantic Versioning Specification",
+  "main": "semver.md",
+  "scripts": {
+    "lint": "remark -qf semver.md",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semver/semver.git"
+  },
+  "keywords": [
+    "semver",
+    "semantic",
+    "versioning",
+    "specification",
+    "spec"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/semver/semver/issues"
+  },
+  "homepage": "https://github.com/semver/semver#readme",
+  "devDependencies": {
+    "remark-cli": "^8.0.0",
+    "remark-frontmatter": "^2.0.0",
+    "remark-lint-mdash-style": "^1.1.1",
+    "remark-preset-lint-node": "^1.16.0"
+  }
+}

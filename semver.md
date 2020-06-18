@@ -48,7 +48,6 @@ I call this system "Semantic Versioning." Under this scheme, version numbers
 and the way they change convey meaning about the underlying code and what has
 been modified from one version to the next.
 
-
 Semantic Versioning Specification (SemVer)
 ------------------------------------------
 
@@ -130,69 +129,69 @@ Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
 
 Backus–Naur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
+```
+<valid semver> ::= <version core>
+                 | <version core> "-" <pre-release>
+                 | <version core> "+" <build>
+                 | <version core> "-" <pre-release> "+" <build>
 
-    <valid semver> ::= <version core>
-                     | <version core> "-" <pre-release>
-                     | <version core> "+" <build>
-                     | <version core> "-" <pre-release> "+" <build>
+<version core> ::= <major> "." <minor> "." <patch>
 
-    <version core> ::= <major> "." <minor> "." <patch>
+<major> ::= <numeric identifier>
 
-    <major> ::= <numeric identifier>
+<minor> ::= <numeric identifier>
 
-    <minor> ::= <numeric identifier>
+<patch> ::= <numeric identifier>
 
-    <patch> ::= <numeric identifier>
+<pre-release> ::= <dot-separated pre-release identifiers>
 
-    <pre-release> ::= <dot-separated pre-release identifiers>
+<dot-separated pre-release identifiers> ::= <pre-release identifier>
+                                          | <pre-release identifier> "." <dot-separated pre-release identifiers>
 
-    <dot-separated pre-release identifiers> ::= <pre-release identifier>
-                                              | <pre-release identifier> "." <dot-separated pre-release identifiers>
+<build> ::= <dot-separated build identifiers>
 
-    <build> ::= <dot-separated build identifiers>
+<dot-separated build identifiers> ::= <build identifier>
+                                    | <build identifier> "." <dot-separated build identifiers>
 
-    <dot-separated build identifiers> ::= <build identifier>
-                                        | <build identifier> "." <dot-separated build identifiers>
+<pre-release identifier> ::= <alphanumeric identifier>
+                           | <numeric identifier>
 
-    <pre-release identifier> ::= <alphanumeric identifier>
-                               | <numeric identifier>
+<build identifier> ::= <alphanumeric identifier>
+                     | <digits>
 
-    <build identifier> ::= <alphanumeric identifier>
-                         | <digits>
+<alphanumeric identifier> ::= <non-digit>
+                            | <non-digit> <identifier characters>
+                            | <identifier characters> <non-digit>
+                            | <identifier characters> <non-digit> <identifier characters>
 
-    <alphanumeric identifier> ::= <non-digit>
-                                | <non-digit> <identifier characters>
-                                | <identifier characters> <non-digit>
-                                | <identifier characters> <non-digit> <identifier characters>
+<numeric identifier> ::= "0"
+                       | <positive digit>
+                       | <positive digit> <digits>
 
-    <numeric identifier> ::= "0"
-                           | <positive digit>
-                           | <positive digit> <digits>
+<identifier characters> ::= <identifier character>
+                          | <identifier character> <identifier characters>
 
-    <identifier characters> ::= <identifier character>
-                              | <identifier character> <identifier characters>
+<identifier character> ::= <digit>
+                         | <non-digit>
 
-    <identifier character> ::= <digit>
-                             | <non-digit>
+<non-digit> ::= <letter>
+              | "-"
 
-    <non-digit> ::= <letter>
-                  | "-"
+<digits> ::= <digit>
+           | <digit> <digits>
 
-    <digits> ::= <digit>
-               | <digit> <digits>
+<digit> ::= "0"
+          | <positive digit>
 
-    <digit> ::= "0"
-              | <positive digit>
+<positive digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
-    <positive digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-
-    <letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
-               | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
-               | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d"
-               | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n"
-               | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x"
-               | "y" | "z"
-
+<letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
+           | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
+           | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d"
+           | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n"
+           | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x"
+           | "y" | "z"
+```
 
 Why Use Semantic Versioning?
 ----------------------------
@@ -226,7 +225,6 @@ If all of this sounds desirable, all you need to do to start using Semantic
 Versioning is to declare that you are doing so and then follow the rules. Link
 to this website from your README so others know the rules and can benefit from
 them.
-
 
 FAQ
 ---
@@ -352,8 +350,7 @@ cofounder of GitHub.
 If you'd like to leave feedback, please [open an issue on
 GitHub](https://github.com/semver/semver/issues).
 
-
 License
 -------
 
-[Creative Commons - CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+[Creative Commons ― CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
