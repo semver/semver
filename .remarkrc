@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "remark-frontmatter",
+    "remark-preset-lint-node",
+    "remark-lint-mdash-style",
+    ["remark-lint-fenced-code-flag", false],
+    ["remark-lint-first-heading-level", false],
+    ["remark-lint-maximum-line-length", false],
+    ["remark-lint-no-file-name-articles", false],
+    ["remark-lint-no-literal-urls", false],
+    ["remark-lint-no-trailing-spaces", false],
+    ["remark-lint-no-undefined-references", false],
+    ["remark-lint-prohibited-strings", false],
+    ["remark-lint-no-shortcut-reference-link", false],
+    ["remark-lint-unordered-list-marker-style", "-"],
+    ["remark-lint-heading-style", "setext"],
+    ["remark-lint-code-block-style", "fenced"]
+  ]
+}
