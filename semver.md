@@ -110,22 +110,39 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 1.0.0-beta+exp.sha.5114f85, 1.0.0+21AF26D3----117B344092BD.
 
 1. Precedence refers to how versions are compared to each other when ordered.
-Precedence MUST be calculated by separating the version into major, minor, patch
-and pre-release identifiers in that order (Build metadata does not figure
-into precedence). Precedence is determined by the first difference when
-comparing each of these identifiers from left to right as follows: Major, minor,
-and patch versions are always compared numerically. Example: 1.0.0 < 2.0.0 <
-2.1.0 < 2.1.1. When major, minor, and patch are equal, a pre-release version has
-lower precedence than a normal version. Example: 1.0.0-alpha < 1.0.0. Precedence
-for two pre-release versions with the same major, minor, and patch version MUST
-be determined by comparing each dot separated identifier from left to right
-until a difference is found as follows: identifiers consisting of only digits
-are compared numerically and identifiers with letters or hyphens are compared
-lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. A larger set of pre-release fields has a higher
-precedence than a smaller set, if all of the preceding identifiers are equal.
-Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
-1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+
+   1. Precedence MUST be calculated by separating the version into major,
+      minor, patch and pre-release identifiers in that order (Build metadata
+      does not figure into precedence).
+
+   1. Precedence is determined by the first difference when comparing each of
+      these identifiers from left to right as follows: Major, minor, and patch
+      versions are always compared numerically.
+
+      Example: 1.0.0 < 2.0.0 < 2.1.0 < 2.1.1.
+
+   1. When major, minor, and patch are equal, a pre-release version has lower
+      precedence than a normal version:
+
+      Example: 1.0.0-alpha < 1.0.0.
+
+   1. Precedence for two pre-release versions with the same major, minor, and
+      patch version MUST be determined by comparing each dot separated identifier
+      from left to right until a difference is found as follows:
+
+      1. Identifiers consisting of only digits are compared numerically.
+
+      1. Identifiers with letters or hyphens are compared lexically in ASCII
+         sort order.
+
+      1. Numeric identifiers always have lower precedence than non-numeric
+         identifiers.
+
+      1. A larger set of pre-release fields has a higher precedence than a
+         smaller set, if all of the preceding identifiers are equal.
+
+      Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 
+      1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Backus–Naur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
