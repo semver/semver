@@ -292,9 +292,9 @@ In such environments where only one version of a library could
 be present in a running system, the transitive dependencies effectively become
 part of the public library interface and thus the version of the user library SHOULD be 
 incremented to the same degree as the version of the transitive dependency:
-  - for MAJOR change in transitive dependency we SHOULD increment MAJOR part of our version,
-  - for MINOR change in transitive dependency we SHOULD increment MINOR part of our version,
-  - for PATCH change in transitive dependency we SHOULD increment PATCH part of our version.
+- for MAJOR change in transitive dependency we SHOULD increment MAJOR part of our version,
+- for MINOR change in transitive dependency we SHOULD increment MINOR part of our version,
+- for PATCH change in transitive dependency we SHOULD increment PATCH part of our version.
   
 If a few dependencies are being changed, only the highest degree is required to be incremented. 
 (See also [the discussion](https://github.com/semver/semver/issues/341).)
