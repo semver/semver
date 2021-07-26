@@ -87,7 +87,7 @@ MUST be reset to 0 when minor version is incremented.
 
 1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
 incompatible changes are introduced to the public API. It MAY also include minor
-and patch level changes. Patch and minor version MUST be reset to 0 when major
+and patch level changes. Patch and minor versions MUST be reset to 0 when major
 version is incremented.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a
