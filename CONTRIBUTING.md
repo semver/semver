@@ -15,9 +15,9 @@ Some changes do not require an RFC:
 
 ## What the process is
 
-When pull requests are opened against the specification or this repository, they may be
-tagged with an "RFC" tag ("RFC" from here forward). RFCs require the consensus of
-all team members (see below) to merge.
+When a pull request ("PR" from here forward) is opened against the specification or
+this repository, it may be tagged with an "RFC" tag ("RFC" from here forward).
+RFCs require the consensus of all team members (see below) to merge.
 
 ## The SemVer Team
 

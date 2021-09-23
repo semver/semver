@@ -1,4 +1,4 @@
-name: Check chagnes
+name: Check changes
 
 on: [pull_request]
 

@@ -31,7 +31,7 @@ specified too loosely, you will inevitably be bitten by version promiscuity
 Dependency hell is where you are when version lock and/or version promiscuity
 prevent you from easily and safely moving your project forward.
 
-As a solution to this problem, I propose a simple set of rules and
+As a solution to this problem, we propose a simple set of rules and
 requirements that dictate how version numbers are assigned and incremented.
 These rules are based on but not necessarily limited to pre-existing
 widespread common practices in use in both closed and open-source software.
@@ -44,7 +44,7 @@ affecting the API increment the patch version, backwards compatible API
 additions/changes increment the minor version, and backwards incompatible API
 changes increment the major version.
 
-I call this system "Semantic Versioning." Under this scheme, version numbers
+We call this system "Semantic Versioning." Under this scheme, version numbers
 and the way they change convey meaning about the underlying code and what has
 been modified from one version to the next.
 
@@ -87,7 +87,7 @@ MUST be reset to 0 when minor version is incremented.
 
 1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
 incompatible changes are introduced to the public API. It MAY also include minor
-and patch level changes. Patch and minor version MUST be reset to 0 when major
+and patch level changes. Patch and minor versions MUST be reset to 0 when major
 version is incremented.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a
@@ -110,22 +110,39 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 1.0.0-beta+exp.sha.5114f85, 1.0.0+21AF26D3----117B344092BD.
 
 1. Precedence refers to how versions are compared to each other when ordered.
-Precedence MUST be calculated by separating the version into major, minor, patch
-and pre-release identifiers in that order (Build metadata does not figure
-into precedence). Precedence is determined by the first difference when
-comparing each of these identifiers from left to right as follows: Major, minor,
-and patch versions are always compared numerically. Example: 1.0.0 < 2.0.0 <
-2.1.0 < 2.1.1. When major, minor, and patch are equal, a pre-release version has
-lower precedence than a normal version. Example: 1.0.0-alpha < 1.0.0. Precedence
-for two pre-release versions with the same major, minor, and patch version MUST
-be determined by comparing each dot separated identifier from left to right
-until a difference is found as follows: identifiers consisting of only digits
-are compared numerically and identifiers with letters or hyphens are compared
-lexically in ASCII sort order. Numeric identifiers always have lower precedence
-than non-numeric identifiers. A larger set of pre-release fields has a higher
-precedence than a smaller set, if all of the preceding identifiers are equal.
-Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
-1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+
+   1. Precedence MUST be calculated by separating the version into major,
+      minor, patch and pre-release identifiers in that order (Build metadata
+      does not figure into precedence).
+
+   1. Precedence is determined by the first difference when comparing each of
+      these identifiers from left to right as follows: Major, minor, and patch
+      versions are always compared numerically.
+
+      Example: 1.0.0 < 2.0.0 < 2.1.0 < 2.1.1.
+
+   1. When major, minor, and patch are equal, a pre-release version has lower
+      precedence than a normal version:
+
+      Example: 1.0.0-alpha < 1.0.0.
+
+   1. Precedence for two pre-release versions with the same major, minor, and
+      patch version MUST be determined by comparing each dot separated identifier
+      from left to right until a difference is found as follows:
+
+      1. Identifiers consisting of only digits are compared numerically.
+
+      1. Identifiers with letters or hyphens are compared lexically in ASCII
+         sort order.
+
+      1. Numeric identifiers always have lower precedence than non-numeric
+         identifiers.
+
+      1. A larger set of pre-release fields has a higher precedence than a
+         smaller set, if all of the preceding identifiers are equal.
+
+      Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 
+      1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Backus–Naur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
@@ -281,7 +298,7 @@ Software that explicitly depends on the same dependencies as your package
 should have their own dependency specifications and the author will notice any
 conflicts. Determining whether the change is a patch level or minor level
 modification depends on whether you updated your dependencies in order to fix
-a bug or introduce new functionality. I would usually expect additional code
+a bug or introduce new functionality. We would usually expect additional code
 for the latter instance, in which case it's obviously a minor level increment.
 
 ### What if I inadvertently alter the public API in a way that is not compliant with the version number change (i.e. the code incorrectly introduces a major breaking change in a patch release)?
