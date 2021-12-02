@@ -31,7 +31,7 @@ specified too loosely, you will inevitably be bitten by version promiscuity
 Dependency hell is where you are when version lock and/or version promiscuity
 prevent you from easily and safely moving your project forward.
 
-As a solution to this problem, we propose a simple set of rules and
+SemVer addresses this with a simple set of rules and
 requirements that dictate how version numbers are assigned and incremented.
 These rules are based on but not necessarily limited to pre-existing
 widespread common practices in use in both closed and open-source software.
@@ -44,7 +44,7 @@ affecting the API increment the patch version, backwards compatible API
 additions/changes increment the minor version, and backwards incompatible API
 changes increment the major version.
 
-We call this system "Semantic Versioning." Under this scheme, version numbers
+This is called "Semantic Versioning". Under this scheme, version numbers
 and the way they change convey meaning about the underlying code and what has
 been modified from one version to the next.
 
