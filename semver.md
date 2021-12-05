@@ -359,6 +359,8 @@ See: <https://regex101.com/r/vkijKf/1/>
 
 One that is compatible with Bash:
 
+See: <https://regex101.com/r/yPKUVq/1>
+
 ```
 ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-((0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*))*))?(\+([0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*))?$
 ```
