@@ -31,7 +31,7 @@ specified too loosely, you will inevitably be bitten by version promiscuity
 Dependency hell is where you are when version lock and/or version promiscuity
 prevent you from easily and safely moving your project forward.
 
-As a solution to this problem, I propose a simple set of rules and
+As a solution to this problem, we propose a simple set of rules and
 requirements that dictate how version numbers are assigned and incremented.
 These rules are based on but not necessarily limited to pre-existing
 widespread common practices in use in both closed and open-source software.
@@ -44,7 +44,7 @@ affecting the API increment the patch version, backwards compatible API
 additions/changes increment the minor version, and backwards incompatible API
 changes increment the major version.
 
-I call this system "Semantic Versioning." Under this scheme, version numbers
+We call this system "Semantic Versioning." Under this scheme, version numbers
 and the way they change convey meaning about the underlying code and what has
 been modified from one version to the next.
 
@@ -87,7 +87,7 @@ MUST be reset to 0 when minor version is incremented.
 
 1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
 incompatible changes are introduced to the public API. It MAY also include minor
-and patch level changes. Patch and minor version MUST be reset to 0 when major
+and patch level changes. Patch and minor versions MUST be reset to 0 when major
 version is incremented.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a
@@ -298,7 +298,7 @@ Software that explicitly depends on the same dependencies as your package
 should have their own dependency specifications and the author will notice any
 conflicts. Determining whether the change is a patch level or minor level
 modification depends on whether you updated your dependencies in order to fix
-a bug or introduce new functionality. I would usually expect additional code
+a bug or introduce new functionality. We would usually expect additional code
 for the latter instance, in which case it's obviously a minor level increment.
 
 ### What if I inadvertently alter the public API in a way that is not compliant with the version number change (i.e. the code incorrectly introduces a major breaking change in a patch release)?
