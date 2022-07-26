@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/semver/semver#readme",
   "devDependencies": {
-    "remark-cli": "^8.0.0",
+    "remark-cli": "^11.0.0",
     "remark-frontmatter": "^2.0.0",
     "remark-lint-mdash-style": "^1.1.1",
     "remark-preset-lint-node": "^1.16.0"
