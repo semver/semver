@@ -27,13 +27,14 @@ Team members are added and removed based on the consensus of the existing team m
 
 The maintainers are:
 
-* [anangaur](https://github.com/anangaur) ([NuGet](https://www.nuget.org/))
 * [dherman](https://github.com/dherman) ([Notion](https://www.notionjs.com/))
 * [indirect](https://github.com/indirect) ([Bundler](https://bundler.io/))
 * [isaacs](https://github.com/isaacs) ([npm](https://www.npmjs.com/))
+* [JohnTitor](https://github.com/JohnTitor) ([crates.io](https://crates.io/))
 * [segiddins](https://github.com/segiddins) ([CocoaPods](https://cocoapods.org/))
 * [steveklabnik](https://github.com/steveklabnik) ([Cargo](https://crates.io/))
 * [Seldaek](https://github.com/Seldaek) ([Composer](https://getcomposer.org/))
+* [zkat](https://github.com/zkat) ([NuGet](https://www.nuget.org/))
 
 ## Participation commitment
 
