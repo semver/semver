@@ -94,12 +94,12 @@ version is incremented.
 series of dot separated identifiers immediately following the patch
 version. Identifiers MUST comprise only ASCII alphanumerics and hyphens
 [0-9A-Za-z-]. Identifiers MUST NOT be empty. Numeric identifiers MUST
-NOT include leading zeroes. Pre-release versions have a lower
-precedence than the associated normal version. A pre-release version
-indicates that the version is unstable and might not satisfy the
-intended compatibility requirements as denoted by its associated
-normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
-1.0.0-x.7.z.92, 1.0.0-x-y-z.--.
+NOT include leading zeroes. When determining version precedence, a version with
+a pre-release identifier has higher precedence than the same version without a
+pre-release identifier. A pre-release version indicates that the version is
+unstable and might not satisfy the intended compatibility requirements as
+denoted by its associated normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1,
+1.0.0-0.3.7, 1.0.0-x.7.z.92, 1.0.0-x-y-z.--.
 
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch or pre-release version.
@@ -121,7 +121,7 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 
       Example: 1.0.0 < 2.0.0 < 2.1.0 < 2.1.1.
 
-   1. When major, minor, and patch are equal, a pre-release version has lower
+   1. When major, minor, and patch are equal, a pre-release version has higher
       precedence than a normal version:
 
       Example: 1.0.0-alpha < 1.0.0.
@@ -135,10 +135,10 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
       1. Identifiers with letters or hyphens are compared lexically in ASCII
          sort order.
 
-      1. Numeric identifiers always have lower precedence than non-numeric
+      1. Numeric identifiers always have higher precedence than non-numeric
          identifiers.
 
-      1. A larger set of pre-release fields has a higher precedence than a
+      1. A larger set of pre-release fields has a lower precedence than a
          smaller set, if all of the preceding identifiers are equal.
 
       Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 
