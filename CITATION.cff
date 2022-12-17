@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you reference the Semantic Versioning Specification in your work, please use this metadata."
+abstract: '"Semantic Versioning" or "SemVer" contain a set of rules and requirements that dictate how version numbers are assigned and incremented.'
+authors:
+  - family-names: Preston-Werner
+    given-names: Tom
+title: Semantic Versioning Specification
+version: 2.0.0
+date-released: 2013-06-18
+url: "https://semver.org"
+repository-code: "https://github.com/semver/semver"
+license: "CC-BY-3.0"
