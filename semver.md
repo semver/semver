@@ -69,7 +69,7 @@ MUST NOT be modified. Any modifications MUST be released as a new version.
 
 1. Major version zero (0.y.z) is for initial development. Anything MAY change
 at any time. The public API SHOULD NOT be considered stable. Incompatible API changes and 
-new functionality might be introcuded in MINOR releases. PATCH releases still reserved
+new functionality might be introduced in incremental `0.Y.0` releases when `0.Y.Z` releases still reserved
 to backwards compatible bug fixes.
 
 1. Version 1.0.0 defines the public API. The way in which the version number
