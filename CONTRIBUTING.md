@@ -13,6 +13,11 @@ Some changes do not require an RFC:
 * Typo fixes
 * Small wording clarifications that do not impact the semantics of the specification.
 
+### Translations
+
+Translations also don't require an RFC.
+If you want to contribute to the translations, you can visit the [website repository](https://github.com/semver/semver.org) and submit a PR.
+
 ## What the process is
 
 When a pull request ("PR" from here forward) is opened against the specification or
