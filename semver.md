@@ -7,9 +7,9 @@ Summary
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
 1. MAJOR version when you make incompatible API changes
-1. MINOR version when you add functionality in a backwards compatible
+1. MINOR version when you add functionality in a backward compatible
    manner
-1. PATCH version when you make backwards compatible bug fixes
+1. PATCH version when you make backward compatible bug fixes
 
 Additional labels for pre-release and build metadata are available as extensions
 to the MAJOR.MINOR.PATCH format.
@@ -40,8 +40,8 @@ consist of documentation or be enforced by the code itself. Regardless, it is
 important that this API be clear and precise. Once you identify your public
 API, you communicate changes to it with specific increments to your version
 number. Consider a version format of X.Y.Z (Major.Minor.Patch). Bug fixes not
-affecting the API increment the patch version, backwards compatible API
-additions/changes increment the minor version, and backwards incompatible API
+affecting the API increment the patch version, backward compatible API
+additions/changes increment the minor version, and backward incompatible API
 changes increment the major version.
 
 We call this system "Semantic Versioning." Under this scheme, version numbers
@@ -74,18 +74,18 @@ at any time. The public API SHOULD NOT be considered stable.
 is incremented after this release is dependent on this public API and how it
 changes.
 
-1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
+1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backward
 compatible bug fixes are introduced. A bug fix is defined as an internal
 change that fixes incorrect behavior.
 
-1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
+1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backward
 compatible functionality is introduced to the public API. It MUST be
 incremented if any public API functionality is marked as deprecated. It MAY be
 incremented if substantial new functionality or improvements are introduced
 within the private code. It MAY include patch level changes. Patch version
 MUST be reset to 0 when minor version is incremented.
 
-1. Major version X (X.y.z | X > 0) MUST be incremented if any backwards
+1. Major version X (X.y.z | X > 0) MUST be incremented if any backward
 incompatible changes are introduced to the public API. It MAY also include minor
 and patch level changes. Patch and minor versions MUST be reset to 0 when major
 version is incremented.
@@ -255,7 +255,7 @@ and then increment the minor version for each subsequent release.
 
 If your software is being used in production, it should probably already be
 1.0.0. If you have a stable API on which users have come to depend, you should
-be 1.0.0. If you're worrying a lot about backwards compatibility, you should
+be 1.0.0. If you're worrying a lot about backward compatibility, you should
 probably already be 1.0.0.
 
 ### Doesn't this discourage rapid development and fast iteration?
@@ -264,7 +264,7 @@ Major version zero is all about rapid development. If you're changing the API
 every day you should either still be in version 0.y.z or on a separate
 development branch working on the next major version.
 
-### If even the tiniest backwards incompatible changes to the public API require a major version bump, won't I end up at version 42.0.0 very rapidly?
+### If even the tiniest backward incompatible changes to the public API require a major version bump, won't I end up at version 42.0.0 very rapidly?
 
 This is a question of responsible development and foresight. Incompatible
 changes should not be introduced lightly to software that has a lot of
@@ -282,11 +282,11 @@ nobody knows how to use your software, or what methods are safe to call. In
 the long run, Semantic Versioning, and the insistence on a well defined public
 API can keep everyone and everything running smoothly.
 
-### What do I do if I accidentally release a backwards incompatible change as a minor version?
+### What do I do if I accidentally release a backward incompatible change as a minor version?
 
 As soon as you realize that you've broken the Semantic Versioning spec, fix
 the problem and release a new minor version that corrects the problem and
-restores backwards compatibility. Even under this circumstance, it is
+restores backward compatibility. Even under this circumstance, it is
 unacceptable to modify versioned releases. If it's appropriate,
 document the offending version and inform your users of the problem so that
 they are aware of the offending version.
