@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.0
+Semantic Versioning 2.0.1
 ==============================
 
 Summary
@@ -182,8 +182,8 @@ Backus–Naur Form Grammar for Valid SemVer Versions
                             | <identifier characters> <non-digit> <identifier characters>
 
 <numeric identifier> ::= "0"
-                       | <positive digit>
-                       | <positive digit> <digits>
+                       | <non-zero digit>
+                       | <non-zero digit> <digits>
 
 <identifier characters> ::= <identifier character>
                           | <identifier character> <identifier characters>
@@ -198,9 +198,9 @@ Backus–Naur Form Grammar for Valid SemVer Versions
            | <digit> <digits>
 
 <digit> ::= "0"
-          | <positive digit>
+          | <non-zero digit>
 
-<positive digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<non-zero digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
 <letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
            | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
