@@ -68,7 +68,9 @@ Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 MUST NOT be modified. Any modifications MUST be released as a new version.
 
 1. Major version zero (0.y.z) is for initial development. Anything MAY change
-at any time. The public API SHOULD NOT be considered stable.
+at any time. The public API SHOULD NOT be considered stable. Incompatible API changes and 
+new functionality might be introduced in incremental `0.Y.0` releases when `0.Y.Z` releases still reserved
+to backwards compatible bug fixes.
 
 1. Version 1.0.0 defines the public API. The way in which the version number
 is incremented after this release is dependent on this public API and how it
