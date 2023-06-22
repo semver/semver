@@ -338,7 +338,7 @@ name and the semantic version is "1.2.3".
 
 There are two. One with named groups for those systems that support them
 (PCRE [Perl Compatible Regular Expressions, i.e. Perl, PHP and R], Python
-and Go).
+Go, Swift, etc.).
 
 See: <https://regex101.com/r/Ly7O1x/3/>
 
@@ -349,7 +349,7 @@ See: <https://regex101.com/r/Ly7O1x/3/>
 And one with numbered capture groups instead (so cg1 = major, cg2 = minor,
 cg3 = patch, cg4 = prerelease and cg5 = buildmetadata) that is compatible
 with ECMA Script (JavaScript), PCRE (Perl Compatible Regular Expressions,
-i.e. Perl, PHP and R), Python and Go.
+i.e. Perl, PHP and R), Python, Go, Swift, etc.
 
 See: <https://regex101.com/r/vkijKf/1/>
 
