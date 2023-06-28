@@ -181,8 +181,7 @@ Backus–Naur Form Grammar for Valid SemVer Versions
                             | <identifier characters> <non-digit>
                             | <identifier characters> <non-digit> <identifier characters>
 
-<numeric identifier> ::= "0"
-                       | <positive digit>
+<numeric identifier> ::= <digit>
                        | <positive digit> <digits>
 
 <identifier characters> ::= <identifier character>
