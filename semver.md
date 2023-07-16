@@ -28,8 +28,8 @@ danger of version lock (the inability to upgrade a package without having to
 release new versions of every dependent package). If dependencies are
 specified too loosely, you will inevitably be bitten by version promiscuity
 (assuming compatibility with more future versions than is reasonable).
-Dependency hell is where you are when version lock and/or version promiscuity
-prevent you from easily and safely moving your project forward.
+Dependency hell is when version lock and/or version promiscuity prevent you 
+from easily and safely moving your project forward.
 
 As a solution to this problem, we propose a simple set of rules and
 requirements that dictate how version numbers are assigned and incremented.
