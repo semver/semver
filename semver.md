@@ -44,7 +44,7 @@ affecting the API increment the patch version, backwards compatible API
 additions/changes increment the minor version, and backwards incompatible API
 changes increment the major version.
 
-This is called "Semantic Versioning". Under this scheme, version numbers
+Under this scheme, version numbers
 and the way they change convey meaning about the underlying code and what has
 been modified from one version to the next.
 
