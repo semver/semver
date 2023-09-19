@@ -112,11 +112,11 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 1. Precedence refers to how versions are compared to each other when ordered.
 
    1. Precedence MUST be calculated by separating the version into major,
-      minor, patch and pre-release identifiers in that order (Build metadata
+      minor, patch and pre-release identifiers in that order (build metadata
       does not figure into precedence).
 
    1. Precedence is determined by the first difference when comparing each of
-      these identifiers from left to right as follows: Major, minor, and patch
+      these identifiers from left to right as follows: major, minor, and patch
       versions are always compared numerically.
 
       Example: 1.0.0 < 2.0.0 < 2.1.0 < 2.1.1.
