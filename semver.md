@@ -322,7 +322,7 @@ that users can smoothly transition to the new API.
 
 ### Does SemVer have a size limit on the version string?
 
-No, but use good judgment. A 255 character version string is probably overkill,
+No, but use good judgment. A 255 character version string is probably an overkill,
 for example. Also, specific systems may impose their own limits on the size of
 the string.
 
