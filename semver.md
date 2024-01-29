@@ -303,7 +303,7 @@ for the latter instance, in which case it's obviously a minor level increment.
 
 ### What if I inadvertently alter the public API in a way that is not compliant with the version number change (i.e. the code incorrectly introduces a major breaking change in a patch release)?
 
-Use your best judgment. If you have a huge audience that will be drastically
+Use your best judgement. If you have a huge audience that will be drastically
 impacted by changing the behavior back to what the public API intended, then
 it may be best to perform a major version release, even though the fix could
 strictly be considered a patch release. Remember, Semantic Versioning is all
@@ -322,7 +322,7 @@ that users can smoothly transition to the new API.
 
 ### Does SemVer have a size limit on the version string?
 
-No, but use good judgment. A 255 character version string is probably overkill,
+No, but use good judgement. A 255 character version string is probably overkill,
 for example. Also, specific systems may impose their own limits on the size of
 the string.
 
