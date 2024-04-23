@@ -357,6 +357,75 @@ See: <https://regex101.com/r/vkijKf/1/>
 ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
 ```
 
+Regex diagram
+
+```mermaid
+flowchart TB
+  START["Start of Line"]
+  subgraph "MAJOR"
+    direction LR;  
+    MAJORSTART{{"Choose One"}}
+    ZERO1["'0'"]
+    ONETONINE1["'1'-'9'"]
+    DIGIT1["digit"]
+    MAJOREND{{"END major"}}
+  end
+  DOT1["."]
+
+  subgraph "MINOR"
+    direction LR;  
+    MINORSTART{{"Choose One"}}
+    ZERO2["'0'"]
+    ONETONINE2["'1'-'9'"]
+    DIGIT2["digit"]
+    MINOREND{{"END minor"}}
+  end
+  DOT2["."]
+
+  subgraph "PATCH"
+    direction LR;  
+    PATCHSTART{{"Choose One"}}
+    ZERO3["'0'"]
+    ONETONINE3["'1'-'9'"]
+    DIGIT3["digit"]
+    PATCHEND{{"END patch"}}
+  end
+  DASH3["-"]
+
+  START --> MAJOR
+  ONETONINE1 --> DIGIT1
+  MAJORSTART --> ONETONINE1
+  MAJORSTART --> ZERO1
+  DIGIT1 --> DIGIT1
+  DIGIT1 --> MAJOREND
+  ZERO1 --> MAJOREND
+  ONETONINE1 --> MAJOREND
+
+  MAJOR --> DOT1
+  DOT1 --> MINOR
+
+  MINORSTART --> ZERO2
+  MINORSTART --> ONETONINE2
+  ONETONINE2 --> DIGIT2
+  ZERO2 --> MINOREND
+  DIGIT2 --> MINOREND
+  DIGIT2 --> DIGIT2
+  ONETONINE2 --> MINOREND
+
+  MINOR --> DOT2
+  DOT2 --> PATCH
+
+  PATCHSTART --> ZERO3
+  PATCHSTART --> ONETONINE3
+  ONETONINE3 --> DIGIT3
+  ZERO3 --> PATCHEND
+  DIGIT3 --> PATCHEND
+  DIGIT3 --> DIGIT3
+  ONETONINE3 --> PATCHEND
+
+  PATCH --> DASH3
+```
+
 About
 -----
 
