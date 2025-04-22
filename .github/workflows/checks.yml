@@ -1,4 +1,4 @@
-name: Check chagnes
+name: Check changes
 
 on: [pull_request]
 
@@ -12,3 +12,4 @@ jobs:
           node-version: "12.x"
       - run: npm ci
       - run: npm run lint
+      - run: npm test

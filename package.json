@@ -4,8 +4,8 @@
   "description": "Semantic Versioning Specification",
   "main": "semver.md",
   "scripts": {
-    "lint": "remark -qf semver.md",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "remark -qf .",
+    "test": "remark -qf semver.md"
   },
   "repository": {
     "type": "git",
