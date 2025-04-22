@@ -354,3 +354,32 @@ License
 -------
 
 [Creative Commons ― CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+
+Save
+----
+
+The "Save" feature allows you to save the current state of your project, including all dependencies and configurations, to a file. This can be useful for creating backups or sharing your project with others.
+
+### Detailed Explanation
+
+The "Save" feature works by creating a file named `project-save.json` in the root directory of your project. This file contains all the necessary information to restore the project to its current state, including the list of dependencies, their versions, and any configurations.
+
+When you run the "Save" feature, it will gather all the information about your project's dependencies and configurations and write them to the `project-save.json` file. This file can then be used to restore the project to its saved state at any time.
+
+### Examples
+
+To use the "Save" feature, run the following command:
+
+```sh
+npm run save
+```
+
+This will create a file named `project-save.json` in the root directory of your project, containing all the necessary information to restore the project to its current state.
+
+To restore the project from the saved state, you can use the following command:
+
+```sh
+npm run restore
+```
+
+This will read the `project-save.json` file and restore the project to its saved state, including all dependencies and configurations.
