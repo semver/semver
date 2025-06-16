@@ -285,7 +285,7 @@ API can keep everyone and everything running smoothly.
 ### What do I do if I accidentally release a backward incompatible change as a minor version?
 
 As soon as you realize that you've broken the Semantic Versioning spec, fix
-the problem and release a new minor version that corrects the problem and
+the problem and release a new patch version that corrects the problem and
 restores backward compatibility. Even under this circumstance, it is
 unacceptable to modify versioned releases. If it's appropriate,
 document the offending version and inform your users of the problem so that
