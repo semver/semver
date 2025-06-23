@@ -7,9 +7,10 @@ Summary
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
 1. MAJOR version when you make incompatible API changes
-1. MINOR version when you add functionality in a backward compatible
+1. MINOR version when you add functionality to the API in a backward compatible
    manner
-1. PATCH version when you make backward compatible bug fixes
+1. PATCH version when you make backward compatible bug fixes or other changes
+   not affecting the API
 
 Additional labels for pre-release and build metadata are available as extensions
 to the MAJOR.MINOR.PATCH format.
@@ -39,10 +40,10 @@ For this system to work, you first need to declare a public API. This may
 consist of documentation or be enforced by the code itself. Regardless, it is
 important that this API be clear and precise. Once you identify your public
 API, you communicate changes to it with specific increments to your version
-number. Consider a version format of X.Y.Z (Major.Minor.Patch). Bug fixes not
-affecting the API increment the patch version, backward compatible API
-additions/changes increment the minor version, and backward incompatible API
-changes increment the major version.
+number. Consider a version format of X.Y.Z (Major.Minor.Patch). Bug fixes or
+other changes not affecting the API increment the patch version, backward
+compatible API additions/changes increment the minor version, and backward
+incompatible API changes increment the major version.
 
 We call this system "Semantic Versioning." Under this scheme, version numbers
 and the way they change convey meaning about the underlying code and what has
@@ -75,8 +76,8 @@ is incremented after this release is dependent on this public API and how it
 changes.
 
 1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backward
-compatible bug fixes are introduced. A bug fix is defined as an internal
-change that fixes incorrect behavior.
+compatible bug fixes or other changes not affecting the API are introduced. A
+bug fix is defined as an internal change that fixes incorrect behavior.
 
 1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backward
 compatible functionality is introduced to the public API. It MUST be
