@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.0
+Semantic Versioning 2.1.0
 ==============================
 
 Summary
@@ -13,6 +13,9 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 
 Additional labels for pre-release and build metadata are available as extensions
 to the MAJOR.MINOR.PATCH format.
+
+Versions starting with zero are special, and follow the above rules matching
+the pattern `0.MAJOR.MINOR` and `0.0.MAJOR`.
 
 Introduction
 ------------
@@ -59,36 +62,33 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 could be declared in the code itself or exist strictly in documentation.
 However it is done, it SHOULD be precise and comprehensive.
 
-1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
-non-negative integers, and MUST NOT contain leading zeroes. X is the
-major version, Y is the minor version, and Z is the patch version.
+1. A normal version number MUST take the form 0.X.Y, 0.0.X, or X.Y.Z where
+X, Y, and Z are non-negative integers, and MUST NOT contain leading zeroes.
+X is the major version, Y is the minor version, and Z is the patch version.
 Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
 1. Once a versioned package has been released, the contents of that version
 MUST NOT be modified. Any modifications MUST be released as a new version.
 
-1. Major version zero (0.y.z) is for initial development. Anything MAY change
-at any time. The public API SHOULD NOT be considered stable.
-
-1. Version 1.0.0 defines the public API. The way in which the version number
-is incremented after this release is dependent on this public API and how it
-changes.
+1. Version 1.0.0, or the first version published, if lower, defines the public
+API. The way in which the version number is incremented after this release is
+dependent on this public API and how it changes.
 
 1. Patch version Z (x.y.Z | x > 0) MUST be incremented if only backward
 compatible bug fixes are introduced. A bug fix is defined as an internal
 change that fixes incorrect behavior.
 
-1. Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backward
+1. Minor version Y (0.x.Y | x.Y.z | x > 0) MUST be incremented if new, backward
 compatible functionality is introduced to the public API. It MUST be
 incremented if any public API functionality is marked as deprecated. It MAY be
 incremented if substantial new functionality or improvements are introduced
 within the private code. It MAY include patch level changes. Patch version
 MUST be reset to 0 when minor version is incremented.
 
-1. Major version X (X.y.z | X > 0) MUST be incremented if any backward
+1. Major version X (0.0.X | 0.X.y | X.y.z) MUST be incremented if any backward
 incompatible changes are introduced to the public API. It MAY also include minor
-and patch level changes. Patch and minor versions MUST be reset to 0 when major
-version is incremented.
+and patch level changes. Patch and minor versions, when present, MUST be reset
+to 0 when the major version is incremented.
 
 1. A pre-release version MAY be denoted by appending a hyphen and a
 series of dot separated identifiers immediately following the patch
@@ -141,7 +141,7 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
       1. A larger set of pre-release fields has a higher precedence than a
          smaller set, if all of the preceding identifiers are equal.
 
-      Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 
+      Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
       1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 
 Backus–Naur Form Grammar for Valid SemVer Versions
