@@ -4,6 +4,7 @@ abstract: '"Semantic Versioning" or "SemVer" contain a set of rules and requirem
 authors:
   - family-names: Preston-Werner
     given-names: Tom
+  - name: The SemVer Team
 title: Semantic Versioning Specification
 version: 2.0.0
 date-released: 2013-06-18
