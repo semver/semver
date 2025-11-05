@@ -60,8 +60,8 @@ could be declared in the code itself or exist strictly in documentation.
 However it is done, it SHOULD be precise and comprehensive.
 
 1. A normal version number MUST take the form X.Y.Z where X, Y, and Z are
-non-negative integers, and MUST NOT contain leading zeroes. X is the
-major version, Y is the minor version, and Z is the patch version.
+non-negative integers. Elements (X, Y and Z) MUST NOT contain leading zeroes.
+X is the major version, Y is the minor version, and Z is the patch version.
 Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.
 
 1. Once a versioned package has been released, the contents of that version
