@@ -357,6 +357,172 @@ See: <https://regex101.com/r/vkijKf/1/>
 ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$
 ```
 
+Regex diagram
+
+```mermaid
+flowchart TB
+  START["Start of Line"]
+  subgraph "MAJOR"
+    direction LR;  
+    MAJORSTART{{"Choose One"}}
+    ZERO1["'0'"]
+    ONETONINE1["'1'-'9'"]
+    DIGIT1["digit"]
+    MAJOREND{{"END major"}}
+  end
+  DOT1["."]
+
+  subgraph "MINOR"
+    direction LR;  
+    MINORSTART{{"Choose One"}}
+    ZERO2["'0'"]
+    ONETONINE2["'1'-'9'"]
+    DIGIT2["digit"]
+    MINOREND{{"END minor"}}
+  end
+  DOT2["."]
+
+  subgraph "PATCH"
+    direction LR;  
+    PATCHSTART{{"Choose One"}}
+    ZERO3["'0'"]
+    ONETONINE3["'1'-'9'"]
+    DIGIT3["digit"]
+    PATCHEND{{"END patch"}}
+  end
+  DASH3["-"]
+
+  subgraph "PRERELEASE"
+    direction LR
+    PRERELEASESTART{{"prerelease"}}
+    subgraph "PRERELEASE1"
+        PRERELEASE1START{{"Choose one"}}
+        ZERO4A["'0'"]
+        ONETONINE4A["'1'-'9'"]
+        DIGIT4A["digit"]
+
+        DIGIT4B["digit"]
+        LETTER4B["'a'-'z' or 'A'-'Z' or '-'"]
+        CHAR4B["'0'-'9' or 'a'-'z' or 'A'-'Z' or '-'"]
+        PRERELEASE1END{{"END part 1"}}
+    end
+    DOT4A["."]
+    subgraph "PRERELEASE2"
+        PRERELEASE2START{{"Choose one"}}
+        ZERO4C["'0'"]
+        ONETONINE4C["'1'-'9'"]
+        DIGIT4C["digit"]
+
+        DIGIT4D["digit"]
+        LETTER4D["'a'-'z' or 'A'-'Z' or '-'"]
+        CHAR4D["'0'-'9' or 'a'-'z' or 'A'-'Z' or '-'"]
+        PRERELEASE2END{{"END part 2"}}
+    end
+
+    PRERELEASEEND{{END prerelease}}
+  end
+
+  PLUS4["+"]
+
+  subgraph BUILDMETADATA
+    direction LR
+    BUILDMETADATASTART{{"START"}}
+    CHAR5A["'0'-'9' or 'a'-'z' or 'A'-'Z' or '-'"]
+    DOT5["."]
+    CHAR5B["'0'-'9' or 'a'-'z' or 'A'-'Z' or '-'"]
+    BUILDMETADATAEND{{"END"}}
+
+  end
+
+  ENDOFLINE{{"End of line"}}
+
+  START --> MAJOR
+  ONETONINE1 --> DIGIT1
+  MAJORSTART --> ONETONINE1
+  MAJORSTART --> ZERO1
+  DIGIT1 --> DIGIT1
+  DIGIT1 --> MAJOREND
+  ZERO1 --> MAJOREND
+  ONETONINE1 --> MAJOREND
+
+  MAJOR --> DOT1
+  DOT1 --> MINOR
+
+  MINORSTART --> ZERO2
+  MINORSTART --> ONETONINE2
+  ONETONINE2 --> DIGIT2
+  ZERO2 --> MINOREND
+  DIGIT2 --> MINOREND
+  DIGIT2 --> DIGIT2
+  ONETONINE2 --> MINOREND
+
+  MINOR --> DOT2
+  DOT2 --> PATCH
+
+  PATCHSTART --> ZERO3
+  PATCHSTART --> ONETONINE3
+  ONETONINE3 --> DIGIT3
+  ZERO3 --> PATCHEND
+  DIGIT3 --> PATCHEND
+  DIGIT3 --> DIGIT3
+  ONETONINE3 --> PATCHEND
+
+  PATCH --> DASH3
+  DASH3 --> PRERELEASE
+
+  PRERELEASE1 --> DOT4A
+
+  PRERELEASESTART --> PRERELEASE1
+  PRERELEASE1START --> ZERO4A
+  PRERELEASE1START --> ONETONINE4A
+  PRERELEASE1START --> DIGIT4B
+  ONETONINE4A --> DIGIT4A
+  ONETONINE4A --> PRERELEASE1END
+  DIGIT4A --> PRERELEASE1END
+  DIGIT4A --> DIGIT4A
+  DIGIT4B --> LETTER4B
+  DIGIT4B --> DIGIT4B
+  LETTER4B --> CHAR4B
+  LETTER4B --> PRERELEASE1END
+  CHAR4B --> PRERELEASE1END
+  ZERO4A --> PRERELEASE1END
+
+  DOT4A --> PRERELEASE2
+
+  PRERELEASE2START --> ZERO4C
+  PRERELEASE2START --> ONETONINE4C
+  PRERELEASE2START --> DIGIT4D
+  ONETONINE4C --> DIGIT4C
+  ONETONINE4C --> PRERELEASE2END
+  DIGIT4C --> PRERELEASE2END
+  DIGIT4C --> DIGIT4C
+  DIGIT4D --> LETTER4D
+  DIGIT4D --> DIGIT4D
+  LETTER4D --> CHAR4D
+  LETTER4D --> PRERELEASE2END
+  CHAR4D --> PRERELEASE2END
+  ZERO4C --> PRERELEASE2END
+
+  PRERELEASE2 --> PRERELEASEEND
+
+  PRERELEASE --> PLUS4
+
+  PLUS4 --> BUILDMETADATA
+
+  BUILDMETADATASTART --> CHAR5A
+  CHAR5A --> CHAR5A
+  CHAR5A --> DOT5
+  CHAR5A --> BUILDMETADATAEND
+  DOT5 --> CHAR5B
+  CHAR5B -->CHAR5B
+  CHAR5B --> DOT5
+  CHAR5B --> BUILDMETADATAEND
+
+  DASH3 --> ENDOFLINE
+  PLUS4 --> ENDOFLINE
+  BUILDMETADATA --> ENDOFLINE
+```
+
 About
 -----
 
