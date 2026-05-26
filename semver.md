@@ -256,7 +256,8 @@ and then increment the minor version for each subsequent release.
 If your software is being used in production, it should probably already be
 1.0.0. If you have a stable API on which users have come to depend, you should
 be 1.0.0. If you're worrying a lot about backward compatibility, you should
-probably already be 1.0.0.
+probably already be 1.0.0. Releasing 1.0.0 is not a guarantee of quality or
+completeness of your software.
 
 ### Doesn't this discourage rapid development and fast iteration?
 
