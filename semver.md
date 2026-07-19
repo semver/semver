@@ -1,4 +1,4 @@
-Semantic Versioning 2.0.0
+Semantic Versioning 2.0.1
 ==============================
 
 Summary
@@ -104,8 +104,9 @@ normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch or pre-release version.
 Identifiers MUST comprise only ASCII alphanumerics and hyphens [0-9A-Za-z-].
-Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
-version precedence. Thus two versions that differ only in the build metadata,
+Identifiers MUST NOT be empty. Build metadata MUST be considered when matching
+identical versions. Build metadata MUST be ignored when determining version
+precedence, and thus two versions that differ only in the build metadata
 have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 1.0.0-beta+exp.sha.5114f85, 1.0.0+21AF26D3\-\-\-\-117B344092BD.
 
@@ -127,8 +128,8 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
       Example: 1.0.0-alpha < 1.0.0.
 
    1. Precedence for two pre-release versions with the same major, minor, and
-      patch version MUST be determined by comparing each dot separated identifier
-      from left to right until a difference is found as follows:
+      patch version MUST be determined by comparing each dot separated
+      identifier from left to right until a difference is found as follows:
 
       1. Identifiers consisting of only digits are compared numerically.
 
@@ -141,8 +142,23 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
       1. A larger set of pre-release fields has a higher precedence than a
          smaller set, if all of the preceding identifiers are equal.
 
-      Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 
+      Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta <
       1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
+
+1. Matching refers to how versions are compared to each other when determining
+   whether two version strings denote the same version.
+
+   1. Two versions are identical if and only if their version strings are
+      character-for-character equal.
+
+   1. Precedence and matching are distinct relations. Precedence orders versions
+      relative to one another. Matching determines whether a version string
+      denotes a particular version. Precedence MUST NOT be used to determine
+      matching.
+
+      Example: 1.0.0+001 and 1.0.0+002 do not match, yet they have the same
+      precedence.
+
 
 Backus–Naur Form Grammar for Valid SemVer Versions
 --------------------------------------------------
@@ -333,6 +349,26 @@ with a "v" is a common way (in English) to indicate it is a version number.
 Abbreviating "version" as "v" is often seen with version control. Example:
 `git tag v1.2.3 -m "Release version 1.2.3"`, in which case "v1.2.3" is a tag
 name and the semantic version is "1.2.3".
+
+### How is build metadata intended to be used?
+
+Build metadata is reserved for use by the package author. Examples might
+include: build timestamp; compiler flags used; validation hash; debug/release
+tags; security validation process info; or anything else that's not covered by
+the predefined semantics of major, minor, patch, and pre-release identifiers.
+
+### Why is build metadata ignored when determining version precedence?
+
+By design, build metadata has no defined structure or rules. This makes it
+useless for ordering a set of version strings.
+
+### Which version should be chosen when build metadata is included in a dependency specification?
+
+The one chosen should have identical build metadata to the specified build
+metadata. Build metadata is ignored only when determining precedence, i.e. when
+ordering versions relative to one another. It is not ignored when determining
+whether a given version matches the version specified in a dependency
+specification.
 
 ### Is there a suggested regular expression (RegEx) to check a SemVer string?
 
