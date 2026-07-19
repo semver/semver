@@ -104,10 +104,10 @@ normal version. Examples: 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7,
 1. Build metadata MAY be denoted by appending a plus sign and a series of dot
 separated identifiers immediately following the patch or pre-release version.
 Identifiers MUST comprise only ASCII alphanumerics and hyphens [0-9A-Za-z-].
-Identifiers MUST NOT be empty. Build metadata MUST be considered when matching
-identical versions. Build metadata MUST be ignored when determining version
-precedence, and thus two versions that differ only in the build metadata
-have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
+Identifiers MUST NOT be empty. Build metadata MUST be ignored when determining
+version precedence, and thus two versions that differ only in the build metadata
+have the same precedence. Build metadata MUST be considered when matching
+identical versions. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
 1.0.0-beta+exp.sha.5114f85, 1.0.0+21AF26D3\-\-\-\-117B344092BD.
 
 1. Precedence refers to how versions are compared to each other when ordered.
@@ -156,7 +156,7 @@ have the same precedence. Examples: 1.0.0-alpha+001, 1.0.0+20130313144700,
       denotes a particular version. Precedence MUST NOT be used to determine
       matching.
 
-      Example: 1.0.0+001 and 1.0.0+002 do not match, yet they have the same
+      Example: `1.0.0+Debug` and `1.0.0` do not match, yet they have the same
       precedence.
 
 
@@ -360,7 +360,7 @@ the predefined semantics of major, minor, patch, and pre-release identifiers.
 ### Why is build metadata ignored when determining version precedence?
 
 By design, build metadata has no defined structure or rules. This makes it
-useless for ordering a set of version strings.
+useless for ordering two versions that differ only in this metadata.
 
 ### Which version should be chosen when build metadata is included in a dependency specification?
 
